@@ -1,0 +1,42 @@
+!!! 5
+%head
+	%title
+		Neumann.biz
+		= title_helper
+	= stylesheet_link_tag :all
+	= javascript_include_tag :defaults
+	= csrf_meta_tag
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+%body
+	%section{:id => 'page'}
+		%header{:id => 'page_header'}
+			%h1
+				=title_helper
+		%nav{:id => 'page_navigation'}
+			%ul
+				%li
+					=link_to 'Home', '/'
+				%li
+					=link_to 'Lebenslauf', 'cv'
+				%li
+					%strong Centrum für Informations- und Sprachverarbeitung
+					%ul
+						%li
+							=link_to 'Forschung', 'forschung'
+						%li
+							=link_to 'Lehre', 'lehre'
+						%li
+							=link_to 'Studium', 'studium'
+						%li
+							=link_to 'Publikationen', 'publikationen'
+				%li
+					%strong Privat
+					%ul
+						%li
+							=link_to 'Erwachsenenbildung', 'vortraege'
+		%section{:id => 'page_main'}
+			= yield
+		.cleaner
+		%footer{:id => 'page_footer'}
+			%br Konzeption, Design und Ausführung: Andreas Neumann
+			=link_to '©  AN-iT', 'http://www.an-it.com'

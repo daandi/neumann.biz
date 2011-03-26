@@ -1,19 +1,16 @@
 NeumannBiz::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/cv"
-
-  get "pages/studium"
-
-  get "pages/projekte"
-
-  get "pages/puplikationen"
-
-  get "pages/vortraege"
-
-  get "pages/links"
-  
-  root :to =>'pages#home'
+    match 'home' => 'pages#home'
+    match 'cv' => 'pages#cv'
+    match 'links' => 'pages#links'
+    match 'projekte' => 'pages#projekte'
+    match 'publikationen' => 'pages#publikationen'
+    match 'studium' => 'pages#studium'
+    match 'lehre' => 'pages#lehre'
+    match 'forschung' => 'pages#forschung'
+    match 'vortraege' => 'pages#vortraege'
+    match 'data' => 'pages#data'
+    
+    root :to =>'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

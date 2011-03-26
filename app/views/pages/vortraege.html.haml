@@ -1,2 +1,21 @@
-%h1 Pages#vortraege
-%p Find me in app/views/pages/vortraege.html.haml
+%article
+	%header 
+		%h2 Soziale Netzwerke
+	%p
+		Facebook, Twitter, Lokalisten. Soziale Netzwerke sind mittlerweile ein Teil unseres Alltags geworden.
+		Neben vielen Chancen bietet der Bereich auch Risiken.
+		Die Folgenden Vorträge zeigen Chancen und Risiken verschiedener Netzwerke zu ihrem Entstehungszeitpunkt auf.
+	%h3 Soziale Netzwerke 2010
+	%h3 Soziale Netzwerke 2009
+	%h3 Soziale Netzwerke 2008
+%article
+	%header 
+		%h2 Was kann mein handy mir bieten?
+	%p
+		Der Vortrag richtet sich an unsere älteren Mitbürger. In einer Mischung aus Vortrag und Übung wird die sachgerechte Benutzung eines Mobiltelefons eingeübt. Inhaltliche Schwerpunkte sind:
+		%ul
+			%li Mobiltelefone, ein Überblick
+			%li Grundlegende Bedienung (Stummschaltung, Tastensperre, Telefonieren usw.)
+			%li Kontaktverwaltung
+			%li Kurznachrichten empfangen und schreiben
+		=render :partial =>'shared/download_file', :locals => {:file => 'files/Mobilfunk.pdf'}
