@@ -32,6 +32,7 @@ li {
 
 li ul li{
 	font-size:smaller;
+	margin-left:-1.2em
 }
 
 a {
@@ -44,9 +45,35 @@ a:hover {
 	text-decoration: none;
 }
 
+table {
+	text-align:left;
+	color:#FFF;
+}
+
+th {
+	padding:0.2em
+}
+
+td {
+	padding:0.5em;
+}
+
+tr:nth-child(2n+1) {
+	background-color:#444;
+}
+
+tr:nth-child(2n) {
+	background-color:#555;
+}
+
+td {
+	font-style:italic;
+	font-size:smaller;
+}
+
 #page {
 	display:block;
-	width: 85%;
+	width: 90%;
 	margin: 15px auto;
 	border:0.1em solid #EEE;
 	background-color: #333;
@@ -54,16 +81,17 @@ a:hover {
 }
 
 #page_navigation {
-	width:15%;
+	width:22%;
 	float:left;
+
 }
 
 #page_main {
-	width:75%;
+	margin:0 1em;
 	float:left;
-	border:0.1em solid #EEE;
-	margin:1em;
+	margin:0.5em;
 	padding:0.5em 1.5em;
+	width:70%;
 }
 
 #page_header {

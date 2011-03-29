@@ -1,1 +1,1 @@
-=link_to(image_tag('pdf_icon.png') + file.gsub(/.*\//,"") + ' herunterladen', file)
+=link_to( image_tag('pdf_icon.png') + '"'+ file.gsub(/.*\//,"").gsub(/_/," ") + '" herunterladen', file )
