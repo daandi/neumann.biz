@@ -61,7 +61,7 @@ a {
 
 a:hover {
 	color:#AA00AA;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 table {
@@ -111,7 +111,6 @@ td {
 	margin:0.5em;
 	padding:0.5em 1.5em;
 	width:70%;
-	background-color:#373737;
 }
 
 #page_header {
