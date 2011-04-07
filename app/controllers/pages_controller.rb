@@ -27,6 +27,10 @@ class PagesController < ApplicationController
   def vortraege
       @title = 'Vorträge'
   end
+  
+  def forschung
+  	@title = 'Forschung'
+  end
 
   def links
       @title = 'Links'

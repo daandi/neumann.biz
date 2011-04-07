@@ -8,7 +8,7 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 gem 'haml'
 gem 'haml-rails'
-
+gem 'rcoins'
 # Use unicorn as the web server
 # gem 'unicorn'
 

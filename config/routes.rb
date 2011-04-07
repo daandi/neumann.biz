@@ -9,6 +9,9 @@ NeumannBiz::Application.routes.draw do
     match 'forschung' => 'pages#forschung'
     match 'vortraege' => 'pages#vortraege'
     match 'data' => 'pages#data'
+    match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
+    match 'daf-studium' => 'pages#daf-studium'
+    match 'ethnologie-studium' => 'pages#ethnologie-studium'
     
     root :to =>'pages#home'
 
