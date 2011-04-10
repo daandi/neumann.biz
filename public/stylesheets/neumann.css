@@ -61,9 +61,9 @@ a {
 }
 
 a:hover {
-	color:#AA00AA;
 	text-decoration: underline;
 }
+
 
 table {
 	text-align:left;
@@ -138,4 +138,12 @@ td {
 
 header, article, section, footer {
 	display:block;
+}
+
+.in {
+	font-style:italic;
+}
+
+.authors {
+	font-size:smaller;
 }
