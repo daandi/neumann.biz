@@ -49,7 +49,11 @@ class PagesController < ApplicationController
   end
   
   def projekt
-    head :moved_permanently, :location => "projekte"
+    head :moved_permanently, :location => "http://www.an-it.com/projekte"
+  end
+  
+  def publication
+    head :moved_permanently, :location => "publikationen"
   end
 
 end
