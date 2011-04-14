@@ -39,5 +39,17 @@ class PagesController < ApplicationController
   def data
     head :moved_permanently, :location => "cv"
   end
+  
+  def lmu
+    head :moved_permanently, :location => "lehre"
+  end
+  
+  def vortrag
+    head :moved_permanently, :location => "vortraege"
+  end
+  
+  def projekt
+    head :moved_permanently, :location => "projekte"
+  end
 
 end

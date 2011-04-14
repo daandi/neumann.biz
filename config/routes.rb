@@ -8,10 +8,15 @@ NeumannBiz::Application.routes.draw do
     match 'lehre' => 'pages#lehre'
     match 'forschung' => 'pages#forschung'
     match 'vortraege' => 'pages#vortraege'
-    match 'data' => 'pages#data'
     match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
     match 'daf-studium' => 'pages#daf-studium'
     match 'ethnologie-studium' => 'pages#ethnologie-studium'
+    
+    # Alte Seite Redirects
+    match 'data' => 'pages#data'
+    match 'projekt' => 'pages#projekt'
+    match 'vortrag' => 'pages#vortraeg'
+    match 'lmu' => 'pages#lmu'
     
     root :to =>'pages#home'
 
