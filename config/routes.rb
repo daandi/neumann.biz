@@ -14,6 +14,7 @@ NeumannBiz::Application.routes.draw do
     
     # Alte Seite Redirects
     match 'data' => 'pages#data'
+    match 'publication' => 'pages#publication'
     match 'projekt' => 'pages#projekt'
     match 'vortrag' => 'pages#vortraeg'
     match 'lmu' => 'pages#lmu'
