@@ -1,4 +1,5 @@
 NeumannBiz::Application.routes.draw do
+
     match 'home' => 'pages#home'
     match 'cv' => 'pages#cv'
     match 'links' => 'pages#links'
@@ -18,6 +19,8 @@ NeumannBiz::Application.routes.draw do
     match 'projekt' => 'pages#projekt'
     match 'vortrag' => 'pages#vortraeg'
     match 'lmu' => 'pages#lmu'
+    
+    
     
     root :to =>'pages#home'
 
