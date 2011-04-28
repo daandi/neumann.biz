@@ -36,6 +36,18 @@ class PagesController < ApplicationController
       @title = 'Links'
   end
   
+  define_method('computerlinguistik-studium') do
+      @title = 'Studium - Computerlinguistik'
+  end
+  
+  define_method( 'ethnologie-studium') do
+      @title = 'Studium - Ethnologie'
+  end
+  
+  define_method( 'daf-studium' ) do
+      @title = 'Studium - DAF'
+  end
+  
   def data
     head :moved_permanently, :location => "cv"
   end
