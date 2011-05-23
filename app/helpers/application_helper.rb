@@ -28,8 +28,6 @@ module ApplicationHelper
         
         if user && user.password == password 
             return true
-            name = params[:name] || session[:name]
-            password = params[:password] || session[:password]
         end
         return false
     end

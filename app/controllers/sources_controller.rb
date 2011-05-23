@@ -88,6 +88,11 @@ class SourcesController < ApplicationController
       send_data(@source.code, :filename => "#{@source.title}.#{@source.language}")
   end
   
+  def vorlesung
+      @id = params[:id]
+      @sources = Source.find(:all).select {|s| s.title =~ /Vorlesung #{@id} /}
+  end
+  
   private
   
     def minimal_security?
@@ -97,6 +102,8 @@ class SourcesController < ApplicationController
         
         user = User.find_by_name(name)
         
+        puts user
+        
         unless user && user.password == password 
             flash[:alert] = "Nicht erlaubt."
             redirect_to(sources_url)
@@ -104,8 +111,6 @@ class SourcesController < ApplicationController
         
         session[:name] = name
         session[:password] = password
-        
-        
         
     end
   

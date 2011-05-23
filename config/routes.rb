@@ -1,6 +1,4 @@
 NeumannBiz::Application.routes.draw do
-    
-
     match 'home' => 'pages#home'
     match 'cv' => 'pages#cv'
     match 'links' => 'pages#links'
@@ -24,6 +22,7 @@ NeumannBiz::Application.routes.draw do
     #Sources
     resources :sources
     match 'sources/download/:id' => 'sources#download'
+    match 'vorlesung/:id' => 'sources#vorlesung'
     
     
     root :to =>'pages#home'
