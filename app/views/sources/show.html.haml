@@ -1,0 +1,16 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @source.title
+%p
+  %b Description:
+  = @source.description
+%p
+  %b Language:
+  = @source.language
+%p
+  %b Code:
+  =raw highlight @source.code, @source.language
+
+= link_to 'Back', sources_path

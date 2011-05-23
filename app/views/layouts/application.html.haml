@@ -15,20 +15,20 @@
 		%nav{:id => 'page_navigation'}
 			%ul
 				%li=link_to 'Home', '/'
-				%li=link_to 'Lebenslauf', 'cv'
+				%li=link_to 'Lebenslauf', '/cv'
 				%li
 					%strong LMU - CIS
 					%ul
-						%li=link_to 'Lehre', 'lehre'
-						%li=link_to 'Publikationen', 'publikationen'
+						%li=link_to 'Lehre', '/lehre'
+						%li=link_to 'Publikationen', '/publikationen'
 				%li
 					%strong Studienarbeiten
 					%ul
-						%li=link_to 'Computerlinguistik', 'computerlinguistik-studium'
-						%li=link_to 'DAF', 'daf-studium'
-						%li=link_to 'Ethnologie', 'ethnologie-studium'
-				%li=link_to 'Erwachsenenbildung', 'vortraege'
-				%li=link_to 'Links', 'links'
+						%li=link_to 'Computerlinguistik', '/computerlinguistik-studium'
+						%li=link_to 'DAF', '/daf-studium'
+						%li=link_to 'Ethnologie', '/ethnologie-studium'
+				%li=link_to 'Erwachsenenbildung', '/vortraege'
+				%li=link_to 'Links', '/links'
 		%section{:id => 'page_main'}
 			= yield
 		.cleaner

@@ -1,0 +1,17 @@
+%h1 Quelltexte
+%section
+	- @sources.each do |source|
+		%article
+			%header
+				%h2=source.title
+			%p=source.description
+			=raw highlight source.code, source.language
+			%footer
+				= link_to 'Download', "sources/download/#{source.id}"
+				= link_to 'Show', source
+				-if allowed?
+					= link_to 'Edit', edit_source_path(source)
+					|
+					= link_to 'Destroy', source, :confirm => 'Are you sure?', :method => :delete
+-if allowed?
+	= link_to 'New Source', new_source_path
