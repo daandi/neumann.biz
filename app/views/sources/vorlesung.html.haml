@@ -1,6 +1,7 @@
-%h2
-	Vorlesung 
+%h1
+	Höhere Programmierung in der Computerlinguistik mit C++ - Vorlesung 
 	=@id
+=link_to 'Zurück', '/lehre'
 - @sources.each do |source|
 	%article
 		%header
@@ -11,3 +12,4 @@
 			= link_to 'Download', "sources/download/#{source.id}"
 			|
 			= link_to 'Show', source
+=link_to 'Zurück', '/lehre'
