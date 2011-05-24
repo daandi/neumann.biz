@@ -1,6 +1,6 @@
 class SourcesController < ApplicationController
     
-    before_filter :minimal_security?, :except=> [:index, :show, :download]
+    before_filter :minimal_security?, :except=> [:index, :show, :download, :vorlesung]
   # GET /sources
   # GET /sources.xml
   def index
