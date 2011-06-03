@@ -22,7 +22,7 @@ NeumannBiz::Application.routes.draw do
     #Sources
     resources :sources
     match 'vorlesung/sources/download/:id' => 'sources#download'
-    match 'sources/sources/download/:id' => 'sources#download'
+    match 'sources/download/:id' => 'sources#download'
     match 'vorlesung/:id' => 'sources#vorlesung'
     
     
