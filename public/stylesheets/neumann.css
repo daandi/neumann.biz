@@ -123,12 +123,22 @@ td {
 	margin:0 1em;
 }
 
+#like_buttons {
+	float:right;
+	display:inline;
+}
+
+#like_buttons li {
+	list-style-type:none;
+	margin-top:0.5em;
+}
+
 #page_footer {
 	font-size:smaller;
-	text-align:right;
+	text-align:left;
 	background-color:#555;
-	padding:1.5em;
 	border-top:0.1em solid #FFF;
+	padding-left:1em;
 }
 
 .cleaner {
@@ -147,3 +157,5 @@ header, article, section, footer {
 .authors {
 	font-size:smaller;
 }
+
+

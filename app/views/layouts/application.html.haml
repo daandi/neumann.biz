@@ -8,6 +8,8 @@
 	= csrf_meta_tag
 	= favicon_link_tag 'favicon.png'
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 %body
 	%section{:id => 'page'}
 		%header{:id => 'page_header'}
@@ -34,5 +36,10 @@
 			= yield
 		.cleaner
 		%footer{:id => 'page_footer'}
-			%br Konzeption, Design und Ausführung: Andreas Neumann
-			=link_to '©  AN-iT', 'http://www.an-it.com'
+			=render :partial => 'shared/like'
+			%p
+				Konzeption, Design und Ausführung: Andreas Neumann
+				%br
+				=link_to '©  AN-iT', 'http://www.an-it.com'
+			
+			.cleaner
