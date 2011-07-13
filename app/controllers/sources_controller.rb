@@ -1,6 +1,7 @@
+#coding: utf-8
 class SourcesController < ApplicationController
     
-    before_filter :minimal_security?, :except=> [:index, :show, :download, :vorlesung]
+    before_filter :minimal_security?, :except=> [:index, :show, :download, :vorlesung, :uebung]
   # GET /sources
   # GET /sources.xml
   def index
@@ -93,6 +94,11 @@ class SourcesController < ApplicationController
       @sources = Source.find(:all).select {|s| s.title =~ /Vorlesung #{@id} /}
   end
   
+  def uebung 
+      @id = params[:id]
+      @sources = Source.find(:all).select {|s| s.title =~ /Übung #{@id} /}
+  end
+
   private
   
     def minimal_security?

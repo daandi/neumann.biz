@@ -21,10 +21,13 @@ NeumannBiz::Application.routes.draw do
     
     #Sources
     resources :sources
+    
     match 'vorlesung/sources/download/:id' => 'sources#download'
     match 'sources/download/:id' => 'sources#download'
     match 'vorlesung/:id' => 'sources#vorlesung'
     
+    match 'uebung/sources/download/:id' => 'sources#download'
+    match 'uebung/:id' => 'sources#uebung'
     
     root :to =>'pages#home'
 
