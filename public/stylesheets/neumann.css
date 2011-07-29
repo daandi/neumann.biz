@@ -159,4 +159,9 @@ header, article, section, footer {
 	font-size:smaller;
 }
 
+.klausurergebnisse {
+	font-family:Monospace;
+	padding:1em;
+}
+
 

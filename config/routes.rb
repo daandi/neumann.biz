@@ -29,6 +29,8 @@ NeumannBiz::Application.routes.draw do
     match 'uebung/sources/download/:id' => 'sources#download'
     match 'uebung/:id' => 'sources#uebung'
     
+    match 'lehre/cpp-SS2011-klausurergebnisse' => 'pages#cpp-SS2011-klausurergebnisse'
+    
     root :to =>'pages#home'
 
   # The priority is based upon order of creation:
