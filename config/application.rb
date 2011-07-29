@@ -31,7 +31,7 @@ module NeumannBiz
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(https://apis.google.com/js/plusone.js http://platform.twitter.com/widgets.js https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js  rails)
+    config.action_view.javascript_expansions[:defaults] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js  rails https://apis.google.com/js/plusone.js http://platform.twitter.com/widgets.js http://connect.facebook.net/en_US/all.js#appId=135300686558880&xfbml=1)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

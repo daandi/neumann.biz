@@ -131,6 +131,7 @@ td {
 #like_buttons li {
 	list-style-type:none;
 	margin-top:0.5em;
+	margin-right: 0.5em;
 }
 
 #page_footer {
