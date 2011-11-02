@@ -11,6 +11,7 @@ NeumannBiz::Application.routes.draw do
     match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
     match 'daf-studium' => 'pages#daf-studium'
     match 'ethnologie-studium' => 'pages#ethnologie-studium'
+    match 'impressum' => 'pages#impressum'
     
     # Alte Seite Redirects
     match 'data' => 'pages#data'

@@ -30,6 +30,7 @@
 						%li=link_to 'Ethnologie', '/ethnologie-studium'
 				%li=link_to 'Erwachsenenbildung', '/vortraege'
 				%li=link_to 'Links', '/links'
+				%li=link_to 'Impressum', '/impressum'
 		%section{:id => 'page_main'}
 			= yield
 		.cleaner
@@ -39,5 +40,7 @@
 				Konzeption, Design und Ausführung: Andreas Neumann
 				%br
 				=link_to '©  AN-iT', 'http://www.an-it.com'
+				,
+				=link_to  'Impressum', '/impressum'
 			
 			.cleaner
