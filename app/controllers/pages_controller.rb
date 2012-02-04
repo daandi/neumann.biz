@@ -8,8 +8,8 @@ class PagesController < ApplicationController
       @title = "Lebenslauf"
   end
   
-  def lehre
-      @title = 'Lehre'
+  def cpp
+      @title = 'C++'
   end
 
   def studium

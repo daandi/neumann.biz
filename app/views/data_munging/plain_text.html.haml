@@ -1,2 +1,43 @@
-%h1 DataMunging#plain_text
-%p Find me in app/views/data_munging/plain_text.html.haml
+%header
+	%h1 Plain-Text
+%section
+	%h2 Beschreibung : Plain-Text
+	%article
+		%h3 Allgemein
+		%p Mit plain-text werden Dateien bezeichnet, deren textuelle Inhalte die ganze Datei hindurch gleich und unter einer allgemein verständlichen/dem Betriebssystem inherenten Zeichenkodierung gespeichert werden.
+%section
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%p Zur Formatierung stehen sogenannten "non-printable-characters" bzw. "Control-Characters", wie \n, \t, \0 zur Verfügung.
+		%h3 Layout / Typen
+		%p keine
+		%h3 Logische Strukturierung
+		%p Zeilen
+%section
+	%h2 Besonderheiten
+	%article
+		%h2 Varianten
+		%p Textdatein exisiteiren in verschiedenen Varianten:
+		%h3 Kodierungen: UTF-8, UCS 4, ISO XXXXX, KOI-8, ASCII u.v.a
+		%p Es existieren mehrere Kodierungen, die bestimmen wie die binäre Daten in einer Datei in Buchstaben umgesetzt werden. Dazu werden Zeichentabllen bzw. engl. Codepages benutzt die jedem Zahlenwert ein Zeichen zuordnen.
+		%p Der kleinste gemeinsame Nenner ist ASCII, diese Kodiewrung erlaubt 128 Zeichen.
+		%p ISO-Varianten waren in den 90-er Jahren verbreitet.
+		%p In modernen Anwendungen ist UTF-8 der de facto Standard. Es erlaubt es die Graphen der meisten größeren Kulturen zu Verwenden. Eine Verwendung von ISO-Latin ist nicht mehr zu empfehlen. 	
+		%h3 \n \cr \lf
+		%p Aufgrund entwicklungsgeschichtlicher Designentscheidungen benutzen verschieden Betriebssystem unterschiedliche Zeilentrenner. *nix -> \n, Windows -> \r \n, MacOS bis Version 9 -> \r.
+		%p Im allgemeinen empfiehlt sich die Nutzung von \n als Zeilentrenner, da alle Betriebssystem damit umgehen können.
+%section
+	%header
+		%h2 Textdatei erstellen, bearbeiten und anzeigen
+		Textdateien lassen sich mit Texteditoren bearbeiten, diese dienen auch der Dasrstellung. Die Auswahl ist groß und alle Betriebssystem werden standardmäßig mit zumindest rudimentären Texteditoren ausgeliefert.
+		%h3 vi
+		%h3 emacs
+		%h3 notepad
+		%h3 textmate
+%section
+	%header
+		%h2 Programmatisch
+
+	
+		

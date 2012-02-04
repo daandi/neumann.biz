@@ -1,33 +1,11 @@
 NeumannBiz::Application.routes.draw do
-  get "data_munging/index"
-
-  get "data_munging/what_is"
-
-  get "data_munging/plain_text"
-
-  get "data_munging/csv"
-
-  get "data_munging/word"
-
-  get "data_munging/excel"
-
-  get "data_munging/pdf"
-
-  get "data_munging/html"
-
-  get "data_munging/xml"
-
-  get "data_munging/hocr"
-
-  get "data_munging/open_office"
-
   match 'home' => 'pages#home'
   match 'cv' => 'pages#cv'
   match 'links' => 'pages#links'
   match 'projekte' => 'pages#projekte'
   match 'publikationen' => 'pages#publikationen'
   match 'studium' => 'pages#studium'
-  match 'lehre' => 'pages#lehre'
+  match 'cpp' => 'pages#cpp'
   match 'forschung' => 'pages#forschung'
   match 'vortraege' => 'pages#vortraege'
   match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
@@ -41,7 +19,21 @@ NeumannBiz::Application.routes.draw do
   match 'projekt' => 'pages#projekt'
   match 'vortrag' => 'pages#vortraeg'
   match 'lmu' => 'pages#lmu'
-    
+  
+  get "data_munging/index"
+  get "data_munging/about"
+  get "data_munging/plain_text"
+  get "data_munging/csv"
+  get "data_munging/word"
+  get "data_munging/excel"
+  get "data_munging/pdf"
+  get "data_munging/html"
+  get "data_munging/xml"
+  get "data_munging/hocr"
+  get "data_munging/open_office"
+  match 'data_munging' => 'data_munging#index'
+  
+  
   #Sources
   resources :sources
     

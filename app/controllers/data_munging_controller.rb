@@ -4,8 +4,12 @@ class DataMungingController < ApplicationController
     @title = "Data-Munging"
   end
 
-
   def plain_text
+     @title = "Data-Munging - Plain-Text"
+  end
+  
+  def about
+    @title = "Data-Munging Kursbeschreibung"
   end
 
   def csv

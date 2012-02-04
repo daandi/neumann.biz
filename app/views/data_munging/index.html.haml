@@ -1,59 +1,27 @@
-%header
-	%h1 
-		%strong Datenextraktion / Datenpräsentation
-%section
-	%article
-		%h2 Dokumente, Informatione, Daten - Informationextraktion
-		%p Jedes Dokument entsteht in einem geschichtlichen, ethnischen und sozialen Kontext. Es hat einen (oder mehrere) Verfasser und einen (oder mehrere Empfänger) und wurde mit einer bestimmten Intention zu einem bestimmten Zeitpunkt verfasst.
-		%p Ein Teil der oben genannten Daten wird über den textuellen Inhalt und die Form des Dokuments transportiert, der andere Teil muss über den Kontext erschlossen werden oder liegt als Metadatum, zum Beispiel in einer Datenbank oder im Index einer Suchmaschine, vor.
-		%p Aufgabe der computerlinguistischen Teildisziplin Informationsextraktion ist es aus einem Dokument relevante Informationen in Hinsicht auf eine zuvor festgelegte Aufgabenstellung zu extrahieren.
-		%p Bevor man sich an das interpretieren und extrahieren von Information machen kann ist es jedoch notwendig das Dateiformat in dem das Dokument vorliegt interpretieren und verarbeiten zu können, zu wissen welche Metadaten im Dokument gespeichert sein können und wie man darauf zugreifen kann.
-		%p Zu diesem Schritt will dieser Kurs im ersten Teil Hilfestellung und Anleitung geben.
-		%p Neben dem bloßen sammeln von Erkenntnissen und Information ist es oft notwendig diese auf eine einheitliche und verständliche Weise anderen zugänglich zu machen.
-		%p Techniken und möglichkeiten dies zu bewerkstelligen sollen im zweiten Teil des Kurses gegeben werden.
-%section
-	%article
-		%h2 Kursinhalt Teil 1 - Datenextraktion
-		%p Data-Munging bezeichnet grob übersetzt das umwandeln von einem Dateiformat in ein anderes. Wobei eine Konnotation von unumkehrbarer Zerstörung mitschwingt. Guter Start, oder?
-		%p In unserem Fall soll es Bedeuten "die für unsere Interessen notwendigen Informationen aus einem Dokument/ einer Datei/ einer Dareichungsform zu extrahieren und in Format umzuwandeln mit dem wir arbeiten können.
-		%p In vielen Fällen kann das reiner Text sein, manchmal auch mehr.
-	%article
-		%h2 Kursinhalt Teil 2 - Datenbereitstellung
-		%p Techniken um gesammelte Daten weiterzugeben sollen im zweiten Teil des Kurses behandelt werden.
-	%article
-		%h2 Kursaufbau
-		%p Der Kurs ist als offene Übung gestaltet. Wir werden uns in jeder Sitzung mit einer/ oder mehreren Dokumenttypen beschäftigen und Arbeitsabläufe und Programme entwickeln um an den Inhalt (sprich: Informationstragende Teiile) von Daten zu kommen. 
-		%strong  Es wird also programmiert.
-		%p Lösungen und Programme sollen diskutiert und gesammelt werden. Gute Lösungen sollen auf einer Webseite veröffentlicht werden. 
-		%h2 Vorraussetzungen
-		%ul
-			%li aktive Mitarbeit
-			%li Lust am selbsständigen experimentieren
-			%li praktisches arbeiten
-		
-		%h2 Zeitraum
-		19.04.2012 - 19.07.2012, jeden Donnerstag zwischen 08:30 und 10:00
-		 
-%section
-	%article
-		%h2 Themen
-		%h3 Datenextraktion
-		%ul
-			%li=link_to 'Plain-text, Textdateien und Kodierungswahnsinn', 'plain_text'
-			%li=link_to 'Word, mehr als nur ein Dateiformat', 'word'
-			%li=link_to 'Excel', 'excel'
-			%li=link_to 'Portable Document Format, PDF', 'pdf'
-			%li=link_to 'HTML', 'html'
-			%li=link_to 'XML', 'xml'
-			%li=link_to 'hOCR - Text und Layout', 'hocr'
-			%li=link_to 'Datenbanken - SQL und NOSQL', 'data_base'
-			%li=link_to 'API - Datenschnittstellen', 'api'
-		%h3 Datenbereitstellung
-		%ul
-			%li=link_to 'Webserver und Statische Daten', 'static_data'
-			%li=link_to 'Dynamische Daten', 'dynamic_data'
-			%li=link_to 'Webframeworks und ORM', 'frameworks'
-			%li=link_to 'REST/SOAP', 'rest'
-%section
-	%article
-		%h2 Quelltexte
+%h1 Data-Munging
+%article
+	%header
+		%h2 Data-Munging im SS 12
+	%h3 Kurs
+	%ul
+		%li=link_to 'Data-munging - Kursbeschreibung', '/data_munging/about'
+	%h3 Datenextraktion
+	%ul
+		%li=link_to 'Plain-text, Textdateien und Kodierungswahnsinn', '/data_munging/plain_text'
+		%li=link_to 'Word, mehr als nur ein Dateiformat', '/data_munging/word'
+		%li=link_to 'Excel', '/data_munging/excel'
+		%li=link_to 'Portable Document Format, PDF', '/data_munging/pdf'
+		%li=link_to 'HTML', '/data_munging/html'
+		%li=link_to 'XML', '/data_munging/xml'
+		%li=link_to 'hOCR - Text und Layout', '/data_munging/hocr'
+		%li=link_to 'Datenbanken - SQL und NOSQL', '/data_munging/data_base'
+		%li=link_to 'API - Datenschnittstellen', '/data_munging/api'
+	%h3 Datenbereitstellung
+	%ul
+		%li=link_to 'Webserver und Statische Daten', '/data_munging/static_data'
+		%li=link_to 'Dynamische Daten', '/data_munging/dynamic_data'
+		%li=link_to 'Webframeworks und ORM', '/data_munging/frameworks'
+		%li=link_to 'REST/SOAP', '/data_munging/rest'
+
+
+
