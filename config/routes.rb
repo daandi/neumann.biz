@@ -1,38 +1,60 @@
 NeumannBiz::Application.routes.draw do
-    match 'home' => 'pages#home'
-    match 'cv' => 'pages#cv'
-    match 'links' => 'pages#links'
-    match 'projekte' => 'pages#projekte'
-    match 'publikationen' => 'pages#publikationen'
-    match 'studium' => 'pages#studium'
-    match 'lehre' => 'pages#lehre'
-    match 'forschung' => 'pages#forschung'
-    match 'vortraege' => 'pages#vortraege'
-    match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
-    match 'daf-studium' => 'pages#daf-studium'
-    match 'ethnologie-studium' => 'pages#ethnologie-studium'
-    match 'impressum' => 'pages#impressum'
+  get "data_munging/index"
+
+  get "data_munging/what_is"
+
+  get "data_munging/plain_text"
+
+  get "data_munging/csv"
+
+  get "data_munging/word"
+
+  get "data_munging/excel"
+
+  get "data_munging/pdf"
+
+  get "data_munging/html"
+
+  get "data_munging/xml"
+
+  get "data_munging/hocr"
+
+  get "data_munging/open_office"
+
+  match 'home' => 'pages#home'
+  match 'cv' => 'pages#cv'
+  match 'links' => 'pages#links'
+  match 'projekte' => 'pages#projekte'
+  match 'publikationen' => 'pages#publikationen'
+  match 'studium' => 'pages#studium'
+  match 'lehre' => 'pages#lehre'
+  match 'forschung' => 'pages#forschung'
+  match 'vortraege' => 'pages#vortraege'
+  match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
+  match 'daf-studium' => 'pages#daf-studium'
+  match 'ethnologie-studium' => 'pages#ethnologie-studium'
+  match 'impressum' => 'pages#impressum'
     
-    # Alte Seite Redirects
-    match 'data' => 'pages#data'
-    match 'publication' => 'pages#publication'
-    match 'projekt' => 'pages#projekt'
-    match 'vortrag' => 'pages#vortraeg'
-    match 'lmu' => 'pages#lmu'
+  # Alte Seite Redirects
+  match 'data' => 'pages#data'
+  match 'publication' => 'pages#publication'
+  match 'projekt' => 'pages#projekt'
+  match 'vortrag' => 'pages#vortraeg'
+  match 'lmu' => 'pages#lmu'
     
-    #Sources
-    resources :sources
+  #Sources
+  resources :sources
     
-    match 'vorlesung/sources/download/:id' => 'sources#download'
-    match 'sources/download/:id' => 'sources#download'
-    match 'vorlesung/:id' => 'sources#vorlesung'
+  match 'vorlesung/sources/download/:id' => 'sources#download'
+  match 'sources/download/:id' => 'sources#download'
+  match 'vorlesung/:id' => 'sources#vorlesung'
     
-    match 'uebung/sources/download/:id' => 'sources#download'
-    match 'uebung/:id' => 'sources#uebung'
+  match 'uebung/sources/download/:id' => 'sources#download'
+  match 'uebung/:id' => 'sources#uebung'
     
-    match 'lehre/cpp-SS2011-klausurergebnisse' => 'pages#cpp-SS2011-klausurergebnisse'
+  match 'lehre/cpp-SS2011-klausurergebnisse' => 'pages#cpp-SS2011-klausurergebnisse'
     
-    root :to =>'pages#home'
+  root :to =>'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
