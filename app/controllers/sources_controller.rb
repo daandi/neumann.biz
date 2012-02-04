@@ -118,8 +118,5 @@ class SourcesController < ApplicationController
         session[:name] = name
         session[:password] = password
         
-    end
-  
-  
-  
+    end 
 end
