@@ -32,6 +32,9 @@ class DataMungingController < ApplicationController
   def open_office
   end
   
+  def data_base
+  end
+  
   def serve_content
   end
   
