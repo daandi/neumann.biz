@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120204205210) do
+ActiveRecord::Schema.define(:version => 20120205110744) do
 
   create_table "sourcecodes", :force => true do |t|
     t.string   "tilte"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20120204205210) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "tag"
+    t.string   "author"
   end
 
   create_table "users", :force => true do |t|

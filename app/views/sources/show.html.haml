@@ -1,16 +1,21 @@
 %p#notice= notice
-
 %p
-  %b Title:
-  = @source.title
+	%b Title:
+	= @source.title
 %p
-  %b Description:
-  = @source.description
+	%b Author:
+	= @source.author
 %p
-  %b Language:
-  = @source.language
+	%b Tag:
+	= @source.tag
 %p
-  %b Code:
-  =sanitize highlight @source.code, @source.language
+	%b Description:
+	= @source.description
+%p
+	%b Language:
+	= @source.language
+%p
+	%b Code:
+	=sanitize highlight @source.code, @source.language
 
 = link_to 'Back', sources_path
