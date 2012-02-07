@@ -1,0 +1,13 @@
+%section{:id => "sources"}
+	%h2 Programmbeispiele
+	-lang = ""
+	-for source in @sources do
+		-if lang != source.language then
+			- lang = source.language
+			%section
+				%h3 
+					Beispiele in
+					= lang
+				%article{:class => "code"}
+					= render :partial => "shared/example",  :locals => { :@source => source }
+					

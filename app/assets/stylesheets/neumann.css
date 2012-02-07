@@ -29,6 +29,14 @@ h2 {
 	border-bottom:0.1em solid #1A99B2;
 }
 
+pre {
+	margin:0px;
+	background-color: #FEFEFE;
+	color: #333;
+	font-family:monospace;
+	padding: 1em;
+}
+
 
 
 #page_header{

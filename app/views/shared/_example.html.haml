@@ -1,0 +1,14 @@
+%article{:class => "source"}
+	%p
+		%b Title:
+		= @source.title
+		%br
+		%b Author:
+		= @source.author
+		%br
+		%b Description:
+		= @source.description
+		%br
+		=sanitize highlight @source.code, @source.language
+		= link_to 'Download', "/sources/download/#{@source.id}"
+	

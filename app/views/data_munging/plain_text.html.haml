@@ -37,7 +37,11 @@
 		%h3 textmate
 %section
 	%header
-		%h2 Programmatisch
+		%h2 Beispiele
+	%ul
+		%li=link_to "Goethe: Faust I, UTF-8 kodierter Text, mit Windows Zeilentrenner", '/data/data_munging/Faust.txt'
+		%li=link_to "King James Bible: ASCII-Text, mit Unix Zeilentrenner", '/data/data_munging/AV1611Bible.txt'
+= render :partial => "shared/examples"
 
 	
 		

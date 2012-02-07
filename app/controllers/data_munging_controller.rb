@@ -6,6 +6,7 @@ class DataMungingController < ApplicationController
 
   def plain_text
      @title = "Data-Munging - Plain-Text"
+     @sources = Source.find_all_by_tag("plain-text", :order => "language")
   end
   
   def about
@@ -13,6 +14,7 @@ class DataMungingController < ApplicationController
   end
 
   def csv
+    @sources = Source.find_all_by_tag("csv", :order => "language")
   end
 
   def word
