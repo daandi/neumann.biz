@@ -18,27 +18,40 @@ class DataMungingController < ApplicationController
   end
 
   def word
+    @sources = Source.find_all_by_tag("word", :order => "language")
+  end
+  
+  def ods
+      @sources = Source.find_all_by_tag("ods", :order => "language")
   end
 
   def excel
+    @sources = Source.find_all_by_tag("excel", :order => "language")
   end
 
   def pdf
+    @sources = Source.find_all_by_tag("pdf", :order => "language")
   end
 
   def html
   end
 
   def xml
+     @sources = Source.find_all_by_tag("xml", :order => "language")
   end
 
   def hocr
   end
 
-  def open_office
+  def tei
+    @sources = Source.find_all_by_tag("tei", :order => "language")
   end
   
-  def data_base
+  def wikipedia_dump
+    @sources = Source.find_all_by_tag("wikipedia_dump", :order => "language")
+  end
+  
+  def json
   end
   
   def serve_content

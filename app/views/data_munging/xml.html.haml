@@ -1,2 +1,58 @@
-%h1 DataMunging#xml
-%p Find me in app/views/data_munging/xml.html.haml
+%header
+	%h1 Extensible Markup Language (XML)
+%section
+	%h2 Beschreibung : XML
+	%article
+		%h3 Allgemein
+		%p XML ist eine Auszeichnungssprache zur Darstellung hierarchischer Strukturen in Textdateien und ein häufiges Austauschformat zwischen Programmen.
+%section
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%p kann annotiert werden.
+		%h3 Layout / Typen
+		%p kann annotiert werden
+		%h3 Logische Strukturierung
+		%p Hierachie durch Schachtelung. Semantik durch Tags und Attribute.
+%section
+	%h2 Besonderheiten
+	%article
+		%h3 Wohlgeformtheit
+	%article
+		%h3 Grammatiken
+	%article
+		%h3 Validität
+%section
+	%h2 Bekannte Anwendungen / Subsprachen
+	%p XML ist definitf das am weitesten verbreitete Austauschformat und hat sich mit dem aufkommen von Java durchgesetzt. Deshalb kann hier nur ein kleiner Uaszug gegeben werden:
+	%ul
+		%li XHTML : alternatives Format für Webseiten
+		%li SOAP
+		%li XSLT
+		%li ...
+		
+%section
+	%header
+		%h2 XML - Dateien erstellen, bearbeiten, anzeigen
+	%article
+		%h3 Erstellen
+		Programmatisch
+		per Hand
+	%article
+		%h3 Anzeigen
+		als Text
+		im Browser
+		XSLT
+	%article
+		%h3 Verarbeiten
+		%h4 SAX
+		%h4 DOM
+		
+%section
+	%header
+		%h2 Beispiele
+
+= render :partial => "shared/examples"
+
+	
+		

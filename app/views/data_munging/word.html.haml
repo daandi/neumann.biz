@@ -1,2 +1,46 @@
-%h1 DataMunging#word
-%p Find me in app/views/data_munging/word.html.haml
+%header
+	%h1 Word
+%section
+	%h2 Beschreibung : 
+	%article
+		%h3 Allgemein
+		%p Word Dateien sind das Datenformat des populären Windows-Textverarbeitungsprogrammes Microsoft Word. Neben PDF und ODF sind Word-Dateien der de facto Standard im Schriftverkehr.
+%section
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%p Als Textverarbeitungsprogramm erlaubt Word nahezu alle Formatierungen.
+		%h3 Layout / Typen
+		%p Begrenzt nur durch auf dem Computer installierte Schriftarten
+		%h3 Logische Strukturierung
+		%p möglich, wird aus Unkenntnis selten eingesetzt
+%section
+	%h2 Besonderheiten
+	%article
+		%h2 Varianten
+		%h3 .doc - Word bis 2003
+		%p Binäres und urpsrünglich proprietäre Dateiformate, die sogar unter unterschiedlichen Word-Versionen inkompatibel waren wurden bis zur Version Word 2007 eingesetzt. Heute immer noch verbreitet.
+		%h3 .docx -Word ab 2003
+		%p Ab Word 2007 gibt es das auf XML basierende .docx Format.
+		=link_to 'mehr dazu auf Wikipedia', 'http://de.wikipedia.org/wiki/Office_Open_XML', :rel => 'nofollow'
+		%h3 Makros
+		%p Word erlaubt in VBA-Script geschriebene Makros einzubinden.
+		
+%section
+	%header
+		%h2 Word-Dateien erstellen, anzeigen und bearbeiten
+		Textdateien lassen sich mit Texteditoren bearbeiten, diese dienen auch der Dasrstellung. Die Auswahl ist groß und alle Betriebssystem werden standardmäßig mit zumindest rudimentären Texteditoren ausgeliefert.
+		%h3 vi
+		%h3 emacs
+		%h3 notepad
+		%h3 textmate
+%section
+	%header
+		%h2 Beispiele
+	%ul
+		%li=link_to "Goethe: Faust I, UTF-8 kodierter Text, mit Windows Zeilentrenner", '/data/data_munging/Faust.txt'
+		%li=link_to "King James Bible: ASCII-Text, mit Unix Zeilentrenner", '/data/data_munging/AV1611Bible.txt'
+= render :partial => "shared/examples"
+
+	
+		
