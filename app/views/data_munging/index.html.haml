@@ -1,32 +1,44 @@
-%h1 Data-Munging
-%article
+%section
 	%header
-		%h2 Data-Munging im SS 12
-	%h3 Kurs
-	%ul
-		%li=link_to 'Data-munging - Kursbeschreibung', '/data_munging/about'
-	%h3 Datenextraktion
-	%ul
-		%li=link_to 'Plain-text, Textdateien und Kodierungswahnsinn', '/data_munging/plain_text'
-		%li=link_to 'CSV ( Comma-Separated Values), tabellarische Daten im Textformat', '/data_munging/csv'
-		%li=link_to 'Word', '/data_munging/word'
-		%li=link_to 'Excel', '/data_munging/excel'
-		%li=link_to 'ODS - Open Office - Offene Allternatives Dokumentformat', '/data_munging/ods'
-		%li=link_to 'Portable Document Format, PDF', '/data_munging/pdf'
-		%li=link_to 'HTML', '/data_munging/html'
-		%li=link_to 'XML - Extensible Markup Language', '/data_munging/xml'
-		%li=link_to 'TEI - Text Encoding Initiative - eine Beschreiungssprache in XML', '/data_munging/tei'
-		%li=link_to 'Wikipedia - Dumps', '/data_munging/wikipedia_dump'
-		%li=link_to 'hOCR - Text und Layout', '/data_munging/hocr'
-	%h3 Datenbereitstellung
-	%ul
-		%li=link_to 'Webserver und Statische Daten', '/data_munging/static_data'
-		%li=link_to 'Dynamische Daten', '/data_munging/dynamic_data'
-		%li=link_to 'Webframeworks und ORM', '/data_munging/frameworks'
-		%li=link_to 'REST/SOAP', '/data_munging/rest'
-	%h3 Links
-	%ul
-		%li Cloud File Converter : http://www.tei-c.org/oxgarage/
+		%h1 Data-Munging im SS 12
+	%article
+		%h2 Kurs
+		%ul
+			%li=link_to 'Data-Munging - Kursbeschreibung', '/data_munging/about'
+		%h2 Datenextraktion
+		%ul
+			%li=link_to 'Plain-text, Textdateien und Kodierungswahnsinn', '/data_munging/plain_text'
+			%li=link_to 'CSV ( Comma-Separated Values), tabellarische Daten im Textformat', '/data_munging/csv'
+			%li=link_to 'Word', '/data_munging/word'
+			%li=link_to 'Excel', '/data_munging/excel'
+			%li=link_to 'ODS - Open Office - Offene Allternatives Dokumentformat', '/data_munging/ods'
+			%li=link_to 'Portable Document Format, PDF', '/data_munging/pdf'
+			%li=link_to 'HTML', '/data_munging/html'
+			%li=link_to 'XML - Extensible Markup Language', '/data_munging/xml'
+			%li=link_to 'TEI - Text Encoding Initiative - eine Beschreiungssprache in XML', '/data_munging/tei'
+			%li=link_to 'Wikipedia - Dumps', '/data_munging/wikipedia_dump'
+			%li=link_to 'hOCR - Text und Layout', '/data_munging/hocr'
+		%h2 Datenbereitstellung
+		%ul
+			%li=link_to 'Webserver und Statische Daten', '/data_munging/static_data'
+			%li=link_to 'Dynamische Daten', '/data_munging/dynamic_data'
+			%li=link_to 'Webframeworks und ORM', '/data_munging/frameworks'
+			%li=link_to 'REST/SOAP', '/data_munging/rest'
+	%article
+		%h2 Links und Tools zum Thema Datenextraktion und Datenbereitstellung
+		%ul
+			%li=link_to 'Cloud File Converter', 'http://www.tei-c.org/oxgarage/', :rel => "nofollow"
+			%li=link_to 'TIKA', 'http://tika.apache.org/', :rel => "nofollow"
+	%article
+		%h2 Literatur
+		%ul
+			%li
+				=link_to 'TIKA in Action', 'http://manning.com/mattmann/', :rel => "nofollow"
+				%p Für Java-Programmierer.
+			%li
+				=link_to 'Data Munging with Perl', 'http://www.manning.com/cross/', :rel => "nofollow"
+				%p Für Perl Hacker
+		
 
 
 

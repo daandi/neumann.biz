@@ -34,6 +34,8 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/ods"
     get "data_munging/tei"
     get "data_munging/wikipedia_dump"
+    get "data_munging/static_data"
+    get "data_munging/dynamic_data"
     match 'data_munging' => 'data_munging#index'
   
     #Sources
