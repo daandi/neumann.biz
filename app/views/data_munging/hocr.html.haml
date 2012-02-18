@@ -1,2 +1,51 @@
-%h1 DataMunging#hocr
-%p Find me in app/views/data_munging/hocr.html.haml
+%header
+	%h1 hOCR
+%section
+	%h2 Beschreibung : hOCR
+	%article
+		%h3 Allgemein
+		%p hOCR ist ein hybrides Format, zum speichern und Anzeigen von Daten, welche aus einem OCR-Prozess stammen.
+		%p Zum einen sollen Teile der ursprünglichen Formatierung in HTML nachgebildet werden, zum anderen sollen Daten, die in reinem HTML nicht angezeigt werden können unsichtbar gespeichert werden.
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%ol
+			%li Anzeige: Über HTML Tags
+			%li aus OCR-PRozess: als Attribute in den HTML Tags
+		%h3 Layout / Typen
+		%ol
+			%li Anzeige: minmal, bold und italic aus Style-Attribut
+			%li mehr Information in Style-Attribut
+		%h3 Logische Strukturierung
+		%p Die logische Strukturierung erfolgt nach minmalen Layoutstrukturen: Seite &rarr; Block &rarr; Paragraph &rarr; Zeile &rarr; Wort
+%section
+	%h2 Besonderheiten
+	%article
+		%h2 Verbreitung - Einsatz im Google Digitalisierungsprojekt
+		%p hOCR ist einer der OCR-Kodierungsstandards in dem Daten aus dem Google-Digitalisierungsprojekt gespeichert werden. De facto liegen Millionen von Büchern und Milliarden von Seiten in diesem Format vr.
+		%h2 Spezifikation
+		%p Die Spezifikation lässt sehr viel Raum zur Interpretation, Daten im Format hOCR können untereinander sehr verschieden sein.
+		%p 
+			
+			=link_to 'Link zur Spezifikation', 'https://docs.google.com/document/preview?id=1QQnIQtvdAC_8n92-LhwPcjtAUFwBlzE8EWnKAxlgVf0&pli=1', :rel =>'nofollow'
+%section
+	%h2 Tools zum Arbeiten mit hOCR
+	%article
+		%h3 hOCR - Tools
+		%p=link_to 'hOCR-Tools','http://code.google.com/p/hocr-tools/', :rel => 'nofollow'
+		%h3 rhOCR - eine Ruby Bibliothek zum Umgang mit hOCR
+		%p=link_to 'rhOCR - gem', 'https://rubygems.org/gems/rhocr'
+		
+%section
+	%header
+		%h2 Beispiele für hOCR Daten im Einsatz
+	%article
+		
+%section
+	%header
+		%h2 Alternative OCR-Formate
+
+= render :partial => "shared/examples"
+
+	
+		

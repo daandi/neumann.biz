@@ -34,6 +34,7 @@ class DataMungingController < ApplicationController
   end
 
   def html
+     @sources = Source.find_all_by_tag("html", :order => "language")
   end
 
   def xml
@@ -41,6 +42,7 @@ class DataMungingController < ApplicationController
   end
 
   def hocr
+     @sources = Source.find_all_by_tag("hocr", :order => "language")
   end
 
   def tei
