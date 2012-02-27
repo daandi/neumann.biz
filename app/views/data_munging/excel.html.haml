@@ -1,2 +1,47 @@
-%h1 DataMunging#excel
-%p Find me in app/views/data_munging/excel.html.haml
+%header
+	%h1 Excel
+%section
+	%h2 Beschreibung : 
+	%article
+		%h3 Allgemein
+		%p Excel-Dateien sind das Ausgabeformat der Tabellenkalkulation Excel aus dem Office-Paket von Microsoft. Sie sind vor allem im geschäftlichen Bereich stark verbreitet.
+%section
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%p Möglich. Aber nicht Hauptaufgabe
+		%h3 Layout / Typen
+		%p Begrenzt nur durch auf dem Computer installierte Schriftarten
+		%h3 Logische Strukturierung
+		%p Durch Zellen, Spalten, Reihen, Bezüge und Formeln.
+%section
+	%h2 Besonderheiten
+	%article
+		%h2 Varianten
+		%h3 .xls - Excel bis 2003
+		%p Binäres und urpsrünglich proprietäre Dateiformate.
+		%h3 .xlxs - Excel ab 2003
+		%p Ab Word 2007 gibt es das auf XML basierende .docx Format.
+		=link_to 'mehr dazu auf Wikipedia', 'http://de.wikipedia.org/wiki/Office_Open_XML', :rel => 'nofollow'
+		%h3 Formeln
+		%p Einige Werte stehen nicht direkt in den Daten sonder werden erst mithilfe von Formel beim Start des Programmes errechnet.
+		%h3
+		%p Excel erlaubt in VBA-Script geschriebene Makros einzubinden.
+		
+%section
+	%header
+		%h2 Excel-Dateien erstellen, anzeigen und bearbeiten
+	%article
+		%h3 Excel-Dateien erstellen
+		%ul
+			%li Mit Microsoft Excel
+			%li Mit der Exportfunktion aus OPenOffice und anderen Tabellenkalkulationen
+%section
+	%header
+		%h2 Beispiele
+	%ul
+		
+= render :partial => "shared/examples"
+
+	
+		

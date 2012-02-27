@@ -31,11 +31,15 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/html"
     get "data_munging/xml"
     get "data_munging/hocr"
-    get "data_munging/ods"
+    get "data_munging/odf"
     get "data_munging/tei"
     get "data_munging/wikipedia_dump"
     get "data_munging/static_data"
     get "data_munging/dynamic_data"
+    get "data_munging/orm"
+    get "data_munging/frameworks"
+    get "data_munging/rest"
+    get "data_munging/soap"
     match 'data_munging' => 'data_munging#index'
   
     #Sources

@@ -21,8 +21,8 @@ class DataMungingController < ApplicationController
     @sources = Source.find_all_by_tag("word", :order => "language")
   end
   
-  def ods
-      @sources = Source.find_all_by_tag("ods", :order => "language")
+  def odf
+      @sources = Source.find_all_by_tag("odf", :order => "language")
   end
 
   def excel
@@ -69,6 +69,9 @@ class DataMungingController < ApplicationController
   end
   
   def rest
+  end
+  
+  def soap
   end
 
 end

@@ -11,7 +11,7 @@
 			%li=link_to 'CSV ( Comma-Separated Values), tabellarische Daten im Textformat', '/data_munging/csv'
 			%li=link_to 'Word', '/data_munging/word'
 			%li=link_to 'Excel', '/data_munging/excel'
-			%li=link_to 'ODS - Open Office - Offene Allternatives Dokumentformat', '/data_munging/ods'
+			%li=link_to 'ODF - Open Document Format - Offene Allternatives Dokumentformate', '/data_munging/odf'
 			%li=link_to 'Portable Document Format, PDF', '/data_munging/pdf'
 			%li=link_to 'HTML', '/data_munging/html'
 			%li=link_to 'XML - Extensible Markup Language', '/data_munging/xml'
@@ -22,8 +22,14 @@
 		%ul
 			%li=link_to 'Webserver und Statische Daten', '/data_munging/static_data'
 			%li=link_to 'Dynamische Daten', '/data_munging/dynamic_data'
-			%li=link_to 'Webframeworks und ORM', '/data_munging/frameworks'
-			%li=link_to 'REST/SOAP', '/data_munging/rest'
+			%li
+				=link_to 'Webframeworks', '/data_munging/frameworks'
+				und
+				=link_to 'ORM', '/data_munging/orm'
+			%li
+				=link_to 'REST', '/data_munging/rest'
+				und
+				=link_to 'SOAP', '/data_munging/rest'
 	%article
 		%h2 Links und Tools zum Thema Datenextraktion und Datenbereitstellung
 		%ul
