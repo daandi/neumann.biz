@@ -10,6 +10,11 @@ html {
 article {
 	font-size:smaller;
 	margin-left:1em;
+	margin:0.5em 0px;
+	color: #333;
+	background-color: #FEFEFE;
+	padding: 1em;
+	border-radius: 0.5em;
 }
 
 
@@ -29,6 +34,10 @@ h2 {
 	border-bottom:0.1em solid #1A99B2;
 }
 
+h3 {
+	border-bottom:0.1em solid #1A99B2;
+}
+
 pre {
 	margin:0px;
 	background-color: #FEFEFE;
@@ -37,21 +46,6 @@ pre {
 	padding: 1em;
 }
 
-
-
-#page_header{
-	border-bottom: 0.1em solid #FFF;
-	padding:0.2em;
-	background-color: #1A99B2;
-}
-
-#page_header h1{
-	font-family: Verdana, sans-serif;
-	border-bottom: 0.1em solid #FFF;
-	font-weight: lighter;
-	border:none;
-
-}
 
 li {
 	list-style-type: square;
@@ -108,6 +102,8 @@ td {
 	color:#FAFAFA;
 }
 
+
+
 #page_navigation {
 	width:22%;
 	float:left;
@@ -117,19 +113,27 @@ td {
 #page_main {
 	margin:0 1em;
 	float:left;
-	margin:0.5em;
-	padding:0.5em 1.5em;
 	width:70%;
 }
 
+
+
 #page_header {
-	font-size:x-large;
-	margin-bottom:1em;
+	border-bottom: 0.1em solid #FFF;
+	padding:0.2em;
+	background-color: #1A99B2;
+	
 }
 
+
 #page_header h1{
-	margin:0 1em;
+	font-family: Verdana, sans-serif;
+	border-bottom: 0.1em solid #FFF;
+	font-weight: lighter;
+	border:none;
 }
+
+
 
 #like_buttons {
 	float:right;

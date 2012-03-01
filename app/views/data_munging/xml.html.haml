@@ -18,18 +18,68 @@
 	%h2 Besonderheiten
 	%article
 		%h3 Wohlgeformtheit
+		%p
+			Ein XML-Dokument muss bestimmten ansprüchen genügen um als wohlgeformt zu gelten:
+			%ul
+				%li Ein einziges Wurzelelement (root-Element) muss vorhanden sein
+				%li Alle geöffneten Tags müssen geschlossen worden sein
+				%li Keine illegalen Zeichen
+				%li Ein Element darf nicht mehrere Attribute mit dem gleichen Namen enthalten
+			Ein nicht wohlgeformtes Dokument wird von jedem XML-Parser verweigert.
+			%h3 Validität
+			%p
+				Eine XML-Datei kann mit Regeln (Grammatik) versehen werden, die von validierenden Parsern geprüft werden.
+				Entspricht die Datei nicht den Regeln weist ein validierender Parser sie zurück.
+			%h3 XML- Header
+			%p
+				Der Header gibt an mit welcher Version gearbeitet wird und in welchem Encoding das XML kodiert ist.
+				Der Header steht als erste Zeile im Element noch vor dem Wurzelelement.
+			%pre &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+	%h2 XML-Grammatiken	/ Schemas	
 	%article
-		%h3 Grammatiken
+		%p Es existieren verschieden Systeme um Grammatiken in XML Dokumente einzubetten oder sie aus externen Quellen zu laden. Am bekanntesten sind
+		%h3 DTD
+		%p Ursprüngliches Grammatikformat. Eher unüblich geworden.
+		=link_to 'Mehr zu DTD', 'http://de.wikipedia.org/wiki/Dokumenttypdefinition', :rel => 'nofollow'
+		%h3 XML Schema/XSD
+		%p  Gebräuchlicher Weg ein XML-Schema einzubinden. Die Einbindung geschieht über den Header.
+		=link_to 'Mehr XML Schemata', 'http://de.wikipedia.org/wiki/XML_Schema', :rel => 'nofollow'
+	%h2 XML-Parser
 	%article
-		%h3 Validität
+		%p XML Parser gibt es in unterschiedlichen Ausführungen, die sich in Performanz und Bedienbarkeit unterschieden.
+		%h3 SAX-Parser (Simple API for XML)
+		%ul
+			%li arbeitet das Dokument sequentiell ab
+			%li Ereignisorientiert (d.h. Man definiert Regeln was beim betreten und Verlasseneines Knotens passiert) 
+			%li Speichersparend, für beliebig große XML Dokumente geeignet
+			%li Henne/Ei - Problem: SAX-Parser können unter umständen nicht valide Dokumente akzeptieren, da sie den Dokumentinhalt erst am Ende des Parsvorgangs kenn
+			%li unübersichtlich und schlecht zu bedienen
+			%li kein Rückspringen möglich
+			%li Faustregel: Ist die Datei kleiner als ein fünftel des des vorhanden Ramsund Performanz ist nicht oberstes Kriterium lohnt SAX wegen der schwierigen Bedienbarkeit nicht
+		=link_to 'Gutes Beispiel auf Wikipedia', 'http://de.wikipedia.org/wiki/Simple_API_for_XML', :rel => 'nofollow'
+		%h3 DOM-Parser (Document Object Model)
+		%ul
+			%li liest  das gesammte Dokument und erzeugt daraus eine Baumstruktur
+			%li braucht mehr Speicher und ist langsamer als SAX
+			%li gute Bedienbarkeit, z.B. über XPath
+			%li Möglichkeit sich im Dokument zu bewegen
+		%h3 Pull Parser
+		%ul
+			%li wie SAX
+			%li aber mit Rücksprungmöglichkeit
+			%li einfacher zu handhaben als SAX
+	%h2 XPath
+	%article
+	
 %section
 	%h2 Bekannte Anwendungen / Subsprachen
-	%p XML ist definitf das am weitesten verbreitete Austauschformat und hat sich mit dem aufkommen von Java durchgesetzt. Deshalb kann hier nur ein kleiner Uaszug gegeben werden:
-	%ul
-		%li XHTML : alternatives Format für Webseiten
-		%li SOAP
-		%li XSLT
-		%li ...
+	%article
+		%p XML ist definitiv das am weitesten verbreitete Austauschformat und hat sich mit dem aufkommen von Java durchgesetzt.
+		%ul
+			%li XHTML : alternatives Format für Webseiten
+			%li SOAP
+			%li XSLT
+			%li ...
 		
 %section
 	%header
