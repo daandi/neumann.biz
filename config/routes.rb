@@ -40,6 +40,9 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/frameworks"
     get "data_munging/rest"
     get "data_munging/soap"
+    get "data_munging/json"
+    get "data_munging/abbyy_xml"
+    get "data_munging/alto_xml"
     match 'data_munging' => 'data_munging#index'
   
     #Sources

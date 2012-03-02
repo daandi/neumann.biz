@@ -54,7 +54,17 @@ class DataMungingController < ApplicationController
   end
   
   def json
+     @sources = Source.find_all_by_tag("json", :order => "language")
   end
+  
+  def abbyy_xml
+     @sources = Source.find_all_by_tag("abbyy_xml", :order => "language")
+  end
+  
+  def alto_xml
+     @sources = Source.find_all_by_tag("alto_xml", :order => "language")
+  end
+  
   
   def serve_content
   end
