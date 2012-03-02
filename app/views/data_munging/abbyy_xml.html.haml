@@ -15,33 +15,31 @@
 		%h3 Logische Strukturierung
 		%p Im XML sind folgende logische Einheiten direkt kodiert:
 		%ul
-			%li
-				Seite
+			%li BlockType
+			%li TextType, TableRowType
+			%li ParagraphType
+			%li LineType, FormattingType
+			%l WordRecognitionVariant, CharRecognitionVariant, CharParamsType
+		%p In unserem Beispiel: Seite (page) -> Blöcke (Block) -> Paragraphen (paragraph) -> Zeilen (line) -> Zeichen (charParam)
+		%p Indirekt sind die Wörter durch Wortgrenzen in den XML Attributen kodiert
+		=link_to "Beschreibende Schema-Datei", 'http://www.abbyy.com/FineReader_xml/FineReader8-schema-v2.xml', :rel => 'nofollow'
 %section
 	%h2 Besonderheiten
-	%article
-		%h2 Zeichentrenner
-		%p Es gibt keinen wirklichen Standard nur Konventionen. Als Zeilentrenner werden meist Varianten von "\n, \r" benutzt. Als Splatentrenner finden häufig ",",";","\t" Verwendung.
-%section
-	%header
-		%h2 CSV-Datei erstellen, bearbeiten und anzeigen
-		%p CSV Dateien lassen sich mit einem beliebigen Texteditor erstellen und bearbeiten. Hier ist die Fehleranfälligkeit ziemlich groß.
-		%p Man kann CSV-Dateien aus fast allen Tabellenkalkulationsprogrammen als Exportformat erzeugen und auch in diese importieren. Dabei findet im normalfall auch eine Konsistenzprüfung im Hinsicht auf die Trennzeichen statt.
+	
 %section
 	%header
 		%h2 Beispiele
-	%ul
-		%li
-			Als Textdatei:
-			%pre
-				Stunde;Montag;Dienstag;Mittwoch;Donnerstag;Freitag
-				1;Mathe;Deutsch;Englisch;Mathe;Kunst
-				2;Sport;Französisch;Geschichte;Sport;Geschichte
-				3;Sport;"Religion ev;kath";Kunst;;Kunst
-			=link_to "CSV- Beispieldatei", '/data/data_munging/wiki.csv'
-		%li
-			Als Tabelle:
-			=image_tag 'data_munging/csv.png'
+	%article
+		%h3 Das Bild auf dessen Verarbeitung das OCR basiert
+		=image_tag 'data_munging/abbyy_xml_example.tif', :width => '800px'
+		%h3 Abbyy XML Beispiel
+%section
+	%h2 Erstellen, verarbeiten
+	%article
+		%h3 Abby XML erstellen
+		%p Abby XML Dateien, werden im Rahmen des OCR-Prozesses erstellt. Es handelt sich um eine maschinell generierte Ausgabe ohne menschliche Intervention.
+		%h3 Abby XML verarbbeiten
+		%p Zum verarbeiten muss die Datei, wie bei XML  üblich geparst werden. Daraufhin müssen die INformationen interpretiert werden.
 
 = render :partial => "shared/examples"
 
