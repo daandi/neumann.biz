@@ -1,11 +1,10 @@
 %header
-	%h1 Comma Seperated Values (CSV)
+	%h1 JavaScript Object Notation (JSON)
 %section
-	%h2 Beschreibung : CSV
+	%h2 Beschreibung : JSON
 	%article
 		%h3 Allgemein
-		%p Tablleraische Daten werden unter zuhilfename zweier zuvor festgelegter Trennzeichen in eine Textdatei geschrieben.
-		%p Häufiges Austauschformat.
+		%p JSON ist ein verbreitetes menschenlesbares Datenaustauschformat, welches XML im Bereich vieler Anwendungen ersetzt hat. Dazu hat vor allem das aufkommen von AJAX beigetragen.
 %section
 	%h2 Struktur
 	%article
@@ -14,32 +13,56 @@
 		%h3 Layout / Typen
 		%p keine
 		%h3 Logische Strukturierung
-		%p wird durch Trennzichen erreich. Üblich sind "\n" um Zeilen und "," um Splaten zu trennen.
+		%p
+			Durch Syntaxelemente aus Javascript:
+			%ul
+				%li {} -> Hashes, Maps
+				%li [] -> Listen, Array
+				%li true, false
+				%li Strings innerhalb von "" oder ''
+				%li null
+		
 %section
 	%h2 Besonderheiten
 	%article
-		%h2 Zeichentrenner
-		%p Es gibt keinen wirklichen Standard nur Konventionen. Als Zeilentrenner werden meist Varianten von "\n, \r" benutzt. Als Splatentrenner finden häufig ",",";","\t" Verwendung.
-%section
-	%header
-		%h2 CSV-Datei erstellen, bearbeiten und anzeigen
-		%p CSV Dateien lassen sich mit einem beliebigen Texteditor erstellen und bearbeiten. Hier ist die Fehleranfälligkeit ziemlich groß.
-		%p Man kann CSV-Dateien aus fast allen Tabellenkalkulationsprogrammen als Exportformat erzeugen und auch in diese importieren. Dabei findet im normalfall auch eine Konsistenzprüfung im Hinsicht auf die Trennzeichen statt.
+		%h3 JSON un Javascript
+		%p JSON benutzt Javascriptsyntax um Objekte darzustellen. Jedes JSON sollte per eval() als Javascript interpretiert werden können.
+		%h3 JSON und XML
+		%p JSON erzeugt erniger Overhead als XML und ist in den meisten Fällen effiktiver zu parsen.
+
 %section
 	%header
 		%h2 Beispiele
-	%ul
-		%li
-			Als Textdatei:
-			%pre
-				Stunde;Montag;Dienstag;Mittwoch;Donnerstag;Freitag
-				1;Mathe;Deutsch;Englisch;Mathe;Kunst
-				2;Sport;Französisch;Geschichte;Sport;Geschichte
-				3;Sport;"Religion ev;kath";Kunst;;Kunst
-			=link_to "CSV- Beispieldatei", '/data/data_munging/wiki.csv'
-		%li
-			Als Tabelle:
-			=image_tag 'data_munging/csv.png'
+		%article
+			%h3 Unformatiert
+			:preserve
+				{"source":{"author":null,"code":"/*\r\nC++ - Vorlesung: hello_world.cpp\r\nAutor: Andreas Neumann\r\nDatum: 06.03.2011\r\nBeschreibung: Gibt >Hello World!< auf dem Terminal aus.\r\n*/\r\n\r\n#include <iostream>\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\t\r\n\tcout << \"Hello World!\" << endl;\r\n\t\r\n}","created_at":"2011-05-21T14:03:06Z","description":"Hallo Welt. Einf\u00fchrendes Programm.","id":1,"language":"cpp","tag":null,"title":"C++ Vorlesung 1 - Hallo Welt","updated_at":"2011-05-21T16:20:33Z"}}
+			%h3 Formatiert
+			~sanitize highlight "{\"source\":{\n\t\"author\":null,\n\t\"code\":\"/*C++ - Vorlesung: hello_world.cpp\n\t\tAutor: Andreas Neumann\n\t\tDatum: 06.03.2011\n\t\tBeschreibung: Gibt >Hello World!< auf dem Terminal aus.\n\t\t*/\n\t\t#include <iostream>\n\t\tusing namespace std;\n\t\tint main() {\n\t\t\tcout << \"Hello World!\" << endl;\n\t\t}\",\n\t\"created_at\":\"2011-05-21T14:03:06Z\",\n\t\"description\":\"Hallo Welt. Einf\u00fchrendes Programm.\",\n\t\t\"id\":1,\n\t\t\"language\":\"cpp\",\n\t\t\"tag\":null,\n\t\t\"title\":\"C++ Vorlesung 1 - Hallo Welt\",\n\t\t\"updated_at\":\"2011-05-21T16:20:33Z\"}\n}", :json
+			%h3 Download
+			=link_to 'Beispiel herunterladen', '/sources/1.json'
+%section
+	%header
+		%h2 Anzeigen, Erstellen und Verarbeiten
+		%article
+			%p Als Austauschformat wird JSON primär programmatisch genutzt.
+			%h3 JSON erstellen
+			%p Viele Programmiersprachen bieten Klassen um JSON OBjekte/ Elemente aus den spracheigenen Elementen zu Erzeugen.
+			%ul
+				%li
+					Scala:
+					~sanitize highlight "JSONObject(Map (\"names\" -> List(\"Maier\", \"Müller\", \"Magerle\"),\"count\" -> 3))\n\nres3: scala.util.parsing.json.JSONObject = {\"names\" : List(Maier, Müller, Magerle), \"count\" : 3}", :scala
+				%li
+					Ruby
+					~sanitize highlight "ruby-1.9.2-p290 :006 > JSON.generate [ \"names\" => [ \"Maier\", \"Müller\", \"Magerle\"] , \"count\" => 3]\n => \"[{\"names\":[\"Maier\",\"Müller\",\"Magerle\"],\"count\":3}]\" ", :ruby
+			%h3 JSON verarbeiten
+			%p In den meisten Sprachen werden JSON-Objekte auf die eignen Sprachelemente abgebildet.
+			%ul
+				%li
+					Ruby
+					~sanitize highlight "ruby-1.9.2-p290 :007 > JSON.parse \"[{\"names\":[\"Maier\",\"Müller\",\"Magerle\"],\"count\":3}]\" \n=> [{\"names\"=>[\"Maier\", \"Müller\", \"Magerle\"], \"count\"=>3}]", :ruby
+			
+				
 
 = render :partial => "shared/examples"
 

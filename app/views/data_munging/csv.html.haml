@@ -23,23 +23,26 @@
 %section
 	%header
 		%h2 CSV-Datei erstellen, bearbeiten und anzeigen
+	%article
 		%p CSV Dateien lassen sich mit einem beliebigen Texteditor erstellen und bearbeiten. Hier ist die Fehleranfälligkeit ziemlich groß.
 		%p Man kann CSV-Dateien aus fast allen Tabellenkalkulationsprogrammen als Exportformat erzeugen und auch in diese importieren. Dabei findet im normalfall auch eine Konsistenzprüfung im Hinsicht auf die Trennzeichen statt.
 %section
 	%header
 		%h2 Beispiele
-	%ul
-		%li
-			Als Textdatei:
-			%pre
-				Stunde;Montag;Dienstag;Mittwoch;Donnerstag;Freitag
-				1;Mathe;Deutsch;Englisch;Mathe;Kunst
-				2;Sport;Französisch;Geschichte;Sport;Geschichte
-				3;Sport;"Religion ev;kath";Kunst;;Kunst
-			=link_to "CSV- Beispieldatei", '/data/data_munging/wiki.csv'
-		%li
-			Als Tabelle:
-			=image_tag 'data_munging/csv.png'
+	%article
+		%ul
+			%li
+				Als Textdatei:
+				%pre
+					:preserve
+						Stunde;Montag;Dienstag;Mittwoch;Donnerstag;Freitag
+						1;Mathe;Deutsch;Englisch;Mathe;Kunst
+						2;Sport;Französisch;Geschichte;Sport;Geschichte
+						3;Sport;"Religion ev;kath";Kunst;;Kunst
+				%p=link_to "CSV- Beispieldatei", '/data/data_munging/wiki.csv'
+			%li
+				Als Tabelle:
+				=image_tag 'data_munging/csv.png'
 
 = render :partial => "shared/examples"
 

@@ -84,6 +84,7 @@
 					<title>C++ Vorlesung 1 - Hallo Welt</title>
 					<updated-at type="datetime">2011-05-21T16:20:33Z</updated-at>
 				</source>
+		%p=link_to 'Besipiel als Datei herunterladen', '/sources/1.xml'
 	
 
 
@@ -126,7 +127,7 @@
 %section
 	%header
 		%h2 XML programmatisch Verarbeiten
-	%p Um XML programatisch zu verarbeiten muss es erst einmap geparst werden.
+	%p Um XML programatisch zu verarbeiten muss es geparst werden.
 	%h3 XML-Parser
 	%article
 		%p XML Parser gibt es in unterschiedlichen Ausführungen, die sich in Performanz und Bedienbarkeit unterschieden.
@@ -166,7 +167,8 @@
 			
 		=link_to 'Xpath auf Wikipedia', 'http://de.wikipedia.org/wiki/XPath', :rel=> 'nofollow'
 	%h2 Quick-and-Dirty-Alternative
-	%p XML lässt sich weiterhin als Plain-Text-Datei betrachten und mit regulären Ausdrücken bearbeiten. Für einfache Anforderungen brauchbar und schnell.
+	%article
+		%p XML lässt sich weiterhin als Plain-Text-Datei betrachten und mit regulären Ausdrücken bearbeiten. Für einfache Anforderungen brauchbar und schnell.
 
 
 = render :partial => "shared/examples"

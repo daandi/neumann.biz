@@ -31,6 +31,7 @@
 	%header
 		%h2 Textdatei erstellen, bearbeiten und anzeigen
 		Textdateien lassen sich mit Texteditoren bearbeiten, diese dienen auch der Dasrstellung. Die Auswahl ist groß und alle Betriebssystem werden standardmäßig mit zumindest rudimentären Texteditoren ausgeliefert.
+	%article
 		%h3 vi
 		%h3 emacs
 		%h3 notepad
@@ -38,9 +39,10 @@
 %section
 	%header
 		%h2 Beispiele
-	%ul
-		%li=link_to "Goethe: Faust I, UTF-8 kodierter Text, mit Windows Zeilentrenner", '/data/data_munging/Faust.txt'
-		%li=link_to "King James Bible: ASCII-Text, mit Unix Zeilentrenner", '/data/data_munging/AV1611Bible.txt'
+	%article
+		%ul
+			%li=link_to "Goethe: Faust I, UTF-8 kodierter Text, mit Windows Zeilentrenner", '/data/data_munging/Faust.txt'
+			%li=link_to "King James Bible: ASCII-Text, mit Unix Zeilentrenner", '/data/data_munging/AV1611Bible.txt'
 = render :partial => "shared/examples"
 
 	
