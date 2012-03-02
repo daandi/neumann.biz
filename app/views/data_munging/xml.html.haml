@@ -26,25 +26,108 @@
 				%li Keine illegalen Zeichen
 				%li Ein Element darf nicht mehrere Attribute mit dem gleichen Namen enthalten
 			Ein nicht wohlgeformtes Dokument wird von jedem XML-Parser verweigert.
-			%h3 Validität
-			%p
-				Eine XML-Datei kann mit Regeln (Grammatik) versehen werden, die von validierenden Parsern geprüft werden.
-				Entspricht die Datei nicht den Regeln weist ein validierender Parser sie zurück.
-			%h3 XML- Header
-			%p
-				Der Header gibt an mit welcher Version gearbeitet wird und in welchem Encoding das XML kodiert ist.
-				Der Header steht als erste Zeile im Element noch vor dem Wurzelelement.
+		%h3 Validität
+		%p
+			Eine XML-Datei kann mit Regeln (Grammatik) versehen werden, die von validierenden Parsern geprüft werden.
+			Entspricht die Datei nicht den Regeln weist ein validierender Parser sie zurück.
+		%h3 XML- Header
+		%p
+			Der Header gibt an mit welcher Version gearbeitet wird und in welchem Encoding das XML kodiert ist.
+			Der Header steht als erste Zeile im Element noch vor dem Wurzelelement.
 			%pre &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
-	%h2 XML-Grammatiken	/ Schemas	
+	
+%section
+	%h2 Bekannte Anwendungen / Subsprachen
 	%article
-		%p Es existieren verschieden Systeme um Grammatiken in XML Dokumente einzubetten oder sie aus externen Quellen zu laden. Am bekanntesten sind
-		%h3 DTD
-		%p Ursprüngliches Grammatikformat. Eher unüblich geworden.
-		=link_to 'Mehr zu DTD', 'http://de.wikipedia.org/wiki/Dokumenttypdefinition', :rel => 'nofollow'
-		%h3 XML Schema/XSD
-		%p  Gebräuchlicher Weg ein XML-Schema einzubinden. Die Einbindung geschieht über den Header.
-		=link_to 'Mehr XML Schemata', 'http://de.wikipedia.org/wiki/XML_Schema', :rel => 'nofollow'
-	%h2 XML-Parser
+		%p XML ist definitiv das am weitesten verbreitete Austauschformat und hat sich mit dem aufkommen von Java durchgesetzt.
+		%ul
+			%li XHTML : alternatives Format für Webseiten
+			%li SOAP : Webausutauschformat
+			%li XSLT : Programmiersprache / Stylesheet für XML in XML
+			%li XSD : YML- Schemadetie in XML
+			%li
+				=link_to 'TEI', '/data-munging/tei'
+				\: Sammlung von Formaten zur Annotierung von Texten
+			%li ...
+
+%section
+	%header
+		%h2 Beispiele
+	%article
+		%h3 Eine einfache XML-Datei
+		%pre
+			:escaped
+				<?xml version="1.0" encoding="UTF-8"?>
+				<source>
+					<author nil="true"></author>
+					<code>/*
+				C++ - Vorlesung: hello_world.cpp
+				Autor: Andreas Neumann
+				Datum: 06.03.2011
+				Beschreibung: Gibt &amp;gt;Hello World!&amp;lt; auf dem Terminal aus.
+				*/
+
+				#include &amp;lt;iostream&amp;gt;
+
+				using namespace std;
+
+				int main() {
+	
+					cout &amp;lt;&amp;lt; "Hello World!" &amp;lt;&amp;lt; endl;
+	
+				}</code>
+					<created-at type="datetime">2011-05-21T14:03:06Z</created-at>
+					<description>Hallo Welt. Einführendes Programm.</description>
+					<id type="integer">1</id>
+					<language>cpp</language>
+					<tag nil="true"></tag>
+					<title>C++ Vorlesung 1 - Hallo Welt</title>
+					<updated-at type="datetime">2011-05-21T16:20:33Z</updated-at>
+				</source>
+	
+
+
+%section
+	%header
+		%h2 XML -anzeigen
+	%article
+		%h3 Im Texteditor
+		%p Da XML als Plaintext kodiert ist problemlos möglich. Kann auch nicht wohlgeformte Dokument anzeigen. Daher überlebenswichtig beim erstellen und reparieren von kaputten Dateien.
+		%h3 Im Webbrowser
+		%p
+			Darstellung aus einem Web-Kit Browser:
+			=image_tag 'data_munging/xml_browser.png'
+		=link_to 'Im eigenen Browser testen.', '/sources/1.xml'
+		
+%section
+	%header
+		%h2 XML-Dateien erstellen
+	%article
+		%h3 Texteditor
+		%p XML kann händisch mit einem beliebigen Texteditor erstellt werden.
+		%p Die meisten IDEs und Texteditoren bieten Higlighting und Prüfung auf wohlgeformtheit und die Möglichkeit zur Valididerung.
+		%h3 Spezielle XML-Editoren
+		%p Für gesteigerte Ansprüche existieren XML-Editoren. Sie bieten unter anderem: Bessere Integration von Schemas, Grammatiken, alternative Ansichten.
+		%h3 generiertes XML
+		%p Viele Programme bieten XML als Exportformat an.
+	
+	%arrticle
+		%h3 XML-Grammatiken	/ Schemas	
+		%article
+			%p Es existieren verschieden Systeme um Grammatiken in XML Dokumente einzubetten oder sie aus externen Quellen zu laden. Am bekanntesten sind
+			%h3 DTD
+			%p Ursprüngliches Grammatikformat. Eher unüblich geworden.
+			=link_to 'Mehr zu DTD', 'http://de.wikipedia.org/wiki/Dokumenttypdefinition', :rel => 'nofollow'
+			%h3 XML Schema/XSD
+			%p	Gebräuchlicher Weg ein XML-Schema einzubinden. Die Einbindung geschieht über den Header.
+			=link_to 'Mehr XML Schemata', 'http://de.wikipedia.org/wiki/XML_Schema', :rel => 'nofollow'
+	
+
+%section
+	%header
+		%h2 XML programmatisch Verarbeiten
+	%p Um XML programatisch zu verarbeiten muss es erst einmap geparst werden.
+	%h3 XML-Parser
 	%article
 		%p XML Parser gibt es in unterschiedlichen Ausführungen, die sich in Performanz und Bedienbarkeit unterschieden.
 		%h3 SAX-Parser (Simple API for XML)
@@ -59,7 +142,7 @@
 		=link_to 'Gutes Beispiel auf Wikipedia', 'http://de.wikipedia.org/wiki/Simple_API_for_XML', :rel => 'nofollow'
 		%h3 DOM-Parser (Document Object Model)
 		%ul
-			%li liest  das gesammte Dokument und erzeugt daraus eine Baumstruktur
+			%li liest	das gesammte Dokument und erzeugt daraus eine Baumstruktur
 			%li braucht mehr Speicher und ist langsamer als SAX
 			%li gute Bedienbarkeit, z.B. über XPath
 			%li Möglichkeit sich im Dokument zu bewegen
@@ -70,37 +153,21 @@
 			%li einfacher zu handhaben als SAX
 	%h2 XPath
 	%article
-	
-%section
-	%h2 Bekannte Anwendungen / Subsprachen
-	%article
-		%p XML ist definitiv das am weitesten verbreitete Austauschformat und hat sich mit dem aufkommen von Java durchgesetzt.
-		%ul
-			%li XHTML : alternatives Format für Webseiten
-			%li SOAP
-			%li XSLT
-			%li ...
-		
-%section
-	%header
-		%h2 XML - Dateien erstellen, bearbeiten, anzeigen
-	%article
-		%h3 Erstellen
-		Programmatisch
-		per Hand
-	%article
-		%h3 Anzeigen
-		als Text
-		im Browser
-		XSLT
-	%article
-		%h3 Verarbeiten
-		%h4 SAX
-		%h4 DOM
-		
-%section
-	%header
-		%h2 Beispiele
+		%p Bei XPath handelt es sich um eine spezielle Anfragesprache für XML. Für fast jede Programmiersprache existieren Bibliotheken die sich mehr oder minder an die XPath Spezifikation halten.
+		Ein paar Beispiele:
+		%pre
+			:preserve
+				/source/code	Alle Code-Elemente unter source
+				/				Wurzel
+				//code			Alle Code Elemente, Elternelemente egal
+				/*/*/*			Alle Elemente, die genau drei Knoten von der Wurzel trennen
+				./				Aktuelles Element
+				attribute::*	Attribute des aktuellen Knotens
+			
+		=link_to 'Xpath auf Wikipedia', 'http://de.wikipedia.org/wiki/XPath', :rel=> 'nofollow'
+	%h2 Quick-and-Dirty-Alternative
+	%p XML lässt sich weiterhin als Plain-Text-Datei betrachten und mit regulären Ausdrücken bearbeiten. Für einfache Anforderungen brauchbar und schnell.
+
 
 = render :partial => "shared/examples"
 

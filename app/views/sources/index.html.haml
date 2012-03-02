@@ -5,7 +5,7 @@
 			%header
 				%h2=source.title
 			%p=source.description
-			=raw highlight source.code, source.language
+			~raw highlight source.code, source.language
 			%footer
 				= link_to 'Download', "sources/download/#{source.id}"
 				= link_to 'Show', source

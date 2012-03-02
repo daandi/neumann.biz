@@ -40,10 +40,12 @@ h3 {
 
 pre {
 	margin:0px;
+	padding:1em;
 	background-color: #FEFEFE;
-	color: #333;
 	font-family:monospace;
-	padding: 1em;
+	background-color:#EEE;
+	color:#333;
+	border-radius:0.5em;
 }
 
 

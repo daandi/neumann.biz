@@ -7,7 +7,7 @@
 		%header
 			%h2=source.title
 		%p=source.description
-		=sanitize highlight source.code, source.language
+		~sanitize highlight source.code, source.language
 		%footer
 			= link_to 'Download', "sources/download/#{source.id}"
 			|

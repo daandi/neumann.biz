@@ -21,6 +21,7 @@ class SourcesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @source }
+      format.json  { render :json => @source }
     end
   end
 
