@@ -48,7 +48,7 @@ class DataMungingController < ApplicationController
 
   def tei
     @sources = Source.find_all_by_tag("tei", :order => "language")
-    @tei_example_xml = Source.find_by_tag("tei_xml_example")
+    @tei_example =  File.open("#{Rails.root}/public/data/data_munging/tei_example.xml").read
   end
   
   def wikipedia_dump
