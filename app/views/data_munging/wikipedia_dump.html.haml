@@ -1,30 +1,64 @@
 %header
 	%h1 Wikipedia Dumps
 %section
-	%h2 Beschreibung : Wikipeda
+	%h2 Beschreibung : Wikipeda Dumps
 	%article
 		%h3 Allgemein
-		%p http://dumps.wikimedia.org/backup-index.html 
+		%p
+			Wikipedia-Dump bezeichnet das Datenformat in dem man komplette Wikimedia-Projekte, wie z.B. die bekannte Online Enzyklopädie
+			=link_to 'Wikipedia' ,'www.wikipedia.com', :rel=>'nofollow'
+			herunterladen kann. Es ahndelt sich um XML-Dokumente in denen die Daten in der wikieignen Markupsprache kodiert sind.
+		%p
+			Die Dumps findet man unter
+			=link_to 'Wiki Dumps', "http://dumps.wikimedia.org/backup-index.html", :rel => 'nofollow'
+			\.
+		
 %section
 	%h2 Struktur
 	%article
 		%h3 Formatierung
-	
+		keine in der Datei, in den Daten durch Wiki Markup
 		%h3 Layout / Typen
-		
+		keine im XML, einige im WIki Markup
 		%h3 Logische Strukturierung
-		
+		Zwei Ebenen:
+		%ol
+			%li Strukturiert: durch XML-Tags
+			%li Semistrukturiert: Innerhalb von bestimmten XML Tags im Texteil in Wiki-Markup kodiert. Was und wie kodiert wird hängt vom Wikiprojekt ab.
 %section
 	%h2 Besonderheiten
 	%article
-		%h2
+		%h3 Wiki-Markup
+		%p Wiki markaup bzw. wikitext bezeichnet eine nicht standartisierte Auszeichnungssprache, welche ein vereinfachtes Subset von HTML zur Verfügung stellt. Es weren keine Tags sondern spezielle Zeichenkombination benutzt um diese Elemete zu kodieren
+		%h3 Überblick über die in Wikimarkup verwendeten Tags
+		=link_to 'Mehr zu Wiki markup', 'http://en.wikipedia.org/wiki/Help:Wiki_markup', :rel=>'nofollow'
+%sevtion
+	%h2 Beispiele
+	%article
+		%h3 Wiki-Dump-XML: Auszug
+		%p Auszug aus einem Dump des Wiktionairy.
+		~sanitize highlight @wiki_dump_example, :xml
+		%h3 Wiki-Markup: Auszug
+		%p Beispiel für wiki markup.
+		%p
+			Originalartikel:
+			=link_to 'Artikel zu "ordo"','http://de.wiktionary.org/wiki/ordo', :rel => 'nofollow'
+		~sanitize highlight @wiki_markup_example, :markup
 %section
 	%header
-		%h2 CSV-Datei erstellen, bearbeiten und anzeigen
-		
-%section
-	%header
-		%h2 Beispiele
+		%h2 Wikipedia Dumps anzeigen und bearbeiten
+	%article
+		%h3 Anzeigen
+		%p Aufgrund der Dateigrößen kann man sich die Dumps nur AUszugweiße in normalen Browsern/XML-Editoren betrachten.
+		%h3 Bearbeiten
+		%p Die Dumps werden im normalfall programmatisch bearbeitet. Die Bearbeitung muss in zwei Schritten erfolgen:
+		%ol
+			%li XML parsen (hier nur effektiv mit SAX bzw. Pull-Parser möglich), gewünschte Information extrahieren
+			%li 
+				Wiki markup parsen: 
+				%ol
+					%li Für grobe Extraktion z.B. mit regulären Ausdrücken
+					%li mit einem speziellen Parser für wiki markup
 
 = render :partial => "shared/examples"
 

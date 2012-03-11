@@ -109,6 +109,7 @@ td {
 #page_navigation {
 	width:22%;
 	float:left;
+	overflow:auto;
 
 }
 
@@ -116,6 +117,7 @@ td {
 	margin:0 1em;
 	float:left;
 	width:70%;
+	overflow:auto;
 }
 
 

@@ -15,6 +15,7 @@ class DataMungingController < ApplicationController
 
   def csv
     @sources = Source.find_all_by_tag("csv", :order => "language")
+    @csv_example = File.open("#{Rails.root}/public/data/data_munging/csv_example.csv").read
   end
 
   def word
@@ -52,6 +53,8 @@ class DataMungingController < ApplicationController
   
   def wikipedia_dump
     @sources = Source.find_all_by_tag("wikipedia_dump", :order => "language")
+    @wiki_dump_example = File.open("#{Rails.root}/public/data/data_munging/wiki_dump_wiktionairy_auszug.xml").read
+    @wiki_markup_example = File.open("#{Rails.root}/public/data/data_munging/wiki_markup_example.txt").read
   end
   
   def json
@@ -60,6 +63,7 @@ class DataMungingController < ApplicationController
   
   def abbyy_xml
      @sources = Source.find_all_by_tag("abbyy_xml", :order => "language")
+     @abbyy_example_xml = File.open("#{Rails.root}/public/data/data_munging/abbyy_short_example.xml").read
   end
   
   def alto_xml

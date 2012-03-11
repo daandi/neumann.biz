@@ -1,0 +1,51 @@
+<document xmlns="http://www.abbyy.com/FineReader_xml/FineReader8-schema-v2.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" producer="FineReader 8.0" xsi:schemaLocation="http://www.abbyy.com/FineReader_xml/FineReader8-schema-v2.xml http://www.abbyy.com/FineReader_xml/FineReader8-schema-v2.xml" mainLanguage="OldGerman" languages="OldGerman">
+<page width="6112" height="4721" resolution="600" originalCoords="true">
+<block blockType="Text" blockName="" isHidden="true" l="1143" t="416" r="2547" b="541">...</block>
+<block blockType="Text" blockName="" isHidden="true" l="1054" t="687" r="2884" b="3748">...</block>
+<block blockType="Text" blockName="" isHidden="true" l="3673" t="406" r="4793" b="525">
+<region>
+<rect l="3673" t="406" r="3841" b="407"/>
+<rect l="3673" t="407" r="4236" b="408"/>
+<rect l="3673" t="408" r="4631" b="409"/>
+<rect l="3673" t="409" r="4793" b="522"/>
+<rect l="3838" t="522" r="4793" b="523"/>
+<rect l="4233" t="523" r="4793" b="524"/>
+<rect l="4628" t="524" r="4793" b="525"/>
+</region>
+<text>
+<par align="Justified">
+<line baseline="491" l="3686" t="418" r="4781" b="504">
+<formatting lang="OldGerman">
+<charParams l="3686" t="425" r="3734" b="484" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="true" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="63" serifProbability="255">/</charParams>
+<charParams l="3754" t="422" r="3807" b="489" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="96" serifProbability="255">E</charParams>
+<charParams l="3818" t="437" r="3859" b="486" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="80" serifProbability="255">n</charParams>
+<charParams l="3876" t="433" r="3897" b="487" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="90" serifProbability="255">t</charParams>
+<charParams l="3915" t="425" r="3955" b="502" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="94" serifProbability="255">s</charParams>
+<charParams l="3915" t="425" r="3955" b="502" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="94" serifProbability="255">t</charParams>
+<charParams l="3972" t="443" r="3995" b="486" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="96" serifProbability="255">e</charParams>
+<charParams l="4011" t="419" r="4050" b="499" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="96" serifProbability="255">h</charParams>
+<charParams l="4070" t="439" r="4104" b="486" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="94" serifProbability="255">u</charParams>
+<charParams l="4125" t="440" r="4161" b="485" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="94" serifProbability="255">n</charParams>
+<charParams l="4176" t="439" r="4212" b="499" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="7" meanStrokeWidth="77" charConfidence="90" serifProbability="255">g</charParams>
+<charParams l="4212" t="419" r="4269" b="487" characterHeight="46" hasUncertainHeight="false" baseLine="0"></charParams>
+<charParams l="4269" t="428" r="4298" b="486" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="true" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="2" meanStrokeWidth="77" charConfidence="94" serifProbability="255">d</charParams>
+<charParams l="4305" t="442" r="4329" b="487" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="2" meanStrokeWidth="77" charConfidence="98" serifProbability="255">e</charParams>
+<charParams l="4335" t="441" r="4362" b="486" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="true" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="2" meanStrokeWidth="77" charConfidence="85" serifProbability="255">r</charParams>
+<charParams l="4362" t="422" r="4418" b="487" characterHeight="46" hasUncertainHeight="false" baseLine="0"></charParams>
+<charParams l="4418" t="422" r="4502" b="489" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="true" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="96" serifProbability="255">M</charParams>
+<charParams l="4522" t="443" r="4553" b="490" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="92" serifProbability="255">a</charParams>
+<charParams l="4572" t="437" r="4594" b="490" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="83" serifProbability="255">t</charParams>
+<charParams l="4615" t="444" r="4638" b="489" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="90" serifProbability="255">e</charParams>
+<charParams l="4654" t="443" r="4681" b="489" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="96" serifProbability="255">r</charParams>
+<charParams l="4700" t="430" r="4723" b="490" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="85" serifProbability="255">l</charParams>
+<charParams l="4734" t="445" r="4762" b="493" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="83" serifProbability="255">e</charParams>
+<charParams l="4764" t="467" r="4781" b="485" suspicious="true" characterHeight="46" hasUncertainHeight="false" baseLine="0" wordStart="false" wordFromDictionary="false" wordNormal="true" wordNumeric="false" wordIdentifier="false" wordPenalty="9" meanStrokeWidth="77" charConfidence="87" serifProbability="255">.</charParams>
+</formatting>
+</line>
+</par>
+</text>
+</block>
+<block blockType="Text" blockName="" isHidden="true" l="3379" t="685" r="5246" b="3534">...</block>
+<block blockType="Text" blockName="" isHidden="true" l="4867" t="3629" r="5063" b="3732">...</block>
+</page>
+</document>

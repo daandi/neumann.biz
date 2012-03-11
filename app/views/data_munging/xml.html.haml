@@ -48,7 +48,8 @@
 			%li
 				=link_to 'TEI', '/data-munging/tei'
 				\: Sammlung von Formaten zur Annotierung von Texten
-			%li ...
+			%li 
+				=link_to "und noch viele, viele mehr", 'http://en.wikipedia.org/wiki/List_of_XML_markup_languages', :rel => 'nofollow'
 
 %section
 	%header
@@ -136,10 +137,10 @@
 			%li arbeitet das Dokument sequentiell ab
 			%li Ereignisorientiert (d.h. Man definiert Regeln was beim betreten und Verlasseneines Knotens passiert) 
 			%li Speichersparend, für beliebig große XML Dokumente geeignet
-			%li Henne/Ei - Problem: SAX-Parser können unter umständen nicht valide Dokumente akzeptieren, da sie den Dokumentinhalt erst am Ende des Parsvorgangs kenn
+			%li Henne/Ei - Problem: SAX-Parser können unter umständen nicht valide Dokumente akzeptieren, da sie den Dokumentinhalt erst am Ende des Parsvorgangs kennen.
 			%li unübersichtlich und schlecht zu bedienen
 			%li kein Rückspringen möglich
-			%li Faustregel: Ist die Datei kleiner als ein fünftel des des vorhanden Ramsund Performanz ist nicht oberstes Kriterium lohnt SAX wegen der schwierigen Bedienbarkeit nicht
+			%li Faustregel: Ist die Datei kleiner als ein zehntel des des vorhanden Rams und Performanz ist nicht oberstes Kriterium lohnt SAX wegen der schwierigen Bedienbarkeit nicht
 		=link_to 'Gutes Beispiel auf Wikipedia', 'http://de.wikipedia.org/wiki/Simple_API_for_XML', :rel => 'nofollow'
 		%h3 DOM-Parser (Document Object Model)
 		%ul
@@ -149,9 +150,15 @@
 			%li Möglichkeit sich im Dokument zu bewegen
 		%h3 Pull Parser
 		%ul
-			%li wie SAX
+			%li ähnlich SAX
 			%li aber mit Rücksprungmöglichkeit
 			%li einfacher zu handhaben als SAX
+			%li stellt einen Iterator über Elemete zur Verrfügung
+		%h3 Data Binding
+		%ul
+			%li XML wird auf Objekte abgebildet
+			%li Abfrage erfolgt wie über Classpath
+		
 	%h2 XPath
 	%article
 		%p Bei XPath handelt es sich um eine spezielle Anfragesprache für XML. Für fast jede Programmiersprache existieren Bibliotheken die sich mehr oder minder an die XPath Spezifikation halten.

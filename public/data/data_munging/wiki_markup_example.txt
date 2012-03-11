@@ -1,0 +1,117 @@
+== ōrdo ({{Sprache|Lateinisch}}) ==
+=== {{Wortart|Substantiv|Lateinisch}}, {{m}} ===
+{{Lateinisch Substantiv Übersicht 2|ōrdo|ōrdin|is}}
+{{Silbentrennung}}
+:ōr·do, {{Pl.}} ōr·di·nēs
+
+{{Aussprache}}
+:{{IPA}} {{Lautschrift|ˈɔʁdoː}}, {{Pl.}} {{Lautschrift|ˈɔʁdineːs}} 
+:{{Hörbeispiele}} {{fehlend}}, {{Pl.}} {{fehlend}}
+
+{{Bedeutungen}}
+:[1] ''gegenständlich:'' [[Reihe]], [[Sitzreihe]] ''(Reihe der Sitze oder Bänke im Theater)'', [[Lage]], [[Schicht]]
+:[2] ''militärisch:'' 
+::— ''(abstrakt: Militär-Gruppierung, Legion)'' [[Glied]], [[Zenturie]], [[Abteilung]], [[Abteilungsglied]], [[Kompanie]]
+::— ''(personifiziert)'' der [[Hauptmann]] selbst
+:[3] ''politisch-gesellschaftlich:'' [[Stand]], [[Klasse]], [[Rang]], [[Stellung]]
+:[4] ''abstrakt:'' [[Ordnung]], gehörige Reihenfolge, [[Anordnung]], [[Regel]]
+::— ''übertragen:'' [[Verfassung]], [[Zustand]]
+:[5] ''kirchlich (mittellateinisch):''
+::[a] [[Ordensgemeinschaft]] ''von Mönchen'' 
+::[b] kirchlicher Stand: [[Weihestufe]]
+::[c] die (göttliche) Weltordnung
+:[6] ''[[Taxonomie]]: Biologische Systematik (neulateinisch):'' [[Ordnung]] oder fachwissenschaftlich [[Ordo]] ''(Zusammenfassung mehrerer eng verwandter Familien, Teil eine Klasse)''
+
+{{Herkunft}}
+:Substantiv zu dem Verb ''{{Ü|la|ordiri}}''
+
+{{Charakteristische Wortkombinationen}}
+:[1] ''ordine'' [[arbor]]um / [[vehiculum]] – eine Baumreihe / Reihe der Fahrzeuge
+:[1/2] [[quattuordecim]] ordines – ''Sitzreihen der Ritter im Theater''
+::''daher:'' in quattourdecim ordinibus sedere – Ritter sein
+:[1/2] [[nullus|nullo]] ''ordine'' – ''gegenständlich:'' unordentlich; ''militärisch:'' nicht in Reih und Glied gestellt
+
+:[2] honestum ''ordine'' [[ducere]] – höherer Zenturio sein/höheres Kommando führen
+:[2] [[furior]]es ''ordines'' – geringere Kommandos
+:[2] ''ordine'' [[egregus|egregi]] – aus Reih und Glied treten
+:[2] ''ordines'' [[servare]] &lt;small&gt;''oder''&lt;/small&gt; [[habere]] – Reih und Glied halten (in Reih und Glied marschieren)
+:[2a] ''ordinem'' [[ducere]] – Zenturio sein ''(eine Abteilung führen)''
+:[2a] [[aliqui|aliquam]] in ''ordinem'' [[cogere]] – degradieren, ''übertragen:'' kränken
+:[2b] ordines primi – Hauptleute ''von den ersten Kompanien'' &lt;span style=&quot;font-size:95%; line-height:12pt&quot;&gt;(der ''[[hastati]]'', ''[[principes]]'' und ''[[triarii]]'', die in zehn solche ''ordines'' oder ''centuriae'' eingeteilt gewesen zu sein scheinen, also ''ordo:'' der dreißigste oder sechzigste Teil einer Legion)&lt;/span&gt;
+
+:[3] ''Stände und Abteilungen in der römischen Gesellschaft:'' 
+::* [[ordo amplissimus]] &lt;small&gt;''oder''&lt;/small&gt; [[ordo senatorius|senatorius]] – der [[Senatorenstand]]
+::* [[ordo equester]] – der [[Ritterstand]]
+::* [[ordo pedester]] – die Klasse der Bürger, die zu Fuß dienen
+::* [[ordo publicanorum]] – Klasse der Steuerpächter
+::* [[ordo scribarum]] – ''den Schreiberdekurien angehörende'' Amtsschreiber&lt;!-- &lt;ref&gt;http://books.google.de/books?id=vk7FJJIvtXYC&amp;pg=PA112&amp;lpg=PA112&amp;dq=ordo+scribarum&amp;source=bl&amp;ots=25Pj_-DhOe&amp;sig=ky0kEfXS3rEMGkI9J3cFocwE97g&amp;hl=de&amp;ei=qD7AS4rSKc2fONO52JYE&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=3&amp;ved=0CA8Q6AEwAg#v=onepage&amp;q=ordo%20scribarum&amp;f=false&lt;/ref&gt; --&gt;
+::* [[ordo libertinorum]] 
+::* [[ordo sacerdotum]] &lt;small&gt;''oder''&lt;/small&gt; [[ordo sacerdotalis|sacerdotalis]]
+::* [[ordo matronarum]]
+:[3] ''ordine'' [[homo|homines]] [[tractare]] – nach ihrer Stellung (verfahren)
+
+:[4] ordines [[fatum|fatorum]] – Gang des Schicksals
+:[4] ordines [[saeculum|saeculorum]] – Zeitenfolge
+:[4] [[res]] in ordinem [[adducere]] &lt;small&gt;''oder''&lt;/small&gt; [[referre]] – etwas in Ordnung bringen
+:[4] ordinem servare &lt;small&gt;''oder''&lt;/small&gt; tenere &lt;small&gt;''oder''&lt;/small&gt; sequi
+:[4] in ordinem se [[referre]] – wieder in Ordnung kommen ''(im gesundheitlichen Sinne)''
+:[4] ordine &lt;small&gt;''oder''&lt;/small&gt; in ordine &lt;small&gt;''oder''&lt;/small&gt; in ordinem – der Reihe nach, ordnungsgemäß
+:[4] extra ordinem – außer der Reihe, außerordentlich; ohne Ordnung, wider aller Ordnung
+:[4] [[Serva ordinem et ordo servabit te]]. ''(Sprichwort)''
+:: Bewahre Ordnung und die Ordnung wird dich bewahren.
+
+:[5a] ''Mönchsstände (Katholische Kirche):''
+::* [[Ordo Benedictinus]] &lt;small&gt;''oder''&lt;/small&gt; [[Ordo Sancte Benedicte]] ([[OSB]]) – [[Benediktiner]]
+::* [[Ordo Fratrum Minorum]] ([[OFM]]) – [[Franziskaner]] (&lt;small&gt;''wörtlich:''&lt;/small&gt; Orden der Minderen Brüder)
+::* [[Ordo Cisterciensis]] ([[OCist]]) – [[Zisterzienser]]
+::* [[Ordo Cartusiensis|Ordo Cart(h)usiensis]] ([[OCart]]) – [[Kartäuser]]
+:[5b] ''Kirchenlatein, Katholizismus:'' ordines – ''die einzelnen Weihestufen'' &lt;!-- &lt;ref&gt;vgl. CIC 108/9, 948-950, http://www.jstor.org/pss/1583519&lt;/ref&gt; --&gt;
+::''insbesondere:'' ordo – ''das Sakrament der'' Priesterweihe
+
+:[6] ''Ordines'' sunt exempli gratia Insectis [[Diptera]] et [[Odonata]]. 
+::''Ordnungen'' der Insekten sind zum Beispiel die Zweiflügler und die Libellen.
+
+{{Gegenwörter}}
+:[1] [[confusio]], [[conturbatio]], [[perturbatio]]
+
+{{Abgeleitete Begriffe}}
+:''(lateinisch)'' [[ordinare]], [[ordinatio]], [[ordinatim]], [[ordinarius]]
+:[5b] [[Ordination]]
+
+==== Übersetzungen ====
+{{Ü-links}}
+:{{Übersetzungen umleiten|5a|Ordensgemeinschaft|}} {{f}}
+:{{Übersetzungen umleiten|5b|Weihestufe|}} {{f}}
+:{{Übersetzungen umleiten|6|Ordnung|2}} {{f}} 
+{{Ü-Abstand}}
+*{{fr}}: [1] {{Ü|fr|}}
+*{{it}}: [1] {{Ü|it|}}
+{{Ü-rechts}}
+
+{{Referenzen}}
+:[5a] Lateinischer {{Wikipedia2|la|Ordo religiosus}}
+:[6] Lateinischer {{Wikipedia2|la|Ordo (taxinomia)}}
+:[1–4] {{Ref-Georges}}, Band 2, Sp. 1395f.
+
+{{Ähnlichkeiten}}
+
+[[br:ordo]]
+[[el:ordo]]
+[[en:ordo]]
+[[et:ordo]]
+[[fi:ordo]]
+[[fr:ordo]]
+[[hu:ordo]]
+[[id:ordo]]
+[[io:ordo]]
+[[it:ordo]]
+[[ja:ordo]]
+[[ko:ordo]]
+[[la:ordo]]
+[[no:ordo]]
+[[pl:ordo]]
+[[ru:ordo]]
+[[sv:ordo]]
+[[tr:ordo]]
+[[vi:ordo]]
+[[zh:ordo]]

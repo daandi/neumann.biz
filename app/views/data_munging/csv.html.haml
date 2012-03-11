@@ -33,13 +33,8 @@
 		%ul
 			%li
 				Als Textdatei:
-				%pre
-					:preserve
-						Stunde;Montag;Dienstag;Mittwoch;Donnerstag;Freitag
-						1;Mathe;Deutsch;Englisch;Mathe;Kunst
-						2;Sport;Französisch;Geschichte;Sport;Geschichte
-						3;Sport;"Religion ev;kath";Kunst;;Kunst
-				%p=link_to "CSV- Beispieldatei", '/data/data_munging/wiki.csv'
+				~sanitize highlight @csv_example, :csv
+				%p=link_to "CSV- Beispieldatei", '/data/data_munging/csv_example.csv'
 			%li
 				Als Tabelle:
 				=image_tag 'data_munging/csv.png'

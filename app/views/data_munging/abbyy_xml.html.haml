@@ -33,6 +33,9 @@
 		%h3 Das Bild auf dessen Verarbeitung das OCR basiert
 		=image_tag 'data_munging/abbyy_xml_example.tif', :width => '800px'
 		%h3 Abbyy XML Beispiel
+		%p Gekürzter Auszug aus der zugehörigen Abbyy-XML-Datei:
+		~sanitize highlight @abbyy_example_xml, :xml
+		=link_to 'komplette Abbyy-XML-Datei herunterladen', '/data/data_munging/abbyy_xml_example.xml'
 %section
 	%h2 Erstellen, verarbeiten
 	%article

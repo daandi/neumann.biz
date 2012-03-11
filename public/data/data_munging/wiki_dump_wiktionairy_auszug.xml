@@ -1,0 +1,97 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.6/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.6/ http://www.mediawiki.org/xml/export-0.6.xsd" version="0.6" xml:lang="de">
+  <siteinfo>
+    <sitename>Wiktionary</sitename>
+    <base>http://de.wiktionary.org/wiki/Wiktionary:Hauptseite</base>
+    <generator>MediaWiki 1.19wmf1</generator>
+    <case>case-sensitive</case>
+    <namespaces>
+      <namespace key="-2" case="case-sensitive">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="case-sensitive" />
+      <namespace key="1" case="case-sensitive">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="case-sensitive">Wiktionary</namespace>
+      <namespace key="5" case="case-sensitive">Wiktionary Diskussion</namespace>
+      <namespace key="6" case="case-sensitive">Datei</namespace>
+      <namespace key="7" case="case-sensitive">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="case-sensitive">Vorlage</namespace>
+      <namespace key="11" case="case-sensitive">Vorlage Diskussion</namespace>
+      <namespace key="12" case="case-sensitive">Hilfe</namespace>
+      <namespace key="13" case="case-sensitive">Hilfe Diskussion</namespace>
+      <namespace key="14" case="case-sensitive">Kategorie</namespace>
+      <namespace key="15" case="case-sensitive">Kategorie Diskussion</namespace>
+      <namespace key="102" case="case-sensitive">Verzeichnis</namespace>
+      <namespace key="103" case="case-sensitive">Verzeichnis Diskussion</namespace>
+      <namespace key="104" case="case-sensitive">Thesaurus</namespace>
+      <namespace key="105" case="case-sensitive">Thesaurus Diskussion</namespace>
+    </namespaces>
+  </siteinfo>
+    <page>
+      <title>Blecheimer</title>
+      <ns>0</ns>
+      <id>271534</id>
+        <sha1>o5ssibzur73e3lkvg3vp4bpdjg50cs9</sha1>
+      <revision>
+        <id>2133103</id>
+        <timestamp>2012-02-24T19:34:26Z</timestamp>
+        <contributor>
+          <username>Priwo</username>
+          <id>19285</id>
+        </contributor>
+        <comment>Neue Seite: == Blecheimer ({{Sprache|Deutsch}}) == === {{Wortart|Substantiv|Deutsch}}, {{m}} ===  {{Deutsch Substantiv Übersicht |Nominativ Singular=der Blecheimer |Nominativ Plural=die Blecheim…</comment>
+        <text xml:space="preserve">== Blecheimer ({{Sprache|Deutsch}}) ==
+  === {{Wortart|Substantiv|Deutsch}}, {{m}} ===
+
+  {{Deutsch Substantiv Übersicht
+  |Nominativ Singular=der Blecheimer
+  |Nominativ Plural=die Blecheimer
+  |Genitiv Singular=des Blecheimers
+  |Genitiv Plural=der Blecheimer
+  |Dativ Singular=dem Blecheimer
+  |Dativ Plural=den Blecheimern
+  |Akkusativ Singular=den Blecheimer
+  |Akkusativ Plural=die Blecheimer
+  }}
+  {{Silbentrennung}}
+  :Blech·ei·mer, {{Pl.}} Blech·ei·mer
+
+  {{Aussprache}}
+  :{{IPA}} {{Lautschrift|...}}, {{Pl.}} {{Lautschrift|...}}
+  :{{Hörbeispiele}} {{fehlend}}, {{Pl.}} {{fehlend}}
+
+  {{Bedeutungen}}
+  :[1] Eimer, hergestellt aus Blech
+
+  {{Herkunft}}
+  :[1] [[Determinativkompositum]] aus den Substantiven [[Blech]] und [[Eimer]]
+    
+  {{Oberbegriffe}}
+  :[1] [[Eimer]]
+
+  {{Beispiele}}
+  :[1] 
+
+  ==== Übersetzungen ====
+  {{Ü-links}}
+  *{{en}}: [1] {{Ü|en|}}
+  *{{it}}: [1] {{Ü|it|}}
+  {{Ü-Abstand}}
+  *{{sv}}: [1] {{Ü|sv|}}
+  *{{es}}: [1] {{Ü|es|}}
+  {{Ü-rechts}}
+
+  {{Referenzen}}
+  :[1] {{Ref-DWDS|Blecheimer}}
+  :[1] {{Ref-Canoo|Blecheimer}}
+  :[1] {{Ref-UniLeipzig|Blecheimer}}
+  :[1] {{Ref-FreeDictionary|Blecheimer}}</text>
+      </revision>
+    </page>
+    <page>
+      ....
+    </page>
+</mediawiki>
+  
