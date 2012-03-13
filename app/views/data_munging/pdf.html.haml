@@ -4,12 +4,86 @@
 	%h2 Beschreibung : PDF
 	%article
 		%h3 Allgemein
-		%p PDF ist als orimär als Anzeigeformat konzipiert.
+		%p Binäres Format zum layoutgetreuen Anzeigen von Dokumenten.
 		%p Ziel ist es, dass der im PDF gespeicherte Inhalt unabhängig von Plattform und verwendete Software immer gleich angezeigt wird.
+%section
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%p Fast alles möglich
+		%h3 Layout / Typen
+		%p in das Dokument eingebetet
+		%h3 Logische Strukturierung
+		rudimentär
 		
 %section
+	%h2 Besonderheiten
+	%article
+		%h3 PDF/A
+		%p 
+			spezielles PDF-Format zur Archivierung von Daten:
+			=link_to 'mehr dazu', 'http://de.wikipedia.org/wiki/PDF/A', :rel => 'nofollow'
+		%h3 PDF-Überblick
+		%p
+			=link_to 'PDF-Formatefamilie im Überblick', 'http://de.wikipedia.org/wiki/Portable_Document_Format', :rel => 'nofollow'
+
+%section
 	%header
-		%h2 Alternative OCR-Formate
+		%h2 Beispiele
+	%article
+		%h3 PDF Datei im Viewer
+		=image_tag 'data_munging/pdf_viewer_example.png'
+		%h3 PDF-Datei
+		%p Eine Beispieldatei
+		=link_to 'Beispieldatei: Auswirkung von Position und Sequenz auf Lautsymbolik','data/daf/Auswirkung_von_Position_und_Sequenz_auf_Lautsymbolik.pdf'
+		%h3 Auszug aus einer PDF-Datei im Texteditor
+		%p Als binäres Format ist PDF nicht mit einem Texteditor zu bearbeiten. 
+		%p 
+			Man beachte 
+			%strong %PDF-1.3
+			am Beginn der Datei. Dies dient zur Identifikation von PDF-Dateien.
+		%pre
+			:preserve
+				%PDF-1.3
+				%Äåòåë§ó ÐÄÆ
+				2 0 obj
+				<< /Length 4 0 R /Filter /FlateDecode >>
+				stream
+				xÚ¥ËrÚH@÷ýwé,ÜôûÕx¤ªdÊ]62ÈÆ l=ì}®H @\e»@Î}t÷OpO0º.9LKàPNS´×pÙüS¤pÖ> ¿o$ÍOÈ`øsÉ××Mðç¸[?ë@8Ks¸Ô0YÀè§ß5¹qUÏ²ôý;2ù>NZµc8Î<e\7nH»ªË´}µ4ÔZæ7_¼dÅCÿçw°{¥`î;ðÅ2!N(Fõ¶¿¨Ìª¯¬óÓ§:Í_á.ÍàkRWåÿ»å<{h?éãÜÂè&-¦écU's(ÚÜ9Õ²¹Õ!RÒIêeùèËÃ%æ&53EýÎ*{N¯óe-ÒªÈ¦kè&Þ£°Ú¤P¬nþâ¯6w2²ÊÝ×zöýX«îâFqMa;ì`òTknT@ë[ò_¶ÈæYQHÎ=åJ6H²[wÉeH(j¼_»Öm
+				ú'ÇôØ
+			
+
+
+%section
+	%h2 PDF-Dateien anzeigen, erstellen
+	%article
+		%h3 PDF Dateien anzeigen
+		%p 
+			Der ursprüngliche weg führte über den AdobeAcrobatViewer. Mittlerweile existieren daneben für jedes Betriebssystem auch alternative Viewer.
+		%p
+	
+		%h3 Eine PDF-Datei erstellen
+		%p 
+			Um eine PDF-Datei gibt es mehrere Möglichkeiten
+			%ul
+				%li
+					Nativ mit
+					=link_to 'Adobe Acrobat', 'http://de.wikipedia.org/wiki/Adobe_Acrobat', :rel => 'nofollow'
+				%li 
+					Als Export aus einer Anwendung, wie OpenOffice oder Pages
+					=image_tag 'data_munging/export_pdf.png'
+				%li
+					Aus Transformationen eines Formats in ein PDf. Zum Beispiel aus postcipt oder XML mit XSLT.
+		%h3 PDF Dateien bearbeiten
+		%p Das bearbeiten einer PDF Datei ist nicht möglich
+		%h3 PDF Dateien verarbeiten
+		%p
+			Je nach Anspruch gibt es verschiedene Möglichkeiten, die Daten eines PDF Dokuments zu verarbeiten:
+			
+		
+		
+	 
+
 
 = render :partial => "shared/examples"
 

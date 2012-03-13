@@ -180,4 +180,11 @@ header, article, section, footer {
 	padding:1em;
 }
 
+footer p {
+	margin:0;
+	font-size:smaller;
+	padding: 0.5em;
+	
+}
+
 
