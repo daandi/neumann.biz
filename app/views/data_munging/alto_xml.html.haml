@@ -1,7 +1,54 @@
 %header
-	%h1 Alto XML
+	%h1  Analyzed Layout and Text Object (ALTO) XML Schema 
 %section
+
 	%h2 Beschreibung : Alto XML
+	%p Alto XML ist ein  standartisiertes, aus der Bibliothekswelt stammendes XML-Format um Dokumentlayout zu beschreiben.
+
+	%h2 Struktur
+	%article
+		%h3 Formatierung
+		%p wird beschrieben, Datei selbst nicht
+		%h3 Layout / Typen
+		%p werden beschrieben, in Datei selbst nicht
+		%h3 Logische Strukturierung
+		%p Drei Hauptstrukturen <Description>, <Styles>, <Layout> beschreiben einzelne Aspekte des Dokumentlayouts.
+
+		=link_to "Alto-XML-Schema-Datei", 'http://www.loc.gov/standards/alto/alto-v2.0.xsd', :rel => 'nofollow'
+		=link_to 'Alle Elemente des Schmas erklärt','http://www.loc.gov/standards/alto/techcenter/elementSet/index.php', :rel => 'nofollow'
+		
+%section
+	%h2 Besonderheiten
+	%article
+		%h3 <description> - Abschnitt
+		%p Hier finden sich Metadaten zum beschriebenen Dokument.
+		%h3 <Styles> - Abschnitt
+		%p
+			Im Style Abschnitt werden alle Informationen zu Typen und Layout kodiert.
+			%ul
+				%li <TextStyle> : Informationen zu der verwendeten Schriftart
+				%li <ParagraphStyle> : Layoutinformationen, wie Ausrichtung
+			=link_to 'Komplettüberblick über Alto-XML-Styles','http://www.loc.gov/standards/alto/techcenter/layout.php', :rel => 'nofollow'
+		%h3 <Layout> - Abschnitt
+		%p
+			Im Layoutabschnitt findest sich wiedersprüchlicherweise der Inhalt des Dokuments.
+			Ein Dokument besteht aus einer oder mehreren <Page>-Elementen.
+		%h3 Maßeinheiten
+		%p Positionasangaben werden in 1/10mm oder 1/1200inch gemacht.
+		%h3 Umrechnung in Pixel
+		%p 
+			%ul
+				%li Bei Angabe in 1/1200inch: Wert * Auflösung des Dokuments / 1200
+				%li Bei Angabe in 1/100mm: Wert * Auflösung des Dokuments / 254
+
+	
+%section
+		%h2 Beispiele
+
+%section
+	%h2 Erstellen, Anzeigen, Berabeiten
+
+	
 	
 
 = render :partial => "shared/examples"
