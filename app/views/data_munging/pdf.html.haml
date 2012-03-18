@@ -26,7 +26,13 @@
 		%h3 PDF-Überblick
 		%p
 			=link_to 'PDF-Formatefamilie im Überblick', 'http://de.wikipedia.org/wiki/Portable_Document_Format', :rel => 'nofollow'
-
+		%h3 Verträge / Formulare
+		%p
+		%h3 heutiger Funktionsumfang
+		%p
+			PDF hat sich vom ursprünglich statischen Dateiformat zu einer Formatfamilie weiterentwickelt, die eine vielzahl dynamischer Elemente (eingebettete Filme, 3-D Animationen, Sound) erlaubt.
+			
+ 
 %section
 	%header
 		%h2 Beispiele
@@ -76,15 +82,25 @@
 					Aus Transformationen eines Formats in ein PDf. Zum Beispiel aus postcipt oder XML mit XSLT.
 		%h3 PDF Dateien bearbeiten
 		%p Das bearbeiten einer PDF Datei ist nicht möglich
-		%h3 PDF Dateien verarbeiten
-		%p
-			Je nach Anspruch gibt es verschiedene Möglichkeiten, die Daten eines PDF Dokuments zu verarbeiten:
+%section
+	%h2 PDF Dateien verarbeiten
+	%article
+		%p Je nach Anspruch gibt es verschiedene Möglichkeiten, die Daten eines PDF Dokuments zu verarbeiten:
+		%h3 Textextraktion, Teil eines Dokuments
+		%p Um Teile eines einzelnen Dokuments als Text zu extrahieren bietet sich "copy & paste" an.
+		%p Text markieren: STRG+C  bzw ⌘ + C zum kopieren
+		=image_tag 'data_munging/pdf_copy_paste_source.png'
+		%p	Zum einfügen: STRG+V  bzw ⌘ + V zum einfügen. Wenn möglich wird sogar das Layout beibehalten.
+		=image_tag 'data_munging/pdf_copy_paste_target.png'
+		
+		%h3 PDF Textinhalt verarbeiten
+		%p z.B. PDF-Box, pdf2text, informationsverlust
+		%h3 PDF interpretieren und verarbeiten
+		%p Wörter mit positionellen Informationen pdfBox, pdflib, Interpretation notwendig vgl. hOCR, AltoXML
+			
 			
 		
 		
-	 
-
-
 = render :partial => "shared/examples"
 
 	
