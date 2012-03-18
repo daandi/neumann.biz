@@ -1,0 +1,85 @@
+%header
+	%h1 Tika
+%section
+	%h2 Beschreibung : Apache Tika
+	%article
+		%h3 Allgemein
+		%p Framework zur Dokumentanalyse. Das Framework nutzt diverse Java-Projekte (PDF-Box, Apache-Poi ...) um eine einheitliches Interface und Ausgabeformat (XHTML) für unterschiedlichste Dateitypen zur Verfügung zu stellen.
+%section
+	%h2 Unterstützte Formate
+	%ul
+		%li PDF
+		%li Word, Excel, ODF
+		%li Epub
+		%li JPEG,PNG
+		%li MP3
+		%li ZIP
+		%li=link_to '	Gesamtliste der unterstützen Formate','http://tika.apache.org/1.0/formats.html',:rel=> 'nofollow'
+%section
+	%h2 Installation
+	%article
+		%h3 Download
+		%ul
+			%li=link_to 'Apache Tika - Webseite','http://tika.apache.org/', :rel => 'nofollow'
+			%li=link_to 'Tika - App','http://www.apache.org/dyn/closer.cgi/tika/tika-app-1.0.jar', :rel => 'nofollow'
+%section
+	%h2 Benutzung
+	%article
+		%h3 Tika-Gui
+		%p Tika-App kommt mit einem integrierten GUI.
+		%p
+			Das GUI kann folgendermaßen gestartet werden:
+			%pre java -jar tika-app-1.0.jar --gui
+		%p Es werden unterschiedliche Sichtweisen des Dokuments dargestellt:
+		%ul
+			%li Internes Standardformat: XHTML
+			%li formatierter Text
+			%li unformatierter Text
+			%li Metadaten
+		=image_tag 'data_munging/tika-gui.png'
+		%h3 Tika-CLI
+		%p Tika als Kommandozeilenprogramm
+		%p
+			Einige Besipiele:
+			%ul
+				%li
+					Dateiinhalt als XML/XHTML ausgeben:
+					%pre cat Briefmarken_mit_Adresse.1Stk.10.03.2012_1247.pdf | java -jar tika-app-1.0.jar > output.xml
+				%li
+					Datei als Plain-Text ausgeben:
+					%pre 
+						:preserve
+							cat Briefmarken_mit_Adresse.1Stk.10.03.2012_1247.pdf | java -jar tika-app-1.0.jar --text
+							ERROR - Error: Could not parse predefined CMAP file for 'Adobe-Identity-UCS'
+							ERROR - Error: Could not parse predefined CMAP file for 'Adobe-Identity-UCS'
+							03/12 1,40
+
+							A0 010C 08A3
+
+							00 0000 0597
+
+							BÜCHERSENDUNG
+							\...
+	
+				%li 
+					Metadaten ausgeben:
+					%pre
+						:preserve
+							cat LiftinAction.epub | java -jar tika-app-1.0.jar --metadata 
+						
+							Content-Type: application/epub+zip
+							creator: Timothy Perrett
+							description: Summary Lift in Action is a step-by-step exploration of the Lift framework. It moves ...
+							identifier: 9c17ef9f-957e-43ff-9c7f-2c582ad867d5
+							language: eng
+							publisher: Manning Publications
+							title: Lift in Action: The Simply Functional Web Framework for Scala
+							Content-Type: application/epub+zip
+							\...
+
+		%h3 Tika in Programmen
+		%p Tika kann auch aus JVM-Sprachen in Programmen verwendet werden:
+		=link_to 'Quellcode auf Github', 'http://github.com/daandi/TikaSimpleExtractor'
+
+	
+		
