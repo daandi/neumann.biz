@@ -80,6 +80,23 @@
 		%h3 Tika in Programmen
 		%p Tika kann auch aus JVM-Sprachen in Programmen verwendet werden:
 		=link_to 'Quellcode auf Github', 'http://github.com/daandi/TikaSimpleExtractor'
+		
+		%p
+			Das Projekt auschecken und ausprobieren:
+			%pre
+				:preserve
+					$ git clone git@github.com:daandi/TikaSimpleExtractor.git
+					$ cd TikaSimpleExtractor
+					$ sbt test
+			
+		%ul
+			%li
+				Tika Klasse:
+				~sanitize highlight @tika_example, :scala
+			%li
+				Beispiele in der Testklasse:
+				~sanitize highlight @tika_example_spec, :scala
+				
 
 	
 		

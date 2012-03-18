@@ -43,6 +43,7 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/json"
     get "data_munging/abbyy_xml"
     get "data_munging/alto_xml"
+    get "data_munging/tika"
     match 'data_munging' => 'data_munging#index'
   
     #Sources
