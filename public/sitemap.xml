@@ -1,23 +1,584 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
-	<url><loc>http://www.neumann.biz</loc></url>
-	<url><loc>http://www.neumann.biz/</loc></url>
-	<url><loc>http://www.neumann.biz/computerlinguistik-studium</loc></url>
-	<url><loc>http://www.neumann.biz/cv</loc></url>
-	<url><loc>http://www.neumann.biz/daf-studium</loc></url>
-	<url><loc>http://www.neumann.biz/data/Mobilfunk.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/Soziale_Netzwerke_2008.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/Soziale_Netzwerke_2009.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/Soziale_Netzwerke_2010.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/computerlinguistik/Konstruktion_historischer_W%C3%B6rterb%C3%BCcher.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/daf/"Entartete"_und_Deutsche_Kunst.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/daf/Auswirkung_von_Position_und_Sequenz_auf_Lautsymbolik.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/daf/Sprache_als_Magie_-_Magie_als_Sprache.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/ethnologie/Die_chinesische_Kampfkunst-Wu_Shu.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/data/ethnologie/Digitalisierung_und_Aufbereitung_vorhandener_Forschungsdaten.pdf</loc></url>
-	<url><loc>http://www.neumann.biz/ethnologie-studium</loc></url>
-	<url><loc>http://www.neumann.biz/lehre</loc></url>
-	<url><loc>http://www.neumann.biz/links</loc></url>
-	<url><loc>http://www.neumann.biz/publikationen</loc></url>
-	<url><loc>http://www.neumann.biz/vortraege</loc></url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.neumann.biz/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/cv</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/cpp</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/publikationen</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/computerlinguistik-studium</loc>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/daf-studium</loc>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/ethnologie-studium</loc>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vortraege</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/links</loc>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/impressum</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/about</loc>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/plain_text</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/csv</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/json</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/xml</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/tei</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/wikipedia_dump</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/abbyy_xml</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/alto_xml</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/html</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/hocr</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/pdf</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/word</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/excel</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/odf</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/static_data</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/dynamic_data</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/frameworks</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/orm</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data_munging/rest</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/lehre/Klausur2011.pdf</loc>
+  <lastmod>2011-07-29T18:19:27+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/lehre/Klausur2011_Musterloesung.pdf</loc>
+  <lastmod>2011-07-29T18:19:27+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/lehre/cpp-SS2011-klausurergebnisse</loc>
+  <priority>0.20</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/1</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/2</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/3</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/4</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/5</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/7</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/lehre/&#195;bungsklausur.pdf</loc>
+  <lastmod>2011-06-27T18:39:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/lehre/&#195;bungsklausur-Musterl&#195;&#182;sung.pdf</loc>
+  <lastmod>2011-07-01T19:15:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/9</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/vorlesung/10</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/computerlinguistik/Konstruktion_historischer_W&#195;&#182;rterb&#195;&#188;cher.pdf</loc>
+  <lastmod>2011-04-10T13:32:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/daf/Auswirkung_von_Position_und_Sequenz_auf_Lautsymbolik.pdf</loc>
+  <lastmod>2011-04-10T13:32:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/daf/Sprache_als_Magie_-_Magie_als_Sprache.pdf</loc>
+  <lastmod>2011-04-10T13:32:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/ethnologie/Digitalisierung_und_Aufbereitung_vorhandener_Forschungsdaten.pdf</loc>
+  <lastmod>2011-04-10T13:32:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/ethnologie/Die_chinesische_Kampfkunst-Wu_Shu.pdf</loc>
+  <lastmod>2011-04-10T13:32:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/Soziale_Netzwerke_2010.pdf</loc>
+  <lastmod>2011-04-10T13:32:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/Soziale_Netzwerke_2009.pdf</loc>
+  <lastmod>2011-04-10T13:32:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/Soziale_Netzwerke_2008.pdf</loc>
+  <lastmod>2011-04-10T13:32:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/Mobilfunk.pdf</loc>
+  <lastmod>2011-04-10T13:32:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/data_munging/Faust.txt</loc>
+  <lastmod>2012-02-27T11:41:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/data/data_munging/AV1611Bible.txt</loc>
+  <lastmod>2012-02-27T11:41:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/1</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/3</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/4</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/5</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/6</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/7</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/8</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/9</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/10</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/11</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/12</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/13</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/14</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/15</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/16</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/17</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/18</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/19</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/20</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/21</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/22</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/23</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/24</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/25</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/27</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/28</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/29</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/30</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/31</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/32</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/33</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/34</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/35</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/36</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/37</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/38</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/39</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/41</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/42</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/43</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/44</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/45</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/46</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/47</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/48</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/49</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/50</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/51</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/52</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/53</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/54</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/55</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/56</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/57</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/58</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/59</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/60</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/61</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/62</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/63</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/64</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources</loc>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/26</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/40</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/65</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/67</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/69</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/70</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/71</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/72</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/73</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/74</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/75</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/76</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/77</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/78</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/79</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/80</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/81</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/82</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/83</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/84</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/86</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/87</loc>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://www.neumann.biz/sources/88</loc>
+  <priority>0.33</priority>
+</url>
 </urlset>
