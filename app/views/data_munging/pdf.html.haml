@@ -6,6 +6,7 @@
 		%h3 Allgemein
 		%p Binäres Format zum layoutgetreuen Anzeigen von Dokumenten.
 		%p Ziel ist es, dass der im PDF gespeicherte Inhalt unabhängig von Plattform und verwendete Software immer gleich angezeigt wird.
+		%p Eignung für Datenextraktion kanns stark schwanken, da die Standardisierung vor allem die Anzeige, NICHT aber die inhaltliche Kodierung zum Ziel hatte.
 %section
 	%h2 Struktur
 	%article
@@ -14,7 +15,7 @@
 		%h3 Layout / Typen
 		%p in das Dokument eingebetet
 		%h3 Logische Strukturierung
-		rudimentär
+		von schlechter als TExt nis komplett annotiert alles möglich
 		
 %section
 	%h2 Besonderheiten
@@ -58,8 +59,6 @@
 				xÚ¥ËrÚH@÷ýwé,ÜôûÕx¤ªdÊ]62ÈÆ l=ì}®H @\e»@Î}t÷OpO0º.9LKàPNS´×pÙüS¤pÖ> ¿o$ÍOÈ`øsÉ××Mðç¸[?ë@8Ks¸Ô0YÀè§ß5¹qUÏ²ôý;2ù>NZµc8Î<e\7nH»ªË´}µ4ÔZæ7_¼dÅCÿçw°{¥`î;ðÅ2!N(Fõ¶¿¨Ìª¯¬óÓ§:Í_á.ÍàkRWåÿ»å<{h?éãÜÂè&-¦écU's(ÚÜ9Õ²¹Õ!RÒIêeùèËÃ%æ&53EýÎ*{N¯óe-ÒªÈ¦kè&Þ£°Ú¤P¬nþâ¯6w2²ÊÝ×zöýX«îâFqMa;ì`òTknT@ë[ò_¶ÈæYQHÎ=åJ6H²[wÉeH(j¼_»Öm
 				ú'ÇôØ
 			
-
-
 %section
 	%h2 PDF-Dateien anzeigen, erstellen
 	%article
@@ -94,10 +93,23 @@
 		=image_tag 'data_munging/pdf_copy_paste_target.png'
 		
 		%h3 PDF Textinhalt verarbeiten
-		%p z.B. PDF-Box, pdf2text, informationsverlust
-		%h3 PDF interpretieren und verarbeiten
-		%p Wörter mit positionellen Informationen pdfBox, pdflib, Interpretation notwendig vgl. hOCR, AltoXML
+		%p Den reinen Textinhalt extrahieren und als Plaintext verarbeiten. Gerade bei komplexen Dokumenten kann es wenn die Extraktionsheuristik sich irrt zu Problemen kommen, die den Text unbrauchbar werden lassen.
+		%p 
+			Tools zum extrahieren des Textinhaltes.
+			%ul
+				%li=link_to 'TIKA', '/data_munging/tika'
+				%li
+					=link_to 'PDF-Box', 'http://pdfbox.apache.org/', :rel => 'nofollow'
+					Wird von TIKA benutzt. Funktsweise geht aber weit darüber hinaus. (Ausfüllen, Entschlüsseln ...)
+				%li pdf2text
 			
+		%h3 PDF interpretieren und verarbeiten
+		%p Will man weniger (textuell/logischen) Informationen verlieren ist es wichtig die Wortkoordinaten beizubehalten. Dabei kommen Techniken wie bei der OCR zum Einsatz. Im Unterschied zur OCR hat man es mit weniger Fuzziness zu tun, d.h. Features (Schriftgröße, Wortabstand), die in einem nativen PDF auftereten sind stets eindeutig.
+		%p 
+			Werkzeuge zur Extraktion
+			%ul
+				%li=link_to 'PDF-Lib TET','http://www.pdflib.com/de/download/tet/', :rel => 'nofollow'
+				%li=link_to 'Abbyy PDF Transformer (ksotenpflichtig)','http://www.abbyy.de/pdftransformer/', :rel => 'nofollow'
 			
 		
 		
