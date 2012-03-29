@@ -68,6 +68,7 @@ class DataMungingController < ApplicationController
   
   def alto_xml
      @sources = Source.find_all_by_tag("alto_xml", :order => "language")
+     @alto_example_xml = File.open("#{Rails.root}/public/data/data_munging/alto_xml_short_example.xml").read
   end
   
   

@@ -3,7 +3,11 @@
 %section
 
 	%h2 Beschreibung : Alto XML
-	%p Alto XML ist ein  standartisiertes, aus der Bibliothekswelt stammendes XML-Format um Dokumentlayout zu beschreiben.
+	%article
+		%p 
+			Alto XML ist ein  standartisiertes, aus der Bibliothekswelt stammendes XML-Format um Dokumentlayout zu beschreiben. Im normalfall tritt er zusammen mit
+			=link_to 'METS', 'http://www.loc.gov/standards/mets/', :rel => 'nofollow'
+			auf.
 
 	%h2 Struktur
 	%article
@@ -43,9 +47,27 @@
 
 %section
 	%h2 Beispiele
+	%article
+		%h3 Das Ausgangsbild
+		%p
+			Beispiel stammt von der
+			=link_to 'Abbyy Developer Seite','http://www.abbyy-developers.eu/en:tech:features:alto', :rel => 'nofollow'
+		=image_tag 'data_munging/alto_image_quarter_size.png'
+		%h3 Auszug aus einer der möglichen ALTO XML Dateien
+		~sanitize highlight @alto_example_xml, :xml
+		%p
+			Alle Daten stammen von der
+			=link_to ' Abbyy Developer Seite','http://www.abbyy-developers.eu/en:tech:features:alto', :rel => 'nofollow'
+			\. Dort können auch alternative Interpretation heruntergeladen werden.
 
 %section
-	%h2 Erstellen, Anzeigen, Berabeiten
+	%h2 Erstellen, verarbeiten
+	%article
+		%h3 Alto XML erstellen
+		%p Alto XML Dateien, werden im Rahmen des OCR-Prozesses erstellt. Es handelt sich um eine maschinell generierte Ausgabe ohne menschliche Intervention.
+		%h3 Alto XML verarbbeiten
+		%p Zum verarbeiten muss die Datei, wie bei XML  üblich geparst werden. Daraufhin müssen die Informationen interpretiert werden.
+
 
 	
 	
