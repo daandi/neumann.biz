@@ -1,5 +1,73 @@
 %header
 	%h1 Dynamische Daten
+%section
+	%h2 Dynmaische Daten - kurz
+	%article
+		%p Dynamische Daten sind Daten die durch den Aufruf einer URL mit einem GET-Request angefordert werden.
+		%p Die Daten existieren bis zum Zeitpunkt des Aufrufs noch nicht und werden durch eine auf dem Server laufende Anwenung erstellt.
+		%p Der Nutzer kann im normalfall nicht erkennen ob die Datei dynamisch auf dem Server ersteltt wurde oder als statische Datei vorlag.
+%section
+	%h2 Dynamic Data - Varianten
+	%p Es hat sich eine ganze Reihe von Verfahren entwicklet um dynmaische Daten bereitzustellen. Einige lassen sich auf verschiedenen Webservern einsetzen andere sind an besnonder Serverimplmentierungen gebunden.
+	%h2 CGI-Skripte (Common Gateway Interface)
+	%article
+		%p CGI-Skripte sind Programme die auf eine Anfrage hin dynmaisch Webseiten erstellen können. Sie werden in einer vom Server zur Verfügung gestellten Luafzeitumgebung ausgeführt.
+		%h3 Vorteile
+		%ul
+			%li einfach zu schreiben
+			%li weites Feld an möglichen Sprachen
+		%h3 Nachteile
+		%ul
+			%li schlechte Performanz, da für jeden Aufruf die Laufzeitumgebung gestartet wird (Möglichkeiten zur Abhilfe FastCGI, mod_xy)
+			%li schnell unübersichtlich
+			%li Sicheheit - kleine Fehler können Sicherheitskonzept eines ganzen Systems gefähreden
+		%h3 Beispiel
+	%h2 Java-Servlets
+	%article
+		%p Java Servlets sind das Java-Equivalent zu CGI.
+		%p Sie benötigen eine Java-Server-Container, wie z.B. Tomcat oder jetty.
+		%p Da es sich um compilierten Code handelt und die Laufzeitumgebung ständig verfügbar ist sind Servlets wesentlich schneller als CGI-Skripte in einer Standardumgebung.
+		%h3 Beispiel
+		
+	%h2 PHP - Embedded Code
+	%article
+		%p Diese Acronyme bezeichnen verfahren die HTML und Code vermengen.
+		%p In eine normale HTML-Datei wird unter Verwendung bestimmter Tags Programmcode eingebunden.
+		%p Die Datei wird durch eine alternative Endung, zumindest intern auf dem Server, gekennzeichnet.
+		%p Auf eine Anfrage des Clients wird die in der HTML-Datei eingebettete Programmlogik ausgeführt und das Ergebnis an den Client geliefert.
+			
+		%h3 Vorteile
+		%ul
+			%li erleichtert HTML Erzeugung im Vergleich zu CGI stark
+			%li Für Programmierer intuitiv zugänglich
+		%h3 Nachteile
+		%ul
+			%li Vermengung von Programmlogik und Darstellung
+			%li Bei größeren Projekte schwer zu handhaben
+			%li Verhindert Arbeitsteilung, da z.B. WEbdesinger nun stets Gefahr laufen durch Designänderungen die Programmlogik zu beeinflussen.
+			%li Performanz
+			
+		%h3 PHP - Ein Besipiel
+			
+	%h2 JSP, ASP - Embedded Code compiliert - Enterprise Level
+	%article
+		%p Hier handelt es sich umd die .Net- und Java-Equivalente zu PHP.
+		%p Bei JSP wird der Code im Gegensatz zu PHP einmalig in ein Servlet umgewandelt.
+		
+		%h3 Vorteile
+		%ul
+			%li Zugriff auf Java- bzw. .Net-Ökosystem.
+		%h3 Nachteile
+		%ul
+			%li Vermengung von Programmlogik und Darstellung
+	
+	%h2 Haml, Scaml, Sass
+	%article
+		%p Der von diesen Sprachen angewandte Ansatz ähnelt dem embedded Code Ansatz, weicht aber insofern von diesem ab als, dass hier kein HTML mehr geschrieben wird sondern eine Metsprache verwendet wird, die HTML erzeugt und Programmlogik aufruft.
+		%p Die Sprachen finden sich heutzutage meist nicht in einem isolierten Umfeld sondern nehmen Teilaufgaben in einem Webframework wahr.
+		%h3 Haml - Beispiel
+		
+	
 
 	
 		

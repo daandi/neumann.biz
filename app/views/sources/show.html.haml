@@ -16,6 +16,6 @@
 	= @source.language
 %p
 	%b Code:
-	=sanitize highlight @source.code, @source.language
+	~sanitize highlight @source.code, @source.language
 
 = link_to 'Back', sources_path

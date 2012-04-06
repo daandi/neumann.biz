@@ -1,7 +1,64 @@
 %header
-	%h1 Webserver - Statische Daten
+	%h1 Statische Daten
 %section
+	%h2 Statische Daten
+	%article
+		%h3 Beschreibung
+		%p 
+			Statische Daten sind Dateien / Daten, die bei jedem Aufruf durch einen Client, das selbe Ergebnis an diesen zurück liefern.
+			Sie liegen in der gleichen Form in der sie ausgeliefert werden als Datei auf dem Server vor.
 	%h2 Statische Daten bereitstellen
+	%article
+		%p Statische Daten werden im normalfall dadurch bereitgestellt, dass sie auf einem Rechner in ein bestimmtes Verzeichnis verschoben und mit den bestimmten Zugriffsrechten, Besitzern und Gruppen versehen werden.
+		%p Verzeichnisstruktur und notwendige Rechte unterscheiden sich von Betriebssystem und eingestztem Webserver.
+	%h2 Beispiele
+	%article
+		%h3 Statische Daten unter Apache bereitstellen - CIP LMU
+		%p Statische Daten können z.B. über den CIP-Account bereitgestellt werden.
+		%p
+			Dazu kopiert man die Daten in das Verzeichnis
+			%pre ~/public_html
+		%p
+			Die Datei ist nun unter
+			%pre http://www.cip.ifi.lmu/~BENUTZERNAME/DATEINAME
+			zugänglich.
+		%p 
+			Beipiel:
+			%pre
+				:preserve
+					cd ~/public_html
+					touch test.html
+				
+					wget http://www.cip.ifi.lmu.de/~neumannb/test.html
+					\--2012-04-06 17:54:30--  http://www.cip.ifi.lmu.de/~neumannb/test.html
+					Auflösen des Hostnamen www.cip.ifi.lmu.de... 141.84.214.32
+					Verbindungsaufbau zu www.cip.ifi.lmu.de|141.84.214.32|:80... verbunden.
+					HTTP-Anforderung gesendet, warte auf Antwort... 200 OK
+					Länge: 0 [text/html]
+					In »test.html.1« speichern.
+
+					[ <=>                                                           ] 0           --.-K/s   in 0s      
+
+					2012-04-06 17:54:30 (0,00 B/s) - »test.html.1« gespeichert [0/0]
+			%h3 Statische Daten in eine Ruby on Rails Anwendung
+			%p 
+				Statische Daten in einer RoR-Anwendung finden sich im Root-Verzeichnis der Anwendung im Order
+				%pre ./public
+			%p Alle in diesem Ordner abgelegten Daten sind von außen unter der Adresse der Anwendung ohne Angabe des Pfades public zugänglich.
+			%p 
+				Dateien im public Verzeichnis der Anwenung neumann.biz:
+				=image_tag 'data_munging/rails_static.png'
+			%p
+				Die Datei "Faust.txt" ist unter der URL
+				%pre http://www.neumann.biz/data/data_munging/Faust.txt
+				öffentlich zugänglich.
+				
+				
+				
+			
+		
+		
+		
 
 	
 		
