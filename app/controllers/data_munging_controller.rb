@@ -79,10 +79,11 @@ class DataMungingController < ApplicationController
   end
   
   def dynamic_data
+    @cgi_example =  Source.find(89).code
   end
   
   def webframeworks
-    @sinatra_example =  File.open("#{Rails.root}/public/data/data_munging/sinatra_example.rb").read
+    @sinatra_example =  Source.find(90).code
   end
   
   def rest
@@ -92,8 +93,8 @@ class DataMungingController < ApplicationController
   end
   
   def tika
-    @tika_example =  File.open("#{Rails.root}/public/data/data_munging/TikaExtractor.scala").read
-    @tika_example_spec =  File.open("#{Rails.root}/public/data/data_munging/TikaExtractorSpec.scala").read
+    @tika_example =  Source.find(91).code
+    @tika_example_spec =  Source.find(92).code
   end
 
 end
