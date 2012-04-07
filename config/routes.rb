@@ -37,7 +37,7 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/static_data"
     get "data_munging/dynamic_data"
     get "data_munging/orm"
-    get "data_munging/frameworks"
+    get "data_munging/webframeworks"
     get "data_munging/rest"
     get "data_munging/soap"
     get "data_munging/json"

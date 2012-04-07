@@ -81,7 +81,8 @@ class DataMungingController < ApplicationController
   def dynamic_data
   end
   
-  def framworks
+  def webframeworks
+    @sinatra_example =  File.open("#{Rails.root}/public/data/data_munging/sinatra_example.rb").read
   end
   
   def rest

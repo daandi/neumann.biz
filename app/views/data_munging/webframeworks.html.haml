@@ -1,0 +1,117 @@
+%header
+	%h1 Webframeworks
+%section
+	%h2 Web Application Frameworks - Web Frameworks
+	%article
+		%p Mit gehobenen ansprüchen an Webanwendungen nahm deren Komplexität immer stärker zu.
+		%p Webframeworks bieten Standardlösungen an um wiederkehrende Anufgaben in der Webentwicklung zu vereinfachen.
+%section
+	%h2 Typische Komponenten, Konzepte und Aufgaben eines Webframeworks
+	%article
+		%h3 MVC - Model, View, Controller
+		%p MVC ist ein Architekturmuster um Komponenten zu entkoppeln und erlaubt flexiblere Anwendungen zu gestalten. Im bereich der WEbanwendungen hat es starke Verbreitung gefunden. Es besteht aus folgenden drei Komponenten:
+		%ul
+			%li
+				%strong Model (Modell):
+				Beschreibt die zugrundeliegende Daten und abstrahiert deren Speicherung und den Zugriff auf diese.
+			%li
+				%strong View (Darstellung):
+				Regelt die Darstellung der Daten und leitet Nutzerinteraktionen an den Controller weiter.
+			%li
+				%strong Controller (Steuerung):
+				Hier findet sich die Programmlogik wieder und es werden Nutzeringaben verarbeitet		
+		%h3 Scaffolding
+		%p Scaffolding beschreibt einen Vorgang der ein grobes Gerüst für eine Webanwendung erzeugt. Dies ersparrt dem Entwickler sinnlose Routineaufgaben.
+		%h3 Templating
+		%p Anstatt HTML aus Anwendungen heraus zu direkt zu generieren, kann eine TEmplating-Engine eingestzt werden die aus einer DSL mit eingebetettem Code oder HTML mit eingebettetem Code das HTML für den Client erzeugt.
+		
+%section
+	%h2 Bekannte Vertreter und deren Philosophien
+	%p Webframeworks haben sich in den letzten Jahren rasend schnell entwicklet und gegenseitig beeinflusst. Hier soll ein grober, vereinfachter Überblick gegeben werden.
+	%h2 Industriestandrads - Java EE, ASP.Net
+	%p Hier handelt es sich um die älteste Grupe von Frameworks. Sie geben einen allgemeinen Rahmen zum erstellen von Webanwendungen. Konzepte aus jüngeren Framworks werden jedoch häufig integriert oder lassen sich mit Bibliotheken nachrüsten.
+	%p Oft bilden diese Framworks auch die Grundlage, auf deren Basis andere Frameworks aufsetzen.
+	%article
+		%h3 Java EE / J2EE - Teilmodul WebApplication
+		%p Es handelt sich hier im engeren Sinne um eine Spezifikation, die beschreibt wie eine Java-Webanwendung aufgebaut sein sollte und welche module und Schnittstellen sie zur Verfügung stellt.
+		%ul
+			%li Spezifikation eines WebContainers
+			%li Verzeichnisstruktur Entwicklung / Deployment
+			%li JSP (Java Server Pages) - Templating System
+			%li Servlet API
+		%p
+			Erweiterungen:
+			=link_to 'Struts','http://struts.apache.org/', :rel => 'nofollow'
+			,
+			=link_to 'Wicket','http://en.wikipedia.org/wiki/Apache_Wicket',:rel=>'nofollow'
+			,
+			=link_to 'Java Server Faces', 'http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html', :rel => 'nofolow'
+			
+	%h2 MVC-Frameworks -  Ruby on Rails / Django/ CakePHP/ NodeJS
+	%p Diese Gruppe von Frameworks nutzt das MVC-Konzept um Webanwenfungen zu erstellen.
+	%article
+		%h3 Ruby on Rails
+		%p Dieses 2004 veröffentlichte Framwork führte eine neue Art ein, wie Web Applikationen entwickelt werden können.
+		%p Die bis dahin benutzten Framworks erforderten viel händische Konfiguration und Boilerplatecode bis die Applikation lief.
+		%p Ruby on Rails Philosophie "convention over configuration" und integrierte Scaffolding Funktionen erlauben es in wesentlich kürzerer eine lauffähe Webapplikation zu erstellen.
+		=link_to 'Mehr zu Ruby on Rails', 'http://rubyonrails.org/' ,:rel => 'nofollow'
+	%article
+		%h3 CakePHP
+		%p Von Ruby on Rails inspiriertes Framwork in PHP.
+		=link_to 'Mehr zu CakePHP', 'http://cakephp.org/', :rel => 'nofollow'
+	%article
+		%h3 Django
+		%p Von Ruby on Rails inspiriertes Framwork in Pthon.
+		=link_to 'Mehr zu Django', 'http://www.djangoproject.com/', :rel => 'nofollow'
+	%article
+		%h3 Grails
+		%p MVC Framwork im JVM-Ökosystem. Starke Anleihen bei Ruby on Rails.
+		=link_to 'Mehr zu Grails', 'http://grails.org/', :rel => 'nofollow'
+	%article
+		%h3 Play Framework
+		%p MVC Framwork in Java und Scala implementiert. Anleihen bei Ruby on Rails und Django. Spezialität HotCode Reloading.
+		=link_to 'Mehr zum Play Framework', 'http://www.playframework.org/', :rel => 'nofollow'
+		
+	%h2 Andere Ansätze
+	%article
+		%h3 Sinatra
+		%p Das Framwork bezeichnet sich als eine DSL zur schnellen und einfachen WEbentwicklung.
+		%p
+			Eine Webanwendung mit Sinatra:
+			%ul
+				%li
+					Installieren:
+					%pre gem install sinatra
+				%li
+					Der Quellcode:
+					~sanitize highlight @sinatra_example, :ruby
+				%li
+					Ausführen:
+					%pre
+						:preserve
+							ruby sinatra_example.rb 
+							[2012-04-07 17:16:44] INFO  WEBrick 1.3.1
+							[2012-04-07 17:16:44] INFO  ruby 1.9.2 (2011-07-09) [x86_64-darwin11.2.0]
+							\== Sinatra/1.3.1 has taken the stage on 4567 for development with backup from WEBrick
+							[2012-04-07 17:16:44] INFO  WEBrick::HTTPServer#start: pid=5768 port=4567
+				%li
+					Betrachten:
+					%p=image_tag 'data_munging/sinatra_example.png'
+		=link_to 'Mehr zu Sinatra', 'http://www.sinatrarb.com/', :rel => 'nofollow'
+	%article
+		%h3 Scalatra
+		%p Sinatra-Konzept auf der JVM. Hoch konfigurierbar und performant.
+		=link_to 'Mehr zu Scalatra', 'http://www.sinatrarb.com/', :rel => 'nofollow'
+	%article
+		%h3 Lift
+		%p Neue Anforderungen, die mehr Flexibilität von Webanwendungen forden können im Rahmen eines sauberen MVC-Konzepts nicht mehr erfüllt werden. Es exisiteren auf moderenen Webseiten Elemente nebeneinander die eine klare Zuordung zu einem bestimmten Controller nicht mehr erlauben.
+		%p View-First Ansatz. Besonderheiten sind die von Anfang an integrierte Nutzerverwaltung, Sicherheit als Aufgabe des Webframeworks und Commet-Actors.
+		=link_to 'Mehr zu Lift', 'http://liftweb.net/', :rel => 'nofollow'
+	%article
+		%h3 YESOD
+		%p Webframework in Haskell.
+		=link_to 'Mehr zu YESOD','http://www.yesodweb.com/', :rel => 'nofollow'
+	
+
+	
+		
