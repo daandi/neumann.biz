@@ -5,7 +5,7 @@
 	%article
 		%h3 Allgemein
 		%p hOCR ist ein hybrides Format, zum speichern und Anzeigen von Daten, welche aus einem OCR-Prozess stammen.
-		%p Zum einen sollen Teile der ursprünglichen Formatierung in HTML nachgebildet werden, zum anderen sollen Daten, die in reinem HTML nicht angezeigt werden können unsichtbar gespeichert werden.
+		%p Zum einen sollen Teile der ursprünglichen Formatierung in HTML nachgebildet werden, zum anderen sollen Daten, die in reinem HTML nicht angezeigt werden können ohne sie zur Anzeige zu bringen mitgespeichert werden können.
 	%h2 Struktur
 	%article
 		%h3 Formatierung
@@ -28,6 +28,22 @@
 		%p 
 			
 			=link_to 'Link zur Spezifikation', 'https://docs.google.com/document/preview?id=1QQnIQtvdAC_8n92-LhwPcjtAUFwBlzE8EWnKAxlgVf0&pli=1', :rel =>'nofollow'
+			
+%section
+	%header
+		%h2 Beispiel
+	%article
+		%h3 Das Ausgangsbild
+		= image_tag 'data_munging/hOCR_example.jpg', :width => '800px'
+		%h3 Darstellung als HTML
+		= image_tag 'data_munging/hOCR_example_as_HTML.png'
+		%h3 Als HTML-Source
+		~sanitize highlight @hocr_example, :html
+		=link_to 'hOCR-Besipiel herunterladen', '/data/data_munging/hocr_example.html'
+		
+		
+
+
 %section
 	%h2 Tools zum Arbeiten mit hOCR
 	%article
@@ -35,15 +51,26 @@
 		%p=link_to 'hOCR-Tools','http://code.google.com/p/hocr-tools/', :rel => 'nofollow'
 		%h3 rhOCR - eine Ruby Bibliothek zum Umgang mit hOCR
 		%p=link_to 'rhOCR - gem', 'https://rubygems.org/gems/rhocr'
+
 		
 %section
 	%header
 		%h2 Beispiele für hOCR Daten im Einsatz
 	%article
+		%h3 Ein Alignierungstool
+		=image_tag 'data_munging/alignator_example.png'
 		
-%section
-	%header
-		%h2 Alternative OCR-Formate
+		%p Paper in Vorbereitung
+	%article
+		%h3 Suche in Volltextdokumenten mit Higlighting der Fundstellen
+		%p Eine Volltextsuchfunktion mit Highlighting in der Grafik auf Basis von hOCR-Daten bieten diverse Spezial-Katalog der Bayerischen Staatsbibliothek.
+		%p
+			Aktuelle Beispiele:
+			%ul
+				%li=link_to 'Chronicon', 'https://www.historicum.net/metaopac/start.do?View=hist', :rel => 'nofollow'
+				%li=link_to 'ViFa Musik', 'https://www.vifamusik.de/metaopac/start.do?View=mus', :rel => 'nofollow'
+		=image_tag 'data_munging/chronicon_example.png'
+		=link_to 'Permalink zum Beispiel in Chronicon','http://www.historicum.net/metaopac/search?q=bsb10376791&db=15&View=hist&q=%22K%C3%B6nig+Ludwig%22&vt_page=108', :rel => 'nofollow'
 
 = render :partial => "shared/examples"
 

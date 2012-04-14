@@ -43,7 +43,8 @@ class DataMungingController < ApplicationController
   end
 
   def hocr
-     @sources = Source.find_all_by_tag("hocr", :order => "language")
+    @hocr_example = File.open("#{Rails.root}/public/data/data_munging/hocr_example.html").read
+    @sources = Source.find_all_by_tag("hocr", :order => "language")
   end
 
   def tei
