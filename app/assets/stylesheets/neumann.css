@@ -95,6 +95,11 @@ td {
 	font-size:smaller;
 }
 
+img {
+	border:1px solid #999;
+	max-width:100%;
+}
+
 #page {
 	display:block;
 	width: 90%;

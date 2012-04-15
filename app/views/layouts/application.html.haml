@@ -5,7 +5,6 @@
 		= title_helper
 	= stylesheet_link_tag :neumann
 	= stylesheet_link_tag :coderay
-	= javascript_include_tag :application
 	= csrf_meta_tag
 	= favicon_link_tag 'favicon.png'
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
@@ -19,9 +18,12 @@
 				%li=link_to 'Home', '/'
 				%li=link_to 'Lebenslauf', '/cv'
 				%li
-					%strong LMU/CIS - Lehre
+					%strong
+						CIS / LMU
+						Lehre
 					%ul
 						%li=link_to 'Data-Munging', '/data_munging'
+						%li=link_to 'Logische Dokumentenanalyse', '/document_understanding'
 						%li=link_to 'C++', '/cpp'
 				%li=link_to 'Publikationen', '/publikationen'
 				%li

@@ -1,6 +1,6 @@
 NeumannBiz::Application.routes.draw do
   
-  match 'home' => 'pages#home'
+    match 'home' => 'pages#home'
     match 'cv' => 'pages#cv'
     match 'links' => 'pages#links'
     match 'projekte' => 'pages#projekte'
@@ -20,8 +20,9 @@ NeumannBiz::Application.routes.draw do
     match 'projekt' => 'pages#projekt'
     match 'vortrag' => 'pages#vortraeg'
     match 'lmu' => 'pages#lmu'
-  
-    get "data_munging/index"
+    
+    #Data-Munging 
+    match 'data_munging' => 'data_munging#index'
     get "data_munging/about"
     get "data_munging/plain_text"
     get "data_munging/csv"
@@ -45,7 +46,12 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/alto_xml"
     get "data_munging/tika"
     get "data_munging/client_server"
-    match 'data_munging' => 'data_munging#index'
+    
+    #Document Understanding
+    match "document_understanding" => 'document_understanding#index'
+    get "document_understanding/file_formats"
+    get "document_understanding/techniques"
+    
   
     #Sources
     resources :sources
