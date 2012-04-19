@@ -9,6 +9,6 @@
 		%b Description:
 		= @source.description
 		%br
-		~sanitize highlight @example.code, @example.language
+		~sanitize highlight @source.code, @source.language
 		= link_to 'Download', "/sources/download/#{@source.id}"
 	
