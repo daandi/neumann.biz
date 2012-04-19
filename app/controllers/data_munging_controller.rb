@@ -6,7 +6,7 @@ class DataMungingController < ApplicationController
 
   def plain_text
      @title = "Data-Munging - Plain-Text"
-     @sources = Source.find_all_by_tag("plain-text", :order => "language")
+     @sources = group_code_by_language_for_tag("plain-text")
   end
   
   def about
@@ -15,73 +15,73 @@ class DataMungingController < ApplicationController
 
   def csv
     @title = "Data-Munging - CSV"
-    @sources = Source.find_all_by_tag("csv", :order => "language")
+    @sources = group_code_by_language_for_tag("csv")
     @csv_example = File.open("#{Rails.root}/public/data/data_munging/csv_example.csv").read
   end
 
   def word
     @title = "Data-Munging - Word"
-    @sources = Source.find_all_by_tag("word", :order => "language")
+    @sources = group_code_by_language_for_tag("word")
   end
   
   def odf
     @title = "Data Munging - Open Document Formats"
-    @sources = Source.find_all_by_tag("odf", :order => "language")
+    @sources = group_code_by_language_for_tag("odf")
   end
 
   def excel
     @title = "Data Munging - Excel"
-    @sources = Source.find_all_by_tag("excel", :order => "language")
+    @sources = Source.group_code_by_language_for_tag("excel")
   end
 
   def pdf
     @title = "Data Munging - PDF"
-    @sources = Source.find_all_by_tag("pdf", :order => "language")
+    @sources = group_code_by_language_for_tag("pdf")
   end
 
   def html
     @title = "Data Munging - HTML"
-    @sources = Source.find_all_by_tag("html", :order => "language")
+    @sources = group_code_by_language_for_tag("html")
   end
 
   def xml
     @title = "Data Munging - XML"
-     @sources = Source.find_all_by_tag("xml", :order => "language")
+     @sources = group_code_by_language_for_tag("xml")
   end
 
   def hocr
     @title = "Data Munging - hOCR"
     @hocr_example = File.open("#{Rails.root}/public/data/data_munging/hocr_example.html").read
-    @sources = Source.find_all_by_tag("hocr", :order => "language")
+    @sources = group_code_by_language_for_tag("hocr")
   end
 
   def tei
     @title = "Data Munging - TEI"
-    @sources = Source.find_all_by_tag("tei", :order => "language")
+    @sources = group_code_by_language_for_tag("tei")
     @tei_example =  File.open("#{Rails.root}/public/data/data_munging/tei_example.xml").read
   end
   
   def wikipedia_dump
     @title = "Data Munging - Wikipedia Dumps"
-    @sources = Source.find_all_by_tag("wikipedia_dump", :order => "language")
+    @sources = group_code_by_language_for_tag("wikipedia_dump")
     @wiki_dump_example = File.open("#{Rails.root}/public/data/data_munging/wiki_dump_wiktionairy_auszug.xml").read
     @wiki_markup_example = File.open("#{Rails.root}/public/data/data_munging/wiki_markup_example.txt").read
   end
   
   def json
     @title = "Data Munging - JSON"
-    @sources = Source.find_all_by_tag("json", :order => "language")
+    @sources =group_code_by_language_for_tag("json")
   end
   
   def abbyy_xml
     @title = "Data Munging - AbbyyXML"
-    @sources = Source.find_all_by_tag("abbyy_xml", :order => "language")
+    @sources = group_code_by_language_for_tag("abbyy_xml")
     @abbyy_example_xml = File.open("#{Rails.root}/public/data/data_munging/abbyy_short_example.xml").read
   end
   
   def alto_xml
     @title = "Data Munging - Alto XML"
-    @sources = Source.find_all_by_tag("alto_xml", :order => "language")
+    @sources = group_code_by_language_for_tag("alto_xml")
     @alto_example_xml = File.open("#{Rails.root}/public/data/data_munging/alto_xml_short_example.xml").read
   end
   
@@ -112,5 +112,24 @@ class DataMungingController < ApplicationController
     @tika_example =  Source.find(91).code
     @tika_example_spec =  Source.find(92).code
   end
+  
+  private
+  def group_code_by_language_for_tag(tag)
+    source_map = Hash.new
+    sources = Source.find_all_by_tag(tag, :order => "language")
+    langs = sources.collect {|s| s.language}.uniq
+    #Map Aufbauen
+    langs.each do |l|
+      source_map[l] = []
+    end
+    
+    sources.each do |s|
+      source_map[s.language] << s
+    end
+    source_map 
+    
+  end
+  
+  
 
 end
