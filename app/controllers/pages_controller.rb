@@ -11,6 +11,11 @@ class PagesController < ApplicationController
   def cpp
       @title = 'C++'
   end
+  
+  def cpp_mac_os_x
+      @title = 'C++'
+  end
+  
 
   def studium
       @title = 'Studium'

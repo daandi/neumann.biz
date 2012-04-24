@@ -1,0 +1,30 @@
+%h1 C++ unter MacOS X
+%article
+	%header
+		%h2 Installation
+	%p
+		Zum installieren einer C++ - Entwicklungsumgebung unter OSX gibt es zwei Möglichkeiten:
+		%h3 Xcode
+		%p Xcode lag frühren Version (bis Snow Leopard) dem Mac auf CD bei. Bei aktuelleren Versionen (ab Lion) kann man es kostenlos über den AppStore beziehen. Vorsicht, das Paket isat mehrere Gigabyte groß .
+		%p=link_to 'XCode im AppStore','http://itunes.apple.com/de/app/xcode/id497799835?mt=12#', :rel => 'nofollow'
+		%p 
+			Nach der Installation steht der C++ - Compiler
+			%strong g++
+			zur Verfügung:
+			=image_tag 'cpp/g++.png'
+		%p
+			Über die Paketverwaltungssysteme
+			=link_to 'Homebrew', 'http://mxcl.github.com/homebrew/', :rel => 'nofollow'
+			oder
+			=link_to 'MacPorts', 'http://www.macports.org/', :rel => 'nofollow'
+			kann man nun zusätzlich benötigte Bibliotheken hinzufügen.
+			=image_tag 'cpp/boost.png'
+		%h3 Netbeans C++ Paket
+		%p Die Java-IDE Netbeans existiert auch als Version für C++. Die Möglichkeit oben genannte Paketverwaltungssysteme und den compiler auf der Konsole zu benutzen entfällt bei diesem vorgehen aber.
+		%p
+			=link_to 'Netbeans IDE herunterladen', 'http://netbeans.org/downloads/index.html', :rel => 'nofollow'
+		=image_tag 'cpp/netbeans.png'
+		
+		
+		
+		
