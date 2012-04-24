@@ -7,6 +7,7 @@ NeumannBiz::Application.routes.draw do
     match 'publikationen' => 'pages#publikationen'
     match 'studium' => 'pages#studium'
     match 'cpp' => 'pages#cpp'
+    match 'cpp_mac_os_x' => 'pages#cpp_mac_os_x'
     match 'forschung' => 'pages#forschung'
     match 'vortraege' => 'pages#vortraege'
     match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
