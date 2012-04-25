@@ -59,6 +59,30 @@
 				%ol
 					%li Für grobe Extraktion z.B. mit regulären Ausdrücken
 					%li mit einem speziellen Parser für wiki markup
+%section
+	%header
+		%h2 Tools um mit Wikipedia-Dumps zu arbeiten
+	%article 
+		%p Danke an David Kaumans und Max Hadersbeck für dieses Softwarepaket.
+		%p=link_to 'Software-Paket mit Skripten zum extrahieren von Wikidaten', '/data/data_munging/WikiExtractor.zip'
+		%p
+			%pre
+				Aus Dump extrahieren:
+				bzip2 -dc .dewiktionary-latest-pages-articles.xml.bz2 | python
+				WikiExtractor.py -o extracted
+
+				Wiki-Markup strippen (entsprechende Unterordner aus extracted/ einfach
+				dazuschreiben):
+				for dir in {'AA','AB','AC','AD','AE','AF','AG','AH','AI'}; do mkdir
+				\./stripped/$dir; for i in {00..99}; do bzip2 -cdv
+				\./extracted/$dir/wiki$i.bz2 | html2text -utf8 > ./stripped/$dir/wiki$i.txt;
+				done; done; echo "Done.";
+
+				Säubern, Normalisieren:
+				for dir in ./stripped/*; do for file in $dir/*.txt; do echo "Cleaning
+				$file..."; cat $file | tr "_" " " > tmp; mv tmp $file; done; done; echo
+				"Done.";
+
 
 = render :partial => "shared/examples"
 

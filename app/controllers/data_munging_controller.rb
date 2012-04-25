@@ -17,6 +17,7 @@ class DataMungingController < ApplicationController
     @title = "Data-Munging - CSV"
     @sources = group_code_by_language_for_tag("csv")
     @csv_example = File.open("#{Rails.root}/public/data/data_munging/csv_example.csv").read
+    @csv_example_complex = File.open("#{Rails.root}/public/data/data_munging/moreComplex.csv").read
   end
 
   def word

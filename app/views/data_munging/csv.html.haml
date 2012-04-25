@@ -30,6 +30,7 @@
 	%header
 		%h2 Beispiele
 	%article
+		%h3 Ein einfaches Beispiel
 		%ul
 			%li
 				Als Textdatei:
@@ -38,6 +39,17 @@
 			%li
 				Als Tabelle:
 				=image_tag 'data_munging/csv.png'
+	%article
+		%h3 Ein komplexeres Beispiel
+		%ul
+			%li
+				Als Textdatei:
+				~sanitize highlight @csv_example_complex, :csv
+				%p=link_to "Komplexere CSV- Beispieldatei", '/data/data_munging/moreComplex.csv'
+			%li
+				Als Tabelle:
+				%p=image_tag 'data_munging/csv_complex.png'
+	
 
 = render :partial => "shared/examples"
 
