@@ -32,7 +32,7 @@ class DataMungingController < ApplicationController
 
   def excel
     @title = "Data Munging - Excel"
-    @sources = Source.group_code_by_language_for_tag("excel")
+    @sources = group_code_by_language_for_tag("excel")
   end
 
   def pdf
