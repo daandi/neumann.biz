@@ -1,5 +1,4 @@
 NeumannBiz::Application.routes.draw do
-  
     match 'home' => 'pages#home'
     match 'cv' => 'pages#cv'
     match 'links' => 'pages#links'
@@ -52,6 +51,11 @@ NeumannBiz::Application.routes.draw do
     match "document_understanding" => 'document_understanding#index'
     get "document_understanding/file_formats"
     get "document_understanding/techniques"
+    
+    #Ten minutes of Ruby
+    match "ten_minutes_of_ruby" => 'ten_minutes_of_ruby#index'
+    get 'ten_minutes_of_ruby/ruby_vs_perl'
+
     
   
     #Sources

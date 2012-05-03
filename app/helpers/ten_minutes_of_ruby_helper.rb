@@ -1,0 +1,2 @@
+module TenMinutesOfRubyHelper
+end
