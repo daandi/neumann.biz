@@ -3,7 +3,7 @@ class TenMinutesOfRubyController < ApplicationController
   end
   
   def ruby_vs_perl
-     @sources = group_code_by_language_for_tag("perl-vs-ruby")
+     @sources = group_code_by_language_for_tag("ruby-vs-perl")
   end
   
  
