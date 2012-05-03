@@ -1,21 +1,19 @@
 %h1 Ruby und Perl ein Sprachvergleich
 %p
 	Ruby und Perl sollen hier in Hinsicht auf Sprachidiome und dem "passend sein" zum lösen diverser computerlinguister Probleme verglichen werden.
-
-%article
-	%header 
-		%h2 Präsentation: Ruby und Perl, ein Sprachvergleich
-	%p
-		Die Präsentation stellt die Sprachen Ruby und Perl gegenüber. Unter anderem werden folgende Punkte abgehandelt:
-		%ul
-			%li Kernkonzepte und Einflüsse
-			%li Syntax
-			%li Out of the Box: Standardbibliotheken und Umfeld
-			%li Infrastruktur: Zusätzliche Bibliothekn
-			%li Nutzbarkaeit für die Verarbeitung von natürlicher Sprache
-	=render :partial =>'shared/download_file', :locals => {:file => '/data/ten_minutes_of_ruby/RubyAndPerl.pdf'}
-	%br
-	=link_to 'Quelltexte zum Vortrag herunterladen','/data/ten_minutes_of_ruby/vergleich_ruby_und_perl.zip'
+%section
+	%h2 Präsentation: Ruby und Perl, ein Sprachvergleich
+	%article	
+		%p
+			Die Präsentation stellt die Sprachen Ruby und Perl gegenüber. Unter anderem werden folgende Punkte abgehandelt:
+			%ul
+				%li Kernkonzepte und Einflüsse
+				%li Syntax
+				%li Out of the Box: Standardbibliotheken und Umfeld
+				%li Infrastruktur: Zusätzliche Bibliothekn
+				%li Nutzbarkaeit für die Verarbeitung von natürlicher Sprache
+		%p=render :partial =>'shared/download_file', :locals => {:file => '/data/ten_minutes_of_ruby/RubyAndPerl.pdf'}
+		%p=link_to 'Quelltexte zum Vortrag herunterladen','/data/ten_minutes_of_ruby/vergleich_ruby_und_perl.zip'
 
 = render :partial => "shared/examples"
 
