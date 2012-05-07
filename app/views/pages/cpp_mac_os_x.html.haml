@@ -24,6 +24,21 @@
 		%p
 			=link_to 'Netbeans IDE herunterladen', 'http://netbeans.org/downloads/index.html', :rel => 'nofollow'
 		=image_tag 'cpp/netbeans.png'
+%article
+	%header
+		%h2 Internationalisierung unter Mac OS X (Stand Leopard, SnowLeopard, Lion)
+	%p 
+		Unter MacOS X steht nur die C-Locale zur Verfügung. Die anderen Locales sind nicht implementiert.
+	%h3 Das funktioniert nicht
+	Konstrukte mit 
+	%pre
+		locale::global( locale( "" ) );
+	führen zum Absturz.
+	%h3 Support für UTF-8 und Wide-IO-Streams
+	%p	
+		Die Unterstützung für wide Character Streams kann folgendermaßen aktiviert werden:
+		%pre
+			setlocale( LC_ALL, "" );
 		
 		
 		
