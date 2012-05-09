@@ -3,12 +3,14 @@
 	%title
 		Neumann.biz
 		= title_helper
+	= javascript_include_tag :application
 	= stylesheet_link_tag :neumann
 	= stylesheet_link_tag :coderay
-	= javascript_include_tag :application
 	= csrf_meta_tag
 	= favicon_link_tag 'favicon.png'
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+	:javascript
+		$j = jQuery.noConflict();
 %body
 	%section{:id => 'page'}
 		%header{:id => 'page_header'}

@@ -95,8 +95,23 @@
 		#click_me [Drück Mich]
 		#click_me_tweet
 		:javascript
-			if (typeof jQuery == 'undefined') { alert("no jQuery")};
-			$("#click_me").click(function(){alert("Clicked")});
+			$("#click_me").click(function(){fetch_last_tweet_for("andreas_neumann")});
+			
+			function display_last_tweet(tweet_data) {
+			
+				$("#click_me_tweet").append("<p>" + tweet_data["stauts"]["text"] + "</p>");
+			}
+			
+			function fetch_last_tweet_for(screen_name) {
+				var url = "http://api.twitter.com/1/users/show.json?screen_name=" +  screen_name + "&include_entities=true&count=1";
+				$.ajax({
+				  url: url,
+				  crossDomain: true,
+				  dataType: "jsonp",
+				  success: display_last_tweet
+				});
+			}
+			
 			
 				
 
