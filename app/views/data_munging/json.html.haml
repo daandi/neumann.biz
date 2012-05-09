@@ -85,6 +85,33 @@
 				%li
 					Ruby
 					~sanitize highlight "ruby-1.9.2-p290 :007 > JSON.parse \"[{\"names\":[\"Maier\",\"Müller\",\"Magerle\"],\"count\":3}]\" \n=> [{\"names\"=>[\"Maier\", \"Müller\", \"Magerle\"], \"count\"=>3}]", :ruby
+
+%section
+	%header
+		%h2 Beispiel für die Nutzung von JSON um asynchron Inhalte nachzuladen (AJAX)
+	%article
+		%h3 Einen Tweet auf Knopfdruck laden
+		%p ...
+		#click_me [Drück Mich]
+		#click_me_tweet
+		:javascript
+			$("#click_me").click(function(){fetch_last_tweet_for("andreas_neumann")});
+			
+			function display_last_tweet(tweet_data) {
+			
+				$("#click_me_tweet").append("<p>" + tweet_data["stauts"]["text"] + "</p>");
+			}
+			
+			function fetch_last_tweet_for(screen_name) {
+				var url = "http://api.twitter.com/1/users/show.json?screen_name=" +  screen_name + "&include_entities=true&count=1";
+				$.ajax({
+				  url: url,
+				  crossDomain: true,
+				  dataType: "jsonp",
+				  success: display_last_tweet
+				});
+			}
+			
 			
 				
 
