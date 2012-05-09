@@ -55,6 +55,13 @@ NeumannBiz::Application.routes.draw do
     #Ten minutes of Ruby
     match "ten_minutes_of_ruby" => 'ten_minutes_of_ruby#index'
     get 'ten_minutes_of_ruby/ruby_vs_perl'
+    
+    #Vorlesung zu Angewandtes Programmieren in der Computerlinguistik
+    match "angewandte_programmierung_in_der_computerlinguistik" => 'angewandte_programmierung_in_der_computerlinguistik#index'
+    get "angewandte_programmierung_in_der_computerlinguistik/modules"
+    get "angewandte_programmierung_in_der_computerlinguistik/cpan"
+    
+    
 
     
   
