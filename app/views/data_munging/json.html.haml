@@ -91,22 +91,22 @@
 		%h2 Beispiel für die Nutzung von JSON um asynchron Inhalte nachzuladen (AJAX)
 	%article
 		%h3 Einen Tweet auf Knopfdruck laden
-		%p ...
-		#click_me [Drück Mich]
+		%p Lädt den letzen Tweet von
+		%input{:type => "text", :value => "Hier Twitter Namen eingeben", :id => "click_me_name"}
+		\.
+		%input{:type=> "button", :value =>  "[Drück Mich]", :id=>"click_me"}
 		#click_me_tweet
+			Hier erscheinen die Tweets:
 		:javascript
-			$("#click_me").click(function(){fetch_last_tweet_for("andreas_neumann")});
+			$("#click_me").click( function(){fetch_last_tweet_for( $("#click_me_name").val() ) } );
 			
 			function display_last_tweet(tweet_data) {
-				$("#click_me_tweet").append("<p>" + tweet_data["stauts"]["text"] + "</p>");
+				$("#click_me_tweet").append("<p>" +  tweet_data["name"] + ": "+ tweet_data["status"]["text"] + "</p>");
 			}
 			
-			function fetch_last_tweet_for(screen_name) {
-				var url = "http://api.twitter.com/1/users/show.json?screen_name=" +  screen_name + "&include_entities=true&count=1";
-				$.getJSON({
-				  url: url,
-				  success: display_last_tweet
-				});
+			function fetch_last_tweet_for(screen_name) {				
+				var url = "http://api.twitter.com/1/users/show.json?screen_name=" +  screen_name + "&include_entities=true&count=1&callback=?";
+				$.getJSON( url, display_last_tweet );
 			}
 			
 			

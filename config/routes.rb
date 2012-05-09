@@ -1,4 +1,5 @@
 NeumannBiz::Application.routes.draw do
+
     match 'home' => 'pages#home'
     match 'cv' => 'pages#cv'
     match 'links' => 'pages#links'
@@ -60,9 +61,6 @@ NeumannBiz::Application.routes.draw do
     match "angewandte_programmierung_in_der_computerlinguistik" => 'angewandte_programmierung_in_der_computerlinguistik#index'
     get "angewandte_programmierung_in_der_computerlinguistik/modules"
     get "angewandte_programmierung_in_der_computerlinguistik/cpan"
-    
-    
-
     
   
     #Sources
