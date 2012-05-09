@@ -6,4 +6,6 @@
 		%h2 Abschnitte
 		%ul
 			%li=link_to 'Ruby und Perl, ein Sprachvergleich', '/ten_minutes_of_ruby/ruby_vs_perl'
+			%li=render :partial =>'shared/download_file', :locals => {:file => 'data/ten_minutes_of_ruby/1. Installation.pdf'}
+			%li=render :partial =>'shared/download_file', :locals => {:file => 'data/ten_minutes_of_ruby/2. Zahlen, Strings und Datenstrukturen.pdf'}
 	
