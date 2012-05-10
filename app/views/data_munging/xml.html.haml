@@ -25,7 +25,7 @@
 				%li Alle geöffneten Tags müssen geschlossen worden sein
 				%li Keine illegalen Zeichen
 				%li Ein Element darf nicht mehrere Attribute mit dem gleichen Namen enthalten
-			Ein nicht wohlgeformtes Dokument wird von jedem XML-Parser verweigert.
+			Ein nicht wohlgeformtes Dokument wird von einem XML-Parser verweigert bzw. führt an der Stelle der nicht-wohlgeformheit zum abbruch des Parsvorgangs..
 		%h3 Validität
 		%p
 			Eine XML-Datei kann mit Regeln (Grammatik) versehen werden, die von validierenden Parsern geprüft werden.
@@ -42,9 +42,9 @@
 		%p XML ist definitiv das am weitesten verbreitete Austauschformat und hat sich mit dem aufkommen von Java durchgesetzt.
 		%ul
 			%li XHTML : alternatives Format für Webseiten
-			%li SOAP : Webausutauschformat
+			%li SOAP : Webaustauschformat
 			%li XSLT : Programmiersprache / Stylesheet für XML in XML
-			%li XSD : YML- Schemadetie in XML
+			%li XSD : XML- Schemadatei‚ in XML
 			%li
 				=link_to 'TEI', '/data-munging/tei'
 				\: Sammlung von Formaten zur Annotierung von Texten
@@ -94,7 +94,7 @@
 		%h2 XML -anzeigen
 	%article
 		%h3 Im Texteditor
-		%p Da XML als Plaintext kodiert ist problemlos möglich. Kann auch nicht wohlgeformte Dokument anzeigen. Daher überlebenswichtig beim erstellen und reparieren von kaputten Dateien.
+		%p Da XML als Plaintext kodiert ist, ist es problemlos möglich diese mit einem Texteditor zu verarbeiten. Ein Texteditor kann auch nicht wohlgeformte Dokument anzeigen. Daher überlebenswichtig beim erstellen und reparieren kaputter Dateien.
 		%h3 Im Webbrowser
 		%p
 			Darstellung aus einem Web-Kit Browser:
@@ -108,8 +108,14 @@
 		%h3 Texteditor
 		%p XML kann händisch mit einem beliebigen Texteditor erstellt werden.
 		%p Die meisten IDEs und Texteditoren bieten Higlighting und Prüfung auf wohlgeformtheit und die Möglichkeit zur Valididerung.
+		%p
+			Es existieren sogar diverse Webservices, die es erlauben eine XML-Datei oder auszüge online validieren zu lassen:
+			=link_to 'XML allgemein validieren lassen',"http://www.xmlvalidation.com/", :rel => 'nofollow'
+			,
+			=link_to 'Prüfen ob eine Webseite nach XHTML-Standards wohlgeformt ist.',"http://validator.w3.org/", :rel => 'nofollow'
+
 		%h3 Spezielle XML-Editoren
-		%p Für gesteigerte Ansprüche existieren XML-Editoren. Sie bieten unter anderem: Bessere Integration von Schemas, Grammatiken, alternative Ansichten.
+		%p Für gesteigerte Ansprüche existieren XML-Editoren. Sie bieten unter anderem: Bessere Integration von Schemas, Grammatiken und alternative Ansichten.
 		%h3 generiertes XML
 		%p Viele Programme bieten XML als Exportformat an.
 	
@@ -117,7 +123,7 @@
 		%h3 XML-Grammatiken	/ Schemas	
 		%article
 			%p Es existieren verschieden Systeme um Grammatiken in XML Dokumente einzubetten oder sie aus externen Quellen zu laden. Am bekanntesten sind
-			%h3 DTD
+			%h3 DTD (Document Type Definition)
 			%p Ursprüngliches Grammatikformat. Eher unüblich geworden.
 			=link_to 'Mehr zu DTD', 'http://de.wikipedia.org/wiki/Dokumenttypdefinition', :rel => 'nofollow'
 			%h3 XML Schema/XSD
@@ -135,11 +141,11 @@
 		%h3 SAX-Parser (Simple API for XML)
 		%ul
 			%li arbeitet das Dokument sequentiell ab
-			%li Ereignisorientiert (d.h. Man definiert Regeln was beim betreten und Verlasseneines Knotens passiert) 
+			%li Ereignisorientiert (d.h. Man definiert Regeln was beim betreten und Verlassen eines Knotens passiert) 
 			%li Speichersparend, für beliebig große XML Dokumente geeignet
 			%li Henne/Ei - Problem: SAX-Parser können unter umständen nicht valide Dokumente akzeptieren, da sie den Dokumentinhalt erst am Ende des Parsvorgangs kennen.
 			%li unübersichtlich und schlecht zu bedienen
-			%li kein Rückspringen möglich
+			%li kein rückspringen möglich
 			%li Faustregel: Ist die Datei kleiner als ein zehntel des des vorhanden Rams und Performanz ist nicht oberstes Kriterium lohnt SAX wegen der schwierigen Bedienbarkeit nicht
 		=link_to 'Gutes Beispiel auf Wikipedia', 'http://de.wikipedia.org/wiki/Simple_API_for_XML', :rel => 'nofollow'
 		%h3 DOM-Parser (Document Object Model)
