@@ -1,2 +1,9 @@
-%h1 AngewandteProgrammierungInDerComputerlinguistik#modules
-%p Find me in app/views/angewandte_programmierung_in_der_computerlinguistik/modules.html.haml
+%h1 Angewandte Programmierung in der Computerlinguistik - Module und CPAN
+%section
+	%article
+		%h2 Inhalt
+		%p Diese Vorlesung befasst sich mit einfachen Modulen in Perl, deren Verwendung und der Benutzung des CPAN ( Comprehensive Perl Archive Network), sowohl der Webseite als auch der shell.
+		%h3 Vortrag
+		=render :partial =>'shared/download_file', :locals => {:file => '/data/lehre/modules.pdf'}
+		%h3 Quelltexte zur Vorlesung
+		=link_to 'Quelltext zum Thema Internationalisierung', '/data/lehre/modules.zip'
