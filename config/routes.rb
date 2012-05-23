@@ -60,7 +60,7 @@ NeumannBiz::Application.routes.draw do
     #Vorlesung zu Angewandtes Programmieren in der Computerlinguistik
     match "angewandte_programmierung_in_der_computerlinguistik" => 'angewandte_programmierung_in_der_computerlinguistik#index'
     get "angewandte_programmierung_in_der_computerlinguistik/modules"
-    get "angewandte_programmierung_in_der_computerlinguistik/cpan"
+    get "angewandte_programmierung_in_der_computerlinguistik/object"
     get "angewandte_programmierung_in_der_computerlinguistik/i18n"
     
   
