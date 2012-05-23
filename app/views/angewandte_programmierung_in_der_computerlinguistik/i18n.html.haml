@@ -7,4 +7,8 @@
 		=render :partial =>'shared/download_file', :locals => {:file => '/data/lehre/i18n.pdf'}
 		%h3 Quelltexte zur Vorlesung
 		=link_to 'Quelltext zum Thema Internationalisierung', '/data/lehre/i18n.zip'
+%secition
+	%article
+		%h2 Übung
+		%p=link_to 'Hebräischer Text über Sänger Ivri Lider',"/data/lehre/hebrew.txt"
 = render :partial => "shared/examples"
