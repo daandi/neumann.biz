@@ -32,6 +32,10 @@
 	%article
 		%h3 TEI - Daten erstellen, bearbeiten und anzeigen
 		%p TEI Dateien lassen sich mit einem beliebigen Texteditor erstellen und bearbeiten. Hier ist die Fehleranfälligkeit ziemlich groß.
+		%p Alternativ lassen sich XML-Editoren wie Oxygen verwenden:
+		%p= image_tag 'data_munging/tei_in_oxygen.png'
+		%p oder sogar normale IDEs wie das Visual Studio verwenden.
+		%p= image_tag 'data_munging/tei_viewer.png'
 		%p Link zu TEI-Tools: http://wiki.tei-c.org/index.php/Category:Tools
 	%article
 		%h3 TEI - Koverertierung in andere Formate
@@ -43,6 +47,9 @@
 	%article
 		%h3 Ein in TEI verpacktes Gedicht
 		~sanitize highlight @tei_example, :xml
+		%h3 Friedrich Schiller Text in TEI annotiert
+		%p Quelle: Text-Grid Projekt
+		%p=link_to "Schiller TEI","/data/data_munging/tei_schiller_xml.zip"
 = render :partial => "shared/examples"
 
 	
