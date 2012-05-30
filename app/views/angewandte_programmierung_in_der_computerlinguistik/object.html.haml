@@ -1,2 +1,14 @@
-%h1 Angewandte Programmierung in der Computerlinguistik - Objekte und Objektorientierte Module
-%p Find me in app/views/angewandte_programmierung_in_der_computerlinguistik/cpan.html.haml
+%h1 Angewandte Programmierung in der Computerlinguistik - Objektorientierung
+%section
+	%article
+		%h2 Inhalt
+		%p Diese Vorlesung befasst sich Objektorientierung und deren Umsetzung in Perl.
+		%ul
+			%li Objekte, Klassen, Instanzen : Intuitive Abstraktionen
+			%li Vererbung : Wiederverwendung von Code
+			%li Polymorphismus : Duck-Typing-Strategie zur Laufzeit
+			%li Kappselung
+		%h3 Vortrag
+		=render :partial =>'shared/download_file', :locals => {:file => '/data/lehre/objects.pdf'}
+		%h3 Quelltexte zur Vorlesung
+		=link_to 'Quelltext zum Thema Module und CPAN', '/data/lehre/objects.zip'
