@@ -18,29 +18,16 @@
 			%h1
 				=title_helper
 		%nav{:id => 'page_navigation'}
+			%h2
+				CIS / LMU
+				Lehre
 			%ul
-				%li=link_to 'Home', '/'
-				%li=link_to 'Lebenslauf', '/cv'
-				%li
-					%strong
-						CIS / LMU
-						Lehre
-					%ul
-						%li=link_to 'Data-Munging', '/data_munging'
-						%li=link_to 'Logische Dokumentenanalyse', '/document_understanding'
-						%li=link_to 'Angewandte Programmierung in der Computerlinguistik','/angewandte_programmierung_in_der_computerlinguistik'
-						%li=link_to 'C++', '/cpp'
-						%li=link_to 'Ten minutes of Ruby', '/ten_minutes_of_ruby'
-				%li=link_to 'Publikationen', '/publikationen'
-				%li
-					%strong Studienarbeiten
-					%ul
-						%li=link_to 'Computerlinguistik', '/computerlinguistik-studium'
-						%li=link_to 'DAF', '/daf-studium'
-						%li=link_to 'Ethnologie', '/ethnologie-studium'
-				%li=link_to 'Erwachsenenbildung', '/vortraege'
-				%li=link_to 'Links', '/links'
-				%li=link_to 'Impressum', '/impressum'
+				%li=link_to 'Data-Munging', '/data_munging'
+				%li=link_to 'Logische Dokumentenanalyse', '/document_understanding'
+				%li=link_to 'Angewandte Programmierung in der Computerlinguistik','/angewandte_programmierung_in_der_computerlinguistik'
+				%li=link_to 'C++', '/cpp'
+				%li=link_to 'Ten minutes of Ruby', '/ten_minutes_of_ruby'
+	
 		%section{:id => 'page_main'}
 			= yield
 		.cleaner
