@@ -1,26 +1,6 @@
 NeumannBiz::Application.routes.draw do
 
-    match 'home' => 'pages#home'
-    match 'cv' => 'pages#cv'
-    match 'links' => 'pages#links'
-    match 'projekte' => 'pages#projekte'
-    match 'publikationen' => 'pages#publikationen'
-    match 'studium' => 'pages#studium'
-    match 'cpp' => 'pages#cpp'
-    match 'cpp_mac_os_x' => 'pages#cpp_mac_os_x'
-    match 'forschung' => 'pages#forschung'
-    match 'vortraege' => 'pages#vortraege'
-    match 'computerlinguistik-studium' => 'pages#computerlinguistik-studium'
-    match 'daf-studium' => 'pages#daf-studium'
-    match 'ethnologie-studium' => 'pages#ethnologie-studium'
     match 'impressum' => 'pages#impressum'
-    
-    # Alte Seite Redirects
-    match 'data' => 'pages#data'
-    match 'publication' => 'pages#publication'
-    match 'projekt' => 'pages#projekt'
-    match 'vortrag' => 'pages#vortraeg'
-    match 'lmu' => 'pages#lmu'
     
     #Data-Munging 
     match 'data_munging' => 'data_munging#index'
@@ -53,9 +33,6 @@ NeumannBiz::Application.routes.draw do
     get "document_understanding/file_formats"
     get "document_understanding/techniques"
     
-    #Ten minutes of Ruby
-    match "ten_minutes_of_ruby" => 'ten_minutes_of_ruby#index'
-    get 'ten_minutes_of_ruby/ruby_vs_perl'
     
     #Vorlesung zu Angewandtes Programmieren in der Computerlinguistik
     match "angewandte_programmierung_in_der_computerlinguistik" => 'angewandte_programmierung_in_der_computerlinguistik#index'
@@ -76,7 +53,7 @@ NeumannBiz::Application.routes.draw do
     
     match 'lehre/cpp-SS2011-klausurergebnisse' => 'pages#cpp-SS2011-klausurergebnisse'
     
-    root :to =>'pages#home'
+    root :to =>'data_munging#about'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
