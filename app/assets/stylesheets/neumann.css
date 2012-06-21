@@ -1,26 +1,25 @@
 html {
 	margin:0;
 	padding:0;
-	font-family: Verdana, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 11pt;
-	background-color:#222;
-	color:#FFF;
+	background-color:#D4D2CE;
+	color:#333‚;
 }
 
 article {
 	font-size:smaller;
 	margin-left:1em;
 	margin:0.5em 0px;
-	color: #333;
-	background-color: #FEFEFE;
 	padding: 1em;
 	border-radius: 0.5em;
+	border:0.1em solid #DDD;
 }
 
 
 h1 {
 	color: #FFF;
-	background-color: #1A99B2;
+	background-color: #009440;
 	padding:0.3em;
 	margin:0.5 1.5em;
 	font-weight: lighter
@@ -31,11 +30,11 @@ h1 {
 
 h2 {
 	font-weight:lighter;
-	border-bottom:0.1em solid #1A99B2;
+	border-bottom:0.1em solid #009440;
 }
 
 h3 {
-	border-bottom:0.1em solid #1A99B2;
+	border-bottom:0.1em solid #009440;
 }
 
 pre {
@@ -59,7 +58,7 @@ li ul li{
 }
 
 a {
-	color:#1A99B2;
+	color:#009440;
 	font-weight:bolder;
 	text-decoration: none;
 }
@@ -104,19 +103,24 @@ img {
 	display:block;
 	width: 90%;
 	margin: 15px auto;
-	border:0.1em solid #EEE;
-	background-color: #333;
-	color:#FAFAFA;
+	border:0.1em solid #333;
+	background-color: #FFFFFF;
+	color:#333;
 }
 
 
 
 #page_navigation {
+	padding:0.5em;
 	width:22%;
 	float:left;
 	overflow:auto;
-
 }
+
+#page_navigation li{
+	font-size:smaller;
+}
+
 
 #page_main {
 	margin:0 1em;
@@ -130,7 +134,7 @@ img {
 #page_header {
 	border-bottom: 0.1em solid #FFF;
 	padding:0.2em;
-	background-color: #1A99B2;
+	background-color: #009440;
 	
 }
 
@@ -158,8 +162,8 @@ img {
 #page_footer {
 	font-size:smaller;
 	text-align:left;
-	background-color:#555;
-	border-top:0.1em solid #FFF;
+	background-color:#EFEFEF;
+	border-top:0.1em solid #333;
 	padding-left:1em;
 }
 

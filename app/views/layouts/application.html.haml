@@ -1,12 +1,12 @@
 !!! 5
 %head
 	%title
-		Neumann.biz
+		Datenextraktion & Datenbereitstellung
 		= title_helper
+	%link{:href => "http://www.neumann.biz/#{controller.controller_name}/#{controller.action_name}", :rel=> "canonical"}
 	= javascript_include_tag :application
 	%script{:type=>"text/javascript", :src=>'https://apis.google.com/js/plusone.js'}
 	%script{:type=>"text/javascript", :src=>'http://platform.twitter.com/widgets.js'}
-	%script{:type=>"text/javascript", :src=>'http://connect.facebook.net/en_US/all.js#appId=135300686558880&amp;xfbml=1'}
 	= stylesheet_link_tag :neumann
 	= stylesheet_link_tag :coderay
 	= csrf_meta_tag
@@ -22,11 +22,48 @@
 				CIS / LMU
 				Lehre
 			%ul
-				%li=link_to 'Data-Munging', '/data_munging'
-				%li=link_to 'Logische Dokumentenanalyse', '/document_understanding'
-				%li=link_to 'Angewandte Programmierung in der Computerlinguistik','/angewandte_programmierung_in_der_computerlinguistik'
-				%li=link_to 'C++', '/cpp'
-				%li=link_to 'Ten minutes of Ruby', '/ten_minutes_of_ruby'
+				%li=link_to 'Data-Munging - Haupseite', '/data_munging'
+			%h2 Datenextraktion
+			%ul
+				%li=link_to 'Plain-text, Textdateien und Kodierungswahnsinn', '/data_munging/plain_text'
+				%li=link_to 'CSV ( Comma-Separated Values), tabellarische Daten im Textformat', '/data_munging/csv'
+				%li=link_to 'JSON - JavaScript Object Notation', '/data_munging/json'
+				%li=link_to 'XML - Extensible Markup Language', '/data_munging/xml'
+				%li=link_to 'TEI - Text Encoding Initiative - eine Beschreiungssprache in XML', '/data_munging/tei'
+				%li=link_to 'Wikipedia - Dumps', '/data_munging/wikipedia_dump'
+				%li 
+					XML und OCR
+					=link_to 'Abbyy XML', '/data_munging/abbyy_xml'
+					und
+					=link_to 'Alto XML', '/data_munging/alto_xml'
+				%li=link_to 'HTML', '/data_munging/html'
+				%li=link_to 'hOCR - Text und Layout', '/data_munging/hocr'
+				%li=link_to 'PDF - Portable Document Format', '/data_munging/pdf'
+				%li
+					=link_to 'Word', '/data_munging/word'
+					und
+					=link_to 'Excel', '/data_munging/excel'
+				%li=link_to 'ODF - Open Document Format - Offene Allternatives Dokumentformate', '/data_munging/odf'
+		
+		
+			%h2 Datenbereitstellung
+			%ul
+				%li=link_to 'Kommunikation im Internet - Clients und Server', '/data_munging/client_server'
+				%li=link_to 'Statische Daten', '/data_munging/static_data'
+				%li=link_to 'Dynamische Daten', '/data_munging/dynamic_data'
+				%li=link_to 'Webframeworks', '/data_munging/webframeworks'
+				%li=link_to 'Objektrelationale Mapper - ORM', '/data_munging/orm'
+				%li
+					Daten als Service mit
+					=link_to 'REST', '/data_munging/rest'
+					und
+					=link_to 'SOAP', '/data_munging/rest'
+			%h2 Links und Tools zum Thema Datenextraktion und Datenbereitstellung
+			%ul
+				%li=link_to 'TIKA', '/data_munging/tika'
+				%li=link_to 'Cloud File Converter', 'http://www.tei-c.org/oxgarage/', :rel => "nofollow"
+			
+				
 	
 		%section{:id => 'page_main'}
 			= yield
@@ -39,5 +76,7 @@
 				=link_to '©  AN-iT', 'http://www.an-it.com'
 				,
 				=link_to  'Impressum', '/impressum'
+				%br
+				=link_to 'Centrum für Informations- und Sprachverarbeitung', 'http://www.cis.uni-muenchen.de/'
 			
 			.cleaner

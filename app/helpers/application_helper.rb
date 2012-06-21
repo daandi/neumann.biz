@@ -5,7 +5,7 @@ require 'rcoins'
 module ApplicationHelper
     
     def title_helper
-        title = 'Neumann.biz'
+        title = 'Datenextraktion & Datenbereitstellung'
         unless @title.nil? then
             title += " | #{@title}"
         end
