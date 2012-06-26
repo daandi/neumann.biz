@@ -27,6 +27,7 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/alto_xml"
     get "data_munging/tika"
     get "data_munging/client_server"
+    get "data_munging/elastic_search"
     
     #Document Understanding
     match "document_understanding" => 'document_understanding#index'
