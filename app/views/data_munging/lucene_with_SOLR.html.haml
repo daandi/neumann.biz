@@ -1,0 +1,97 @@
+%header
+	%h1 Lucene und SOLR
+%section
+	%h2 Beschreibung : Lucene
+	%article
+		%h3 Allgemein
+		%p Lucene per se ist keine Suchmaschine sondern eine Open-Source-Information-Retrieval-Bibliothek für Java.
+%section
+	%h2 Besonderheiten
+	%article
+		%ul
+			%li Hohe Verbreitung (z.B. Twitter nutzt Lucene für die Volltextsuche)
+			%li viele Module vorhanden um Funktionsumfang zu erweitern
+			%li starke Volltextsuche, auch ungenaue Suchen möglich
+	%h2 Beschreibung : SOLR
+	%article
+		%h3 Allgemein
+		%p SOLR ist eine in Java implementierte Open-Source-Suchplattform, oder Suchmaschine, die auf Basis von Lucene läuft.
+%section
+	%h2 Besonderheiten
+	%article
+		%ul
+			%li Nutzt die Lucene-Bibliothek für Volltextsuche
+			%li Servlet, läuft als Java-Application
+			%li Unterstützung für viel Sprachen über http : JSON, XML, PHP, Ruby, Python, XSLT (Auszug)
+			%li Adminsitrierbar über HTML
+			%li Replizier- und Verteilbar
+
+	
+%section
+	%h2 Installation
+	%article
+		%h3 Download
+		=link_to 'SOLR herunterladen',"http://www.apache.org/dyn/closer.cgi/lucene/solr/3.6.0", :rel => 'nofollow'
+		%h3 Paket entpacken
+		=image_tag 'data_munging/solr_install.png'
+	
+			
+%section
+	%h2 Benutzung
+	%pIm Beispiel werden wir die mit SOLR mitgelieferte Beispielanwendung bentutzen
+	%article
+		%h3 SOLR starten (Example)
+		%p Über das jar start.jar lässt sich die Anwendung starten
+		%pre java -jar start.jar
+		=image_tag 'data_munging/solr_start.png'
+		%h3 SOLR Admin
+		%p
+			SOLR lässt sich über ein Admininterface im Webbrowser administrieren.
+			Das interface ist standardmäßig über
+			=link_to 'http://localhost:8983/solr/admin/',:rel => 'nofollow'
+			zu erreichen.
+		%p=image_tag 'data_munging/solr_admin.png'
+		%h3 Daten indexieren
+		%p Zum jetzigen Zeitpunkt enthält die Suchmaschine keine Daten. Das Befüllen eines Suchmaschinenindex mit daten nennt man 
+		%strong feeden
+		\.
+		%p Über das jar post.jar lassen sich Daten zum Index hinzufügen:
+		%pre  java -jar post.jar *.xml
+		%p=image_tag 'data_munging/solr_feed.png'
+		%p Nun werden die Daten zum Index der Suchmaschine hinzugefügt. Dieser Vorgang heißt 
+		%strong indexieren
+		\.
+		%p Erst wenn das indexieren abgeschlossen ist sind die Daten auch suchbar.
+		%h3 Im Index Suchen
+		%p
+			Die Suche im Index ist auf verschiednen Wege möglich
+			%ul
+				%li Über das Admin GUI
+				%li Über http
+				%li Aus einer Anwendung heraus
+		%h4 Suche über Admin-Gui
+		%p=image_tag 'data_munging/solr_search_gui.png'
+		%h4 Suche über Browser und get-Request
+		%p=link_to 'http://localhost:8983/solr/select/?q=test'
+		%p=image_tag 'data_munging/solr_search_get.png'
+		
+		%h4 Beispielsuchergebis
+		%p=image_tag 'data_munging/solr_search_result.png'
+%section
+	%h2 Weiterführende Links
+	%article
+		%p Das Beispiel kann leider nur an der Obfläche zweier sehr komplexer Projekte kratzen. Weiterführende Litereratur
+		%ul
+			%li=link_to 'SOLR Projektseiet',"http://lucene.apache.org/solr/", :rel => 'nofollow'
+			%li=link_to 'SOLR Tutrorial',"http://lucene.apache.org/solr/api/doc-files/tutorial.html", :rel => 'nofollow'
+			%li=link_to 'Lucene Projektseite',"http://lucene.apache.org/core/", :rel => 'nofollow'
+			%li=link_to 'Lucene in Action',"http://www.manning.com/hatcher3/", :rel => 'nofollow'
+	
+		
+		
+		
+		
+		
+			
+	
+		
