@@ -1,0 +1,73 @@
+%header
+	%h1 WEKA
+%section
+	%h2 Beschreibung : WEKA
+	%article
+		%h3 Allgemein
+		%p
+			Weka ist eine Sammlung von Algorithmen aus dem Machine-Learning-Umfeld und bietet nebenen einem CLI auch ein GUI zum experimentieren mit verschieden Trainingssets an.
+			
+%section
+	%h2 Installation
+	%article
+		%h3 Download
+		=link_to 'Weka Downloadseite',"http://www.cs.waikato.ac.nz/ml/weka/index_downloading.html", :rel => 'nofollow'
+		
+%section
+	%h2 Aufbau
+	%article
+		%h3 Allgemeines
+		%p Weka kann auf zwei Arten genutzt werden. Über das Command-Line-Interface (CLI) un ein graphisches Interface (GUI). Hiewr werden wir uns auf das GUI-Modul Explorer beschränken
+		%h3 Einzelne Module im GUI
+		=image_tag 'data_munging/weka_start.png'
+		%ul
+			%li Explorer: Daten mit Weka erforschen
+			%li Experimenter: Experimente und statistische Tests durchführen
+			%li KnowledgeFlow: Ähnlich dem Explorer aber nicht über Felder und Menüs, sonder über das modullieren eine graphischen Abbilds
+			%li Simple CLI: Zugriff auf das CLI, wenn das Betriebsystem keine geeignete Umgebung zur Verfügung stellt.
+			%li Tools: Enthält Werkzeuge zum Arbeiten mit Eingabedaten
+			%li Visualization: Vershciednen Methoden zur Visualisierung der Daten, wie Plotter
+			%li Help: Hilfe, FAQs und Tutrials
+		%h3 WEKA - Explorer
+		%p Der WEKA-Explorer ist wiederum in mehre Sichten aufgeteilt:
+		%ul
+			%li Preprocess: Datenbasis auswählen; evtl auch vorverarbeiten
+			%li Classify: Classifier auf Daten anwenden
+			%li Cluster: Cluster
+			%li Associate: Regeln lernen
+			%li Select Attributes: Wichtige Attribute bei den Daten bestimmen
+			%li Visualize: Visualisierung der Daten
+		
+%section
+	%h2 Beispiele
+	%article
+		%h3 ID3-Algorithmus um Daten zu klassifiziern
+		%p Mithilfe von WEKA wollen wir einen Entschiedungsbaum erstellen um Anhand von Wetterdaten zu entschieden ob wir Golf spielen sollen.
+		%p=link_to 'Ein Paper zum ID3-Algorythmus', 'http://www.cise.ufl.edu/~ddd/cap6635/Fall-97/Short-papers/2.htm', :rel => 'nofollow'
+		%h4 Daten auswählen
+		%p Dem WEKA-Paket liegen mehre Testdaten bei.
+		%p
+			Dies finden sich im Weka-Paket im Ordner
+			%pre data
+		%p Arff ist das Standardformat von WEKA, es werden aber noch viele andere Quellen, wie z.B. gängige SQL-Datenbanken unterstützt.
+		=image_tag 'data_munging/weka_weather.png'
+		%h4 Algorithmus auswählen
+		%p
+			Weka stellt einige bekannte Algorithmen bereits zur Verfügung. Diese werden nach den verwandten Methoden grob gegliedert.
+		%p
+			Wir wählen aus
+			%pre weka/classifieres/trees
+			den Algorithmus
+			%strong Id3
+			aus.
+		=image_tag 'data_munging/weka_choose_alg.png'
+		%h4 Algorithmus anwenden
+		%p Hat man Daten und Algorithmus ausgewählt kann man auf Basis der Trainingsdaten nun einen Classifier erstellen.
+		=image_tag 'data_munging/weka_classify.png'
+				
+%section
+	%h2 Weiterführende Links & Literatur
+	%article
+		%ul
+			%li=link_to 'Weka Wiki',"http://weka.wikispaces.com/", :rel => 'nofollow'
+			%li=link_to 'Data Mining: Practical Machine Learning Tools and Techniques', 'http://www.cs.waikato.ac.nz/~ml/weka/book.html',:rel => 'nofollow'

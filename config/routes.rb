@@ -29,6 +29,7 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/client_server"
     get "data_munging/elastic_search"
     get "data_munging/lucene_with_SOLR"
+    get "data_munging/weka"
     
     #Document Understanding
     match "document_understanding" => 'document_understanding#index'
