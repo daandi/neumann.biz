@@ -93,6 +93,64 @@ class DataMungingController < ApplicationController
   def dynamic_data
     @title = "Data Munging - Dymaische Daten"
     @cgi_example =  Source.find(89).code
+    @haml_example = <<-eos
+    !!! 5
+    %head
+    	%title
+    		Neumann.biz
+    		= title_helper
+    	= javascript_include_tag :application
+    	%script{:type=>"text/javascript", :src=>'https://apis.google.com/js/plusone.js'}
+    	%script{:type=>"text/javascript", :src=>'http://platform.twitter.com/widgets.js'}
+    	%script{:type=>"text/javascript", :src=>'http://connect.facebook.net/en_US/all.js#appId=135300686558880&amp;xfbml=1'}
+    	= stylesheet_link_tag :neumann
+    	= stylesheet_link_tag :coderay
+    	= csrf_meta_tag
+    	= favicon_link_tag 'favicon.png'
+    	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    %body
+    	%section{:id => 'page'}
+    		%header{:id => 'page_header'}
+    			%h1
+    				=title_helper
+    		%nav{:id => 'page_navigation'}
+    			%ul
+    				%li=link_to 'Home', '/'
+    				%li=link_to 'Lebenslauf', '/cv'
+    				%li
+      eos
+      @jsp_example = <<-eos
+      <%@ page import="org.apache.solr.core.SolrCore" %>
+      <%@ page import="java.util.Collection" %>
+      <html>
+      <head>
+         ...
+      </head>
+      <body>
+      <h1>Welcome to Solr!</h1>
+      <a href="."><img border="0" align="right" height="78" width="142" src="admin/solr_small.png" alt="Solr"/></a>
+
+      <% 
+        org.apache.solr.core.CoreContainer cores = (org.apache.solr.core.CoreContainer)request.getAttribute("org.apache.solr.CoreContainer");
+        Collection<SolrCore> solrCores = cores.getCores();
+        if( cores != null
+         && solrCores.size() > 0 // HACK! check that we have valid names...
+         && solrCores.iterator().next().getName().length() != 0 ) {
+          for( org.apache.solr.core.SolrCore core : cores.getCores() ) {
+             String coreName = core.getName();
+            if("".equals(coreName) ) coreName =".";
+      %>
+      <a href="<%= coreName %>/admin/">Admin <%= core.getName() %></a>
+      <br/>
+      <% }} else { %>
+      <a href="admin/">Solr Admin</a>
+      <% } %>
+
+      </body>
+      </html>
+      eos
+      
+      @servlet_example = Source.find(122).code
   end
   
   def webframeworks
