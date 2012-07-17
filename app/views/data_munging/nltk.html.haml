@@ -1,0 +1,90 @@
+%header
+	%h1 NLTK
+%section
+	%h2 Beschreibung : NLTK - Natural Language Processing Toolkit
+	%article
+		%h3 Allgemein
+		%p
+			NLTK ist ein in Python implementiertes Framework um mit menschlicher Sprache zu arbeiten.
+			
+%section
+	%h2 Installation
+	%article
+		%h3 Basisanwendung
+		%p
+			Eine ausführliche Installationsanleitung für alle gängigen Betriebssystem findet sich unter
+			=link_to 'Installtaionsanleitung','http://nltk.org/install.html', :rel => 'nofollow'
+		%h3 Korpora hinzufügen
+		%p
+			Zum korrekten Arbeiten benötigt NLTK einen Corpus bzw. mehrere Corpora. Diese lassen sich mit NLTK-Data installieren.
+		%p
+			%p Python Interpreter starten:
+			%pre
+				shell$ python
+				
+				Python 2.7.1 (r271:86832, Jul 31 2011, 19:30:53) 
+				[GCC 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)] on darwin
+				Type "help", "copyright", "credits" or "license" for more information.
+			%p NLTK im Interpreter importieren
+			%pre >>> import nltk
+			%p Python Methode download des Moduls nltk aufrufe
+			%pre
+				>>> nltk.download()
+				showing info http://nltk.github.com/nltk_data/
+			%p Daraufhin erscheint folgendes Fenster, über das man die benötigten Corpora und Pakete herunterladen kann.
+			=image_tag 'data_munging/nltk_corpora.png'
+%section
+	%h2 Erste Schritte mit NLTK
+	%article
+		%h3 Tokenisieren
+		%p Im folgenden Beispiel wird ein Beisielsatz mit deem Tokenizer aus dem NLTK zerlegt.
+		%pre
+			>>> sentence = "Far out in the uncharted backwaters of the unfashionable end  of  the western spiral arm of the Galaxy lies a small unregarded yellow sun."
+			>>> tokens = nltk.word_tokenize(sentence)
+			>>> tokens
+			['Far', 'out', 'in', 'the', 'uncharted', 'backwaters', 'of', 'the', 'unfashionable', 'end', 'of', 'the', 'western', 'spiral', 'arm', 'of', 'the', 'Galaxy', 'lies', 'a', 'small', 'unregarded', 'yellow', 'sun', '.']
+		%h3 Taggen
+		%p Der zuvor tokenisierte Satz wird nun getaggt:
+		%pre
+			>>> tagged = nltk.pos_tag(tokens)
+			>>> tagged
+			[('Far', 'RB'), ('out', 'IN'), ('in', 'IN'), ('the', 'DT'), ('uncharted', 'JJ'), ('backwaters', 'NNS'), ('of', 'IN'), ('the', 'DT'), ('unfashionable', 'JJ'), ('end', 'NN'), ('of', 'IN'), ('the', 'DT'), ('western', 'JJ'), ('spiral', 'JJ'), ('arm', 'NN'), ('of', 'IN'), ('the', 'DT'), ('Galaxy', 'NNP'), ('lies', 'VBZ'), ('a', 'DT'), ('small', 'JJ'), ('unregarded', 'VBN'), ('yellow', 'JJ'), ('sun', 'NN'), ('.', '.')]
+		%h3 Entitäten finden
+		%p Der tokenisierte Satz wird nach Entltäten durchsucht.
+		%pre
+			>>> entities = nltk.chunk.ne_chunk(tagged)
+			>>> entities
+			Tree('S', [('Far', 'RB'), ('out', 'IN'), ('in', 'IN'), ('the', 'DT'), ('uncharted', 'JJ'), ('backwaters', 'NNS'), ('of', 'IN'), ('the', 'DT'), ('unfashionable', 'JJ'), ('end', 'NN'), ('of', 'IN'), ('the', 'DT'), ('western', 'JJ'), ('spiral', 'JJ'), ('arm', 'NN'), ('of', 'IN'), ('the', 'DT'), Tree('ORGANIZATION', [('Galaxy', 'NNP')]), ('lies', 'VBZ'), ('a', 'DT'), ('small', 'JJ'), ('unregarded', 'VBN'), ('yellow', 'JJ'), ('sun', 'NN'), ('.', '.')])
+			
+%section
+	%h2 NLTK graphische Tools
+	%p
+		NLTK stellt eine Reihe von graphischen Interfaces zur Verfügung.
+	%p Das Paket nltk.app  enthältz graphische Parserimplementierungnen andhand derer man die Arbeitsweise verschiedener Parsingalgorithmen nachvollziehen kann.
+	%p Daneben werden GUIs für Konkordanzen und Wordfrequenzen zur Korpusarbeit zur Verfügung gestellt.
+	=link_to 'mehr zu den NLTK GUI-Appliaktionen', 'http://nltk.org/api/nltk.app.html', :rel => 'nofollow'
+	%article
+		%h3 Shift-Reduce Parser
+		%p
+			Mit diesem Modul lässt sich die Arbeitsweise eines shift-reduce-Parser nachvollziehen:
+			%pre
+				>>> import nltk
+				>>> nltk.app.srparser_app.app()
+		=image_tag 'data_munging/nltk_shift_reduce.png'
+		%h3 Konkordanzen
+		%pre
+			>>> import nltk
+			>>> nltk.app.concordance_app.app()
+		=image_tag 'data_munging/nltk_concordance.png'
+		
+		%h3 Kollokationen
+		%pre
+			>>> import nltk
+			>>> nltk.app.collocations_app.app()
+		=image_tag 'data_munging/nltk_collocations.png'
+				
+%section
+	%h2 Weiterführende Links & Literatur
+	%article
+		%ul
+			%li=link_to 'NLTK - Buch',"https://sites.google.com/site/naturallanguagetoolkit/book/", :rel => 'nofollow'
