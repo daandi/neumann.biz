@@ -176,6 +176,15 @@ class DataMungingController < ApplicationController
      @title = "NLTK - Natural Language processing"
   end
   
+  def tree_tagger
+     @title = "Tree Tagger"
+  end
+  
+  def grammatical_framework
+     @title = "Grammatical Framework"
+  end
+  
+  
   private
   def group_code_by_language_for_tag(tag)
     source_map = Hash.new

@@ -1,0 +1,189 @@
+%header
+	%h1 Tree Tagger
+%section
+	%h2 Beschreibung : Tree Tagger
+	%article
+		%h3 Allgemein
+		%p
+			Der Tree Tagger ist ein an der Universität Stuttgart entwickelter Tagger um Texte mit Wort und Strukturinformationen zu annotieren.
+			
+%section
+	%h2 Installation
+	%article
+		%h3 Download
+		=link_to 'TreeTagger - Projektseite',"http://www.ims.uni-stuttgart.de/projekte/corplex/TreeTagger/", :rel => 'nofollow'
+		%h3 Benötigte Pakete
+		Folgende Paket müssen von der Downloadseite heruntergeladen und in ein eigenes Direcory kopiert werden:
+		%ul
+			%li
+				%p Das Basispaket für das verwendete Betriebssystem:
+				%ul
+					%li=link_to 'Linux (64 bit)', 'ftp://ftp.ims.uni-stuttgart.de/pub/corpora/tree-tagger-linux-3.2-64bit.tar.gz', :rel => 'nofollow'
+					%li=link_to 'Mac', 'ftp://ftp.ims.uni-stuttgart.de/pub/corpora/tree-tagger-MacOSX-3.2-intel.tar.gz', :rel => 'nofollow'
+			%li=link_to 'Taggingskripte','ftp://ftp.ims.uni-stuttgart.de/pub/corpora/tagger-scripts.tar.gz', :rel => 'nofollow'
+			%li=link_to 'Installationsskripte','ftp://ftp.ims.uni-stuttgart.de/pub/corpora/install-tagger.sh', :rel => 'nofollow'
+			%li
+				%p
+					%strong Achtung:
+					Abweichend zur Originalanleitung bzw. dort nicht dokumentiert wird für deutsche Texte in UTF-8 folgendes benötigtweiterhin benötigt:
+					%ul
+						%li=link_to 'German Parameter Files','ftp://ftp.ims.uni-stuttgart.de/pub/corpora/german-par-linux-3.2-utf8.bin.gz', :rel => 'nofollow'
+						%li=link_to 'German Chunc‚er Files','ftp://ftp.ims.uni-stuttgart.de/pub/corpora/german-chunker-par-linux-3.2-utf8.bin.gz', :rel => 'nofollow'
+			%h3 Installation der Pakete
+			%ol
+				%li
+					Prüfen ob alle Pakete vorhanden sind:
+					%pre
+						:preserve
+							dhcp03:tree-tagger andi$ ls -ahl
+							total 16296
+							drwxr-xr-x   7 andi  staff   238B 11 Sep 11:42 .
+							drwx------+ 17 andi  staff   578B 11 Sep 11:41 ..
+							\-rw-r--r--@  1 andi  staff   368K 11 Sep 11:21 german-chunker-par-linux-3.2-utf8.bin.gz
+						
+							\-rw-r--r--@  1 andi  staff   7,3M 11 Sep 11:14 german-par-linux-3.2-utf8.bin.gz
+							\-rw-r--r--@  1 andi  staff   7,4K 11 Sep 11:14 install-tagger.sh
+							\-rw-r--r--@  1 andi  staff    66K 11 Sep 11:14 tagger-scripts.tar.gz
+							\-rw-r--r--@  1 andi  staff   203K 11 Sep 11:14 tree-tagger-MacOSX-3.2-intel.tar.gz
+				%li
+					Installationsskript ausführen
+					%pre
+						:preserve
+							dhcp03:tree-tagger andi$ sh install-tagger.sh 
+
+							Mac OS-X version of TreeTagger for Intel CPUs installed.
+							Tagging scripts installed.
+							German parameter file (Linux, UTF8) installed.
+							German chunker parameter file (Linux) installed.
+							Path variables modified in tagging scripts.
+
+							You might want to add /Users/andi/Downloads/tree-tagger/cmd and /Users/andi/Downloads/tree-tagger/bin to the PATH variable so that you do not need to specify the full path to run the tagging scripts.
+				%li
+					%strong Vorsicht: Auch wenn Dateien fehlen läuft das Skript durch.
+				%li
+					Testen der Installation
+					%p
+						Befehl eingeben
+						%pre
+							:escaped
+								dhcp03:tree-tagger andi$ echo 'Andi mag Weißbier.' | cmd/tagger-chunker-german-utf8 
+						Es sollte folgende Ausgabe erscheinen:
+						%pre
+							:escaped
+								reading parameters ...
+								tagging ...
+								finished.
+								<NC>
+								Andi	NE	Andi
+								</NC>
+								<VC>
+								mag	VMFIN	mögen
+								</VC>
+								<NC>
+								Weißbier	NN	Weißbier
+								</NC>
+								.	$.	.
+						Erscheint diese nicht so fehlen höchstwahrschienlich Pakete. Um welche es sich handelt kann der Fehlermeldung entnommen werden.
+
+%section
+	%h2 Aufbau
+	%article
+		%p Das Tagger Paket ist modular geliedert:
+		%h3 Vorhandene Tagger
+		%p
+			Es existieren Tagger für viele verschiednen Sprachen, (z.B. Deutsch, Französisch, Latein, Swahili ...), diese finden sich im Ordner
+			%strong cmd
+			Diese funktionieren aber nur wenn die notwendigen Sprachpakete installiert sind. (z.B. für Swahili mus die Datei 'latin-par-linux-3.2.bin.gz' im Basisordner der Tree-Tagger-Installation vorhanden sein)
+		
+		
+
+		
+%section
+	%h2 Beispiele
+	%article
+		%h3 Einfaches taggen deutscher Texte
+		Befehl:
+		%pre
+			dhcp03:tree-tagger andi$ echo 'Drei Verwandlungen nenne ich euch des Geistes: wie der Geist zum Kamele wird, und zum Löwen das Kamel, und zum Kinde zuletzt der Löwe.' | cmd/tagger-chunker-german-utf8 
+		Ausgabe:
+		%pre
+			:escaped
+				reading parameters ...
+				tagging ...
+				finished.
+				<NC>
+				Drei	CARD	drei
+				Verwandlungen	NN	Verwandlung
+				</NC>
+				<VC>
+				nenne	VVFIN	nennen
+				</VC>
+				<NC>
+				ich	PPER	ich
+				</NC>
+				<NC>
+				euch	PPER	ihr
+				</NC>
+				<NC>
+				des	ART	die
+				Geistes	NN	Geist
+				</NC>
+				:	$.	:
+				wie	KOUS	wie
+				<NC>
+				der	ART	die
+				Geist	NN	Geist
+				</NC>
+				<PC>
+				zum	APPRART	zu
+				Kamele	NN	Kamel
+				</PC>
+				<VC>
+				wird	VAFIN	werden
+				</VC>
+				,	$,	,
+				und	KON	und
+				<PC>
+				zum	APPRART	zu
+				Löwen	NN	Löwe
+				</PC>
+				<NC>
+				das	ART	die
+				Kamel	NN	Kamel
+				</NC>
+				,	$,	,
+				und	KON	und
+				<PC>
+				zum	APPRART	zu
+				Kinde	NN	Kind
+				</PC>
+				zuletzt	ADV	zuletzt
+				<NC>
+				der	ART	die
+				Löwe	NN	Löwe
+				</NC>
+				.	$.	.
+		%h3 Einfaches taggen lateinischer Texte
+		Befehl:
+		%pre
+			dhcp03:tree-tagger andi$ echo 'Marcus Mariam amat.' | cmd/tree-tagger-latin 
+		Ausgabe:
+		%pre
+			:escaped
+				reading parameters ...
+				tagging ...
+				Marcus	N:nom	Marcus
+				Mariam	N:acc	Maria
+				amat	V:IND	amo
+				.	SENT	.
+		
+		
+				
+%section
+	%h2 Interpretation der vergebenen Tags
+	%article
+		%p Die vergebenen Tags folgen je nach verwendetem Tagger eigenen Kriterien. Diese können nachfolgenden PDFs entnommenw erdfen
+		%ul
+			%li=link_to 'Tags für Deutsche','ftp://ftp.ims.uni-stuttgart.de/pub/corpora/stts_guide.pdf', :rel => 'nofollow'
+			%li=link_to 'Tags für Deutsche','http://www.ims.uni-stuttgart.de/projekte/corplex/TreeTagger/Penn-Treebank-Tagset.pdf', :rel => 'nofollow'
+		
