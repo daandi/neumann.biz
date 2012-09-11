@@ -52,7 +52,7 @@ NeumannBiz::Application.routes.draw do
     get "data_munging/weka"
     get "data_munging/nltk"
     get "data_munging/crfplusplus"
-    #get "data_munging/tree_tagger"
+    get "data_munging/tree_tagger"
     #get "data_munging/grammatical_framework"
     
     #Document Understanding

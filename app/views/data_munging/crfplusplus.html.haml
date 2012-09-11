@@ -1,0 +1,197 @@
+%header
+	%h1 CRF++
+%section
+	%h2 Beschreibung : CRF++
+	%article
+		%h3 Allgemein
+		%p
+			CRF++ ist eine Bibliothek um mit Conditional Random Fields zu arbeiten.
+			
+%section
+	%h2 Installation
+	%article
+		%h3 Download
+		=link_to 'CRF++ Download und Anleitung für die Installation',"http://crfpp.googlecode.com/svn/trunk/doc/index.html#download", :rel => 'nofollow'
+		
+%section
+	%h2 Verwendung
+	%article
+		%h3 Allgemeines
+		%p Die Anwendung des Framworks gliedert sich wie bei allen Lernverfahren in einen Trainingsschritt in dem eion Modell erstellt wird und einen Anwendugsschritt in dem das Model verwendet wird um Input zu klassifizieren.
+
+%section
+	%h2 Das Datenformat
+	%article
+		%p
+			Sowhohl Trainingsdaten, als auch Daten auf die das trainierte Modell angewendet werden sollen müssen in einem bestimmten Datenformat vorliegen:
+			%ul
+				%li Ein Token pro Zeile
+				%li ein Token ist eine tabellarische Darstellung von Feldern, die mit Whitespcase oder Tabs getrennt wereden
+				%li alle Tokens müssen die gleiche Anzahl von Feldern haben
+				%li In den Trainingsdaten ist das letzte Feld das Label das vergeben werden soll
+		%p
+			Beispiel aus dem mitglieferten Examples
+			%h3 Beispiel Daten zum klassifizieren
+			%pre
+				:preserve
+					Feld	Feld
+			
+					Corp. 	NNP
+					's 	POS
+					Tulsa	NNP
+					unit	NN
+					said	VBD
+			%h3 Beispiel Trainingsdten
+			%pre
+				:preserve
+					Feld	Feld	Label
+		
+					He        PRP  B-NP
+					reckons   VBZ  B-VP
+					the       DT   B-NP
+					current   JJ   I-NP
+		
+%section
+	%h2 Training
+	Training bezeichnet den Vorgang, in dem aus Trainingsdaten ein Modell erstellt wird.
+	%article
+		%h3 Anwendung
+		%p
+			Für das Trainieren steht das Programm 
+			%strong crf_learn
+			zur Verfügung.
+			Der Aufruf sieht folgendermaßen aus:
+			%pre
+				:escaped
+					$ crf_learn <TEMPLATE> <TRAININGSDATEN> <ZIELDMODELL>
+		%h3 Feature Templates
+		%p 
+			Jede Zeile des Templates beschreibt mithilfe eines Makros das Verhältnis in dem ein Feld zu einem anderen Feld steht.
+			%h4 Macros
+			%p
+				Die Daten werden im folgenden Abschnitt als eine Tablle mit Zeilen und Spalten betrachtet, wobei jedes Feld mithilfe einer Spalte und einer Zeile refernziert werden kann.
+				Makros haben folgenden Aufbau:
+				%pre
+					:preserve
+						U oder B
+						Nummer :
+						%x[Zeile, Spalte]
+				%ul
+					%li
+						%strong U
+						und
+						%strong B
+						\: Unigramm- oder ein Bigrammmakro
+					%li
+						%strong Nummer
+						\: Eindeutiger Identifier für das Template
+					%li
+						%strong %x[Zeile, Spalte]
+						\: Beschreibt ein Token der Eingabedaten. Wobei Zeile als relativer Wert zur aktuellen Position zu lesen ist und Spalte eine absoulte Positionsangabe.
+				%h4 Ein Beispiel
+				%p
+					Template
+					%pre
+						:preserve
+							# Unigram
+							U01:%x[-1,0]
+							U02:%x[0,0]
+							U03:%x[0,1]
+							U04%x[1,1]/%x[2,0]
+				%p
+					Eingabedaten
+					%pre
+						:preserve
+							He        PRP  B-NP
+							reckons   VBZ  B-VP
+							the       DT   B-NP << Aktuelles Token
+							current   JJ   I-NP 
+							account   NN   I-NP
+				%p
+					Wir betrachten gerdae die dritte Zeile unserer Eingabedaten, das aktuelle Token lautet 
+					%pre
+						the	DT	B-NP
+					Template angewandt auf Eingabedaten an Position aktuelles Token ergibt:
+					%pre
+						:preserve
+							U01 ->	reckons
+							U02 ->	the
+							U03 ->	DT
+							U04 ->	JJ/account
+				
+					
+			%h4 Weitere Information zu Templates
+			=link_to "Mehr zu Feature-Templates", 'http://crfpp.googlecode.com/svn/trunk/doc/index.html#templ', :rel => 'nofollow'
+		%h3 Trainingsdaten
+		%p
+			Trainingsdaten dienen als Eingabe um ein Modell zu erlernen.
+%section
+	%h2 Anwendung
+	%p Anwendung eines Modells auf Eingabedaten.
+	%article
+		%h3 Aufruf
+		%p
+%section
+	%h2 Beispiele
+	%p 
+		Im Paket CRF++ findet sich ein Ordener ./examples , in dem ausführbare Beispiele liegen.
+	%article
+		%h3 Ein Beispiel ausführen
+		%p 
+			In den Ordner examples wechseln
+			%pre
+				dhcp27:CRF++-0.57 andi$ cd example/
+				dhcp27:example andi$ ls
+				JapaneseNE basenp     chunking   seg
+			Ein Beipiel auswählen
+			%pre
+				dhcp27:example andi$ cd seg
+				dhcp27:seg andi$ ls
+				exec.sh    template   test.data  train.data
+			Beispiel mit exec.sh ausühren
+			%pre
+				dhcp27:seg andi$ sh exec.sh
+			exec.sh erstellt ein Modell anhand der Trainingsdaten im Ordner und verfiziert es mit den Trainingsdaten, die im selben Ordner liegen.
+		%h3 Ausgabe des Beispiels seg
+		Ausgabe während des Trainings:
+		%pre
+			:preserve
+				CRF++: Yet Another CRF Tool Kit
+				Copyright (C) 2005-2012 Taku Kudo, All rights reserved.
+
+				reading training data: 
+				Done!0.01 s
+
+				Number of sentences: 36
+				Number of features:  1386
+				Number of thread(s): 4
+				Freq:                3
+				eta:                 0.00010
+				C:                   4.00000
+				shrinking size:      20
+				iter=0 terr=0.38135 serr=0.88889 act=1386 obj=668.88703 diff=1.00000
+				iter=1 terr=0.38135 serr=0.88889 act=1386 obj=629.83587 diff=0.05838
+				iter=2 terr=0.31399 serr=0.80556 act=1386 obj=577.36064 diff=0.08332
+				iter=3 terr=0.19896 serr=0.91667 act=1386 obj=534.79888 diff=0.07372
+				iter=4 terr=0.20829 serr=0.91667 act=1386 obj=469.57859 diff=0.12195
+				...
+
+				Done!0.08 s
+		Verifizierung des Modells:
+		%pre
+			:preserve
+				よ	h	I	B
+				っ	h	I	I
+				て	h	I	B
+				私	k	B	B
+				た	h	B	B
+				ち	h	I	B
+				の	h	B	B
+				世	k	B	B
+				代	k	I	I
+	
+%section
+	%article
+		%h2 Einbinden in den Workflow
+		Es existieren u.a. Bibliotheken für Perl, Ruby, Python und Java, die es erlauben CRF++ in eigene Programme einzubinden. Diese Bibliotheken sind Teil der CRF++ Distribution.
+				
