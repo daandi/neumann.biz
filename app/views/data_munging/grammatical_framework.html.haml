@@ -1,0 +1,209 @@
+%header
+	%h1 GF - Grammatical Framwork
+%section
+	%h2 Beschreibung : Grammatical Framwork
+	%article
+		%h3 Allgemein
+		%p GF ist eine funktionale, auf Haskell basierende, High-Level-Programmiersprache zum erstellen von ausführbahren Parsern und Grammatiken.
+%section
+	%h2 Besonderheiten
+	%article
+		%ul
+			%li
+				kann Parser und Translatorprogramme für eine Einbindung in folgende Sprachen erstellen:
+				%ul
+					%li Java ( Android! )
+					%li Haskell
+					%li JavaScript
+			%li Viele natürliche Sprachen werden unterstützt (Deutsch, Englisch, Italienisch, Finnisch ...)
+
+	
+%section
+	%h2 Installation
+	%article
+		%h3 Download
+		%p
+			Unter folgendem Link kann man das GF in Versionen für Unix, Windowes und MacOS herunterladen.
+			Dort findet sich direkt neben dem Downloadlink auch der Befehl zu Installation unter dem  gewünschten Betriebssystem.
+		=link_to 'Download GF',"http://www.grammaticalframework.org/download/index.html", :rel => 'nofollow'
+		%h3 Beispiel
+		%p
+			%h4 Download
+			%pre
+				:escaped
+					dhcp05:Downloads andi$ wget http://www.grammaticalframework.org/download/gf-3.3.3-bin-intel-mac.tar.gz
+					--2012-09-18 10:26:05--  http://www.grammaticalframework.org/download/gf-3.3.3-bin-intel-mac.tar.gz
+					Resolving www.grammaticalframework.org... 129.16.225.14
+					Connecting to www.grammaticalframework.org|129.16.225.14|:80... connected.
+					HTTP request sent, awaiting response... 200 OK
+					Length: 11264464 (11M) [application/x-gzip]
+					Saving to: `gf-3.3.3-bin-intel-mac.tar.gz'
+
+					100%[================================================================>] 11,264,464  1.54M/s   in 9.2s    
+
+					2012-09-18 10:26:15 (1.17 MB/s) - `gf-3.3.3-bin-intel-mac.tar.gz' saved [11264464/11264464]
+			%h4 Entpacken
+			%p Zumindest für MacOS funktioniert der auf der Website beschreibene Weg nicht korrekt. Hier ein Alternative:
+			%pre
+				dhcp05:Downloads andi$ mkdir ~/gf
+				dhcp05:Downloads andi$ sudo tar -C ~/gf -zxf gf-3.3.3-bin-intel-mac.tar.gz
+				dhcp05:Downloads andi$ ls ~/gf
+				bin   lib   share
+			%h4 Prüfen der Installation
+			%p Nach Eingabe des Befehls
+			%pre
+				dhcp05:Downloads andi$ ~/gf/bin/gf
+			%p sollte diese Ausgabe erscheinen
+			%pre
+				:escaped
+                              
+					         *  *  *              
+					      *           *           
+					    *               *         
+					   *                          
+					   *                          
+					   *        * * * * * *       
+					   *        *         *       
+					    *       * * * *  *        
+					      *     *      *          
+					         *  *  *              
+                              
+					This is GF version 3.3.3. 
+					Built on darwin/i386 with ghc-6.12, flags: interrupt server
+					License: see help -license.   
+					Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+
+
+					Languages:
+					> 
+					
+             
+				
+	
+			
+%section
+	%h2 Benutzung
+	%p GF stellt eine REPL zur verfügung in der Code live getestet werden kann
+	%article
+		%h3 REPL starten
+		%p 
+			Die REPL wird über den Befehl im Verzeichnis des GF gestartet.
+			%pre 
+				gf
+			Für zuvor beschriebene Installationsmethode lautet der Befehl
+			%pre ~/gf/bin/gf
+
+%section
+	%h2 Eine Grammatik schreiben
+	%article
+		%h3 Allgemeine Grammatik
+		%p Die allgemeine Grammatik legt Typen und Kategorien fest, die in der sprachspezifischen Grammatik in der jeweiligen Sprache ausgedrückt werden.
+		
+		%pre
+			:escaped
+				abstract Valuable = {
+				  cat
+				    Phrase ; Item ; Kind ; Value ;
+			  
+				  flags startcat = Phrase ;
+
+				  fun
+				    Is : Item -> Value -> Phrase ;
+				    This: Kind -> Item ;
+				    QKind : Value -> Kind -> Kind ;
+				    Goldbar, Diamond, Ruby, Pebble : Kind ;
+				    Very : Value -> Value ;
+				    Expensive, Rare, Worthless : Value ;
+				}
+		
+		
+		%h3 Eine Sprachspezifische Grammatik
+		%pre
+			:escaped
+				concrete ValuableGer of Valuable = {
+
+				  lincat
+				    Phrase, Item, Kind, Value = {s : Str} ;
+
+				  lin
+				    Is item value = {s = item.s ++ "ist" ++ value.s} ;
+				    This kind = {s = "Dieser" ++ kind.s} ;
+				    QKind value kind = {s = value.s ++ kind.s} ;
+				    Goldbar = {s = "Goldbarren"} ;
+				    Ruby = {s = "Rubin"} ;
+				    Pebble = {s = "Kiesel"} ;
+					Diamond = {s = "Diamant"} ;
+				    Very value = {s = "sehr" ++ value.s} ;
+				    Expensive = {s = "wervoll"} ;
+				    Rare = {s = "selten"} ;
+					Worthless = {s = "wertlos"} ;
+				}
+		%h3 Anwendung der Grammatik
+		%p Grammatical Framework starten und Grammatiken importieren
+		%pre
+			:escaped
+				dhcp05:gf andi$ ~/gf/bin/gf ~/gf/test/*
+                              
+				         *  *  *              
+				      *           *           
+				    *               *         
+				   *                          
+				   *                          
+				   *        * * * * * *       
+				   *        *         *       
+				    *       * * * *  *        
+				      *     *      *          
+				         *  *  *              
+                              
+				This is GF version 3.3.3. 
+				Built on darwin/i386 with ghc-6.12, flags: interrupt server
+				License: see help -license.   
+				Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+
+				- compiling /Users/andi/gf/test/Valuable.gf...   write file /Users/andi/gf/test/Valuable.gfo
+				- compiling /Users/andi/gf/test/ValuableGer.gf...   write file /Users/andi/gf/test/ValuableGer.gfo
+				linking ... OK
+
+				Languages: ValuableGer
+		%p Beispielsätze generieren lassen
+		%pre
+			:escaped
+				Valuable> generate_random | linearize
+				Dieser Kiesel ist wertlos
+
+
+				1 msec
+				Valuable> generate_random | linearize
+				Dieser Goldbarren ist sehr wervoll
+
+
+				0 msec
+				Valuable> generate_random | linearize
+				Dieser Goldbarren ist wertlos
+
+
+				0 msec
+				Valuable> generate_random | linearize
+				Dieser Rubin ist sehr sehr sehr selten
+
+
+				0 msec
+				Valuable>
+
+%section
+	%h2 Weiterführende Links
+	%article
+		%ul
+			%li=link_to 'Ausführliches Tutorial',"http://www.grammaticalframework.org/doc/tutorial/gf-tutorial.html", :rel => 'nofollow'
+			%li=link_to 'Für tiefere Einblicke in die Standardbibliothek des GF',"http://www.grammaticalframework.org/lib/doc/synopsis.html", :rel => 'nofollow'
+			%li=link_to 'Buch: Grammatical Framework',"http://www.grammaticalframework.org/gf-book/", :rel => 'nofollow' 
+
+	
+		
+		
+		
+		
+		
+			
+	
+		
